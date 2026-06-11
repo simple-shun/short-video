@@ -1,0 +1,57 @@
+{
+  "title": "直男夸女生眼睛",
+  "hook": "他夸女生眼睛好看，下一句大翻车 👀",
+  "chat_title": "和女神的聊天",
+  "left": {
+    "avatar": "👁️",
+    "bg": "#FFF8DC"
+  },
+  "right": {
+    "avatar": "🤓",
+    "bg": "#20B2AA"
+  },
+  "bgm": "tension",
+  "messages": [
+    {
+      "side": "right",
+      "text": "你眼睛真好看"
+    },
+    {
+      "side": "left",
+      "text": "谢谢"
+    },
+    {
+      "side": "right",
+      "text": "像葡萄"
+    },
+    {
+      "side": "left",
+      "meme": "love"
+    },
+    {
+      "side": "right",
+      "text": "就是有点大小眼",
+      "typing": true
+    },
+    {
+      "side": "left",
+      "text": "哪有！"
+    },
+    {
+      "side": "right",
+      "text": "左边像巨峰，右边像玫瑰香",
+      "punch": true,
+      "sfx": "goose"
+    },
+    {
+      "side": "left",
+      "text": "你是买水果的吗",
+      "sfx": "laugh_squid"
+    },
+    {
+      "side": "right",
+      "text": "那给我来两斤",
+      "sfx": "slap"
+    }
+  ]
+}

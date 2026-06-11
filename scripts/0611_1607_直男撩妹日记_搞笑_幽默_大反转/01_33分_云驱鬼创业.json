@@ -1,0 +1,73 @@
+{
+  "title": "云驱鬼创业",
+  "hook": "他说在线驱鬼只要9.9，结果穿着道袍来了🤯",
+  "chat_title": "和居家驱鬼师的交易",
+  "left": {
+    "avatar": "👻",
+    "bg": "#E6E6FA"
+  },
+  "right": {
+    "avatar": "🔮",
+    "bg": "#F5DEB3"
+  },
+  "bgm": "sneaky",
+  "messages": [
+    {
+      "side": "left",
+      "text": "一个人在家好害怕，感觉有鬼"
+    },
+    {
+      "side": "right",
+      "text": "开灯，放国歌"
+    },
+    {
+      "side": "left",
+      "text": "没用，还是怕"
+    },
+    {
+      "side": "right",
+      "text": "[链接] 云道士在线驱鬼 只要9.9"
+    },
+    {
+      "side": "left",
+      "meme": "confused"
+    },
+    {
+      "side": "left",
+      "text": "你认真的？"
+    },
+    {
+      "side": "right",
+      "text": "先付款，急急如律令马上安排"
+    },
+    {
+      "side": "left",
+      "text": "已转10块，不用找了"
+    },
+    {
+      "side": "right",
+      "text": "[视频] 我穿着道袍在大喊退散",
+      "punch": true,
+      "sfx": "dun"
+    },
+    {
+      "side": "left",
+      "text": "是你？？？",
+      "sfx": "vl_nigan"
+    },
+    {
+      "side": "right",
+      "text": "五星好评返2块，记得写评价",
+      "sfx": "laugh_evil"
+    },
+    {
+      "side": "left",
+      "text": "返现是假的吧",
+      "sfx": "bruh"
+    },
+    {
+      "side": "right",
+      "text": "出家人不打诳语，二维码发你了"
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "title": "线上电影",
+  "hook": "网恋对象约我看电影，他让我自己进影院😳",
+  "chat_title": "和心动女嘉宾的聊天",
+  "left": {
+    "avatar": "👧",
+    "bg": "#FFB6C1"
+  },
+  "right": {
+    "avatar": "🤖",
+    "bg": "#ADD8E6"
+  },
+  "bgm": "silly",
+  "messages": [
+    {
+      "side": "left",
+      "text": "周六有空吗？一起看电影"
+    },
+    {
+      "side": "right",
+      "text": "没问题，安排"
+    },
+    {
+      "side": "left",
+      "text": "万达广场3点见？"
+    },
+    {
+      "side": "right",
+      "text": "不用，我已经买好票了"
+    },
+    {
+      "side": "left",
+      "text": "啊？你买的哪场？"
+    },
+    {
+      "side": "right",
+      "text": "你直接去取票机取就行"
+    },
+    {
+      "side": "left",
+      "meme": "confused"
+    },
+    {
+      "side": "left",
+      "text": "那你在哪？"
+    },
+    {
+      "side": "right",
+      "text": "我在老家万达啊，你同步看",
+      "punch": true,
+      "sfx": "dun"
+    },
+    {
+      "side": "left",
+      "text": "？？？异地同步看你妹",
+      "sfx": "bruh"
+    },
+    {
+      "side": "right",
+      "text": "这样俩人都不耽误，我还省了路费",
+      "sfx": "goose"
+    },
+    {
+      "side": "right",
+      "text": "对了开场记得静音，别影响别人"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "title": "回归压力测试",
+  "hook": "回归测试：全特性覆盖🧪",
+  "chat_title": "测试群",
+  "left":  { "avatar": "🤖", "bg": "#ffb347" },
+  "right": { "avatar": "🧪", "bg": "#74b9ff" },
+  "bgm": "sneaky",
+  "messages": [
+    { "side": "left",  "text": "今天测试一下全部功能" },
+    { "side": "right", "text": "好啊来吧" },
+    { "side": "left",  "text": "？？？" },
+    { "side": "right", "text": "。。。" },
+    { "side": "left",  "text": "上面两条是纯标点消息" },
+    { "side": "right", "meme": "confused" },
+    { "side": "left",  "text": "这条之后聊天区已经溢出了" },
+    { "side": "right", "text": "嗯然后呢" },
+    { "side": "left",  "text": "看好了，憋大招", "sfx": "whoosh" },
+    { "side": "left",  "text": "这条带打字指示和反转特效", "typing": true, "punch": true, "sfx": "dun" },
+    { "side": "right", "text": "哈哈哈哈哈哈", "sfx": "laugh" },
+    { "side": "left",  "meme": "smug" },
+    { "side": "right", "text": "测试通过", "pause": 500 }
+  ]
+}

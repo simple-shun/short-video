@@ -1,0 +1,77 @@
+{
+  "title": "顺便带瓶酱油",
+  "hook": "让骑手带瓶酱油，他带了老干妈🌶️",
+  "chat_title": "和外卖小哥的聊天",
+  "left": {
+    "avatar": "👧",
+    "bg": "#FFE0B2"
+  },
+  "right": {
+    "avatar": "🛵",
+    "bg": "#BBDEFB"
+  },
+  "bgm": "sneaky",
+  "messages": [
+    {
+      "side": "left",
+      "text": "小哥看到备注没"
+    },
+    {
+      "side": "right",
+      "text": "帮你带酱油对吧",
+      "typing": true
+    },
+    {
+      "side": "left",
+      "text": "对随便啥酱油都行"
+    },
+    {
+      "side": "right",
+      "text": "好嘞"
+    },
+    {
+      "side": "left",
+      "meme": "doge"
+    },
+    {
+      "side": "right",
+      "text": "我到了开门"
+    },
+    {
+      "side": "left",
+      "text": "谢谢！……这带的啥？",
+      "punch": true,
+      "sfx": "boom"
+    },
+    {
+      "side": "right",
+      "text": "老干妈啊也能蘸",
+      "sfx": "laugh"
+    },
+    {
+      "side": "left",
+      "text": "我蘸饺子用老干妈？",
+      "sfx": "awkward"
+    },
+    {
+      "side": "right",
+      "text": "你自己说随便的",
+      "sfx": "whoosh"
+    },
+    {
+      "side": "left",
+      "text": "哈哈哈哈哈哈",
+      "sfx": "laugh"
+    },
+    {
+      "side": "left",
+      "text": "等等我饺子呢？",
+      "sfx": "dun"
+    },
+    {
+      "side": "right",
+      "text": "你又没让我带饺子",
+      "sfx": "suona"
+    }
+  ]
+}

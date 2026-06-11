@@ -1,0 +1,7 @@
+把本文件复制为 openrouter.md 并填入你的 OpenRouter key（管线代码会从中读取）：
+
+  export ANTHROPIC_BASE_URL="https://openrouter.ai/api"
+  export ANTHROPIC_AUTH_TOKEN="sk-or-v1-在此填入你的key"
+
+也可以改用环境变量 OPENROUTER_API_KEY，优先级更高。
+注意：openrouter.md 已在 .gitignore 中，永远不要提交真实 key。

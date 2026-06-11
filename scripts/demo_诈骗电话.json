@@ -1,0 +1,24 @@
+{
+  "title": "诈骗电话37块8",
+  "hook": "我把诈骗犯整破防了😅",
+  "chat_title": "死党🐶",
+  "left":  { "avatar": "🐱", "bg": "#ffb347" },
+  "right": { "avatar": "🐼", "bg": "#74b9ff" },
+  "bgm": "silly",
+  "messages": [
+    { "side": "left",  "text": "兄弟，告诉你个事" },
+    { "side": "left",  "text": "我今天遇到诈骗电话了" },
+    { "side": "right", "text": "啊？没上当吧" },
+    { "side": "left",  "text": "本来要上的" },
+    { "side": "right", "meme": "shock" },
+    { "side": "left",  "text": "他问我银行卡里有多少钱" },
+    { "side": "right", "text": "然后呢" },
+    { "side": "left",  "text": "我说37块8", "typing": true, "punch": true, "sfx": "dun" },
+    { "side": "right", "text": "..." },
+    { "side": "right", "text": "然后他骂你了？" },
+    { "side": "left",  "text": "他挂了", "sfx": "fail" },
+    { "side": "right", "text": "哈哈哈哈哈哈哈哈", "sfx": "laugh" },
+    { "side": "right", "meme": "laugh" },
+    { "side": "left",  "text": "我还没问他怎么变多呢", "pause": 600 }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "title": "PPT求婚",
+  "hook": "他说做了个烟花PPT，最后一页我傻了😮",
+  "chat_title": "和准男友的聊天（待定）",
+  "left": {
+    "avatar": "🌸",
+    "bg": "#F3E5AB"
+  },
+  "right": {
+    "avatar": "📊",
+    "bg": "#D3E0EA"
+  },
+  "bgm": "scheming",
+  "messages": [
+    {
+      "side": "left",
+      "text": "心情不好，好想放烟花啊"
+    },
+    {
+      "side": "right",
+      "text": "城里不让放，我给你做了一个"
+    },
+    {
+      "side": "left",
+      "meme": "confused"
+    },
+    {
+      "side": "right",
+      "text": "[文件] 烟花模拟.pptx"
+    },
+    {
+      "side": "left",
+      "text": "你认真的？还带动画..."
+    },
+    {
+      "side": "right",
+      "text": "翻到最后一页"
+    },
+    {
+      "side": "left",
+      "text": "？？？怎么是求婚俩大字"
+    },
+    {
+      "side": "right",
+      "text": "刚加的，效果不错吧",
+      "punch": true,
+      "sfx": "dun"
+    },
+    {
+      "side": "left",
+      "text": "你拿PPT求婚？",
+      "sfx": "damage"
+    },
+    {
+      "side": "right",
+      "text": "备注里写了彩礼方案，你点开看"
+    },
+    {
+      "side": "right",
+      "text": "第一版是Excel，怕你觉得太商业",
+      "sfx": "goose"
+    }
+  ]
+}

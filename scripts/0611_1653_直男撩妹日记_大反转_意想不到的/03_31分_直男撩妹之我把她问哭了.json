@@ -1,0 +1,83 @@
+{
+  "title": "直男撩妹之我把她问哭了",
+  "hook": "直男发了条消息女生哭了😭",
+  "chat_title": "心动女生陈小鱼",
+  "left": {
+    "avatar": "🐟",
+    "bg": "#ffd6e7"
+  },
+  "right": {
+    "avatar": "🧱",
+    "bg": "#d6eaff"
+  },
+  "bgm": "silly",
+  "messages": [
+    {
+      "side": "right",
+      "text": "你好看哦"
+    },
+    {
+      "side": "left",
+      "text": "我知道",
+      "sfx": "vl_wudi"
+    },
+    {
+      "side": "right",
+      "text": "？"
+    },
+    {
+      "side": "right",
+      "text": "你不说谢谢的吗"
+    },
+    {
+      "side": "left",
+      "text": "谢你干嘛你又没整我"
+    },
+    {
+      "side": "right",
+      "meme": "speechless"
+    },
+    {
+      "side": "right",
+      "text": "那我说你眼睛好看呢"
+    },
+    {
+      "side": "left",
+      "text": "嗯遗传我妈的",
+      "sfx": "bruh"
+    },
+    {
+      "side": "right",
+      "text": "好吧那你妈好看"
+    },
+    {
+      "side": "left",
+      "text": "我也这么觉得",
+      "typing": true
+    },
+    {
+      "side": "left",
+      "text": "她年轻的时候比你好看多了",
+      "punch": true,
+      "sfx": "dun"
+    },
+    {
+      "side": "right",
+      "meme": "cry"
+    },
+    {
+      "side": "left",
+      "text": "哭啥她现在也比你好看"
+    },
+    {
+      "side": "right",
+      "text": "我妈看了这段对话说让你去她公司上班",
+      "sfx": "suona"
+    },
+    {
+      "side": "left",
+      "text": "我就知道长辈都懂得欣赏人才",
+      "sfx": "vl_wudi"
+    }
+  ]
+}

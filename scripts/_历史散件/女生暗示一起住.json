@@ -1,0 +1,60 @@
+{
+  "title": "女生暗示一起住",
+  "hook": "女生说想找人合租，他这样回 🏠",
+  "chat_title": "和女神的聊天",
+  "left": {
+    "avatar": "🏡",
+    "bg": "#FAEBD7"
+  },
+  "right": {
+    "avatar": "💡",
+    "bg": "#F0E68C"
+  },
+  "bgm": "scheming",
+  "messages": [
+    {
+      "side": "left",
+      "text": "最近想换房子"
+    },
+    {
+      "side": "right",
+      "text": "找好了吗"
+    },
+    {
+      "side": "left",
+      "text": "想找个靠谱的合租"
+    },
+    {
+      "side": "right",
+      "text": "我啊，我贼靠谱"
+    },
+    {
+      "side": "left",
+      "meme": "smug"
+    },
+    {
+      "side": "right",
+      "text": "每月只要500",
+      "typing": true
+    },
+    {
+      "side": "left",
+      "text": "你认真的？"
+    },
+    {
+      "side": "right",
+      "text": "包水电，但不管饭",
+      "punch": true,
+      "sfx": "dun"
+    },
+    {
+      "side": "left",
+      "text": "合着你是房东啊",
+      "sfx": "damage"
+    },
+    {
+      "side": "right",
+      "text": "那加200包早饭"
+    }
+  ]
+}

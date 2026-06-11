@@ -1,0 +1,67 @@
+{
+  "title": "奶茶管制",
+  "hook": "让直男带杯奶茶，他带来了分配制😰",
+  "chat_title": "和脑回路男友的日常",
+  "left": {
+    "avatar": "👩",
+    "bg": "#FFD1DC"
+  },
+  "right": {
+    "avatar": "🐒",
+    "bg": "#C1E1C1"
+  },
+  "bgm": "goofy",
+  "messages": [
+    {
+      "side": "left",
+      "text": "下课帮我带杯奶茶，渴死了"
+    },
+    {
+      "side": "right",
+      "text": "收到，多大杯？"
+    },
+    {
+      "side": "left",
+      "text": "大杯就行"
+    },
+    {
+      "side": "right",
+      "text": "好，等着"
+    },
+    {
+      "side": "left",
+      "meme": "shock"
+    },
+    {
+      "side": "left",
+      "text": "这是啥？桶装水？"
+    },
+    {
+      "side": "right",
+      "text": "20升珍珠奶茶桶，够了不？"
+    },
+    {
+      "side": "left",
+      "text": "我一个人怎么喝！"
+    },
+    {
+      "side": "right",
+      "text": "我带了分杯器和号码牌",
+      "punch": true,
+      "sfx": "boom"
+    },
+    {
+      "side": "right",
+      "text": "每人限领一杯，加珍珠另加2块"
+    },
+    {
+      "side": "left",
+      "text": "你开店呢？"
+    },
+    {
+      "side": "right",
+      "text": "已经排到14号了，你插队不太好吧",
+      "sfx": "vl_wudi"
+    }
+  ]
+}

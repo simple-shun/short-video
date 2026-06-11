@@ -1,0 +1,31 @@
+{
+  "title": "彩礼反转新娘是小芳",
+  "hook": "彩礼还没谈完，他先结婚了🤯",
+  "chat_title": "未婚妻（暂定）",
+  "left":  { "avatar": "assets/images/avatar_gf.png", "bg": "#ffd6e7", "voice": "zh-CN-XiaoyiNeural", "rate": "+35%", "pitch": "+25Hz" },
+  "right": { "avatar": "assets/images/avatar_bf.png", "bg": "#c9e4ff", "voice": "zh-CN-YunjianNeural", "rate": "+28%" },
+  "time_label": "晚上 11:24",
+  "bgm": "sneaky",
+  "bgm_tempo": 1.2,
+  "pad_after_audio": 220,
+  "image_dwell": 1200,
+  "end_hold": 1500,
+  "endcard": "关注我，下集她妈杀过来了🔥",
+  "messages": [
+    { "side": "left",  "text": "宝，我妈说彩礼38万8" },
+    { "side": "right", "text": "妥了，再给你添8千8" },
+    { "side": "left",  "text": "我弟还差台奔驰大G呢" },
+    { "side": "right", "text": "嗯呐，粉色的，已安排" },
+    { "side": "left",  "text": "婚礼酒席全你家包了哦" },
+    { "side": "right", "text": "应该的，金箔喜糖整上" },
+    { "side": "left",  "image": "assets/memes/smug/xiongmaotou_smug_1.jpg" },
+    { "side": "left",  "text": "我妈说房本只能写我名" },
+    { "side": "right", "text": "都听你的，都准备好了", "typing": true },
+    { "side": "right", "image": "assets/images/wedding_photo.png", "punch": true, "sfx": "dun", "pause": 300 },
+    { "side": "right", "text": "正办着呢，新娘是小芳", "sfx": "suona" },
+    { "side": "right", "text": "你妈条件那么好，留着配首富吧" },
+    { "side": "right", "text": "随礼不？给你妈留个上座" },
+    { "side": "left",  "text": "？？？", "sfx": "awkward", "pause": 400 },
+    { "side": "left",  "image": "assets/memes/angry/xianzhuo_angry_3.jpg" }
+  ]
+}

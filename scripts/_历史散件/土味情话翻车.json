@@ -1,0 +1,62 @@
+{
+  "title": "土味情话翻车",
+  "hook": "当直男学会土味情话 💀",
+  "chat_title": "和女神的聊天",
+  "left": {
+    "avatar": "😍",
+    "bg": "#FFB6C1"
+  },
+  "right": {
+    "avatar": "😎",
+    "bg": "#87CEEB"
+  },
+  "bgm": "silly",
+  "messages": [
+    {
+      "side": "right",
+      "text": "在吗",
+      "typing": true
+    },
+    {
+      "side": "left",
+      "text": "？"
+    },
+    {
+      "side": "right",
+      "text": "你会弹吉他吗"
+    },
+    {
+      "side": "left",
+      "text": "不会啊"
+    },
+    {
+      "side": "right",
+      "meme": "scheme"
+    },
+    {
+      "side": "right",
+      "text": "那你怎么拨动我心弦",
+      "sfx": "whoosh"
+    },
+    {
+      "side": "left",
+      "text": "……"
+    },
+    {
+      "side": "left",
+      "text": "我是用菜刀剁的",
+      "punch": true,
+      "sfx": "dun"
+    },
+    {
+      "side": "right",
+      "text": "？？？",
+      "sfx": "damage"
+    },
+    {
+      "side": "right",
+      "text": "哈哈哈哈哈哈",
+      "sfx": "laugh_duck"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "title": "直男睡前撩妹",
+  "hook": "睡前互撩，他一句话把天聊死 🛌",
+  "chat_title": "和女神的聊天",
+  "left": {
+    "avatar": "🌙",
+    "bg": "#D8BFD8"
+  },
+  "right": {
+    "avatar": "🧸",
+    "bg": "#FFA07A"
+  },
+  "bgm": "silly",
+  "messages": [
+    {
+      "side": "left",
+      "text": "晚安，梦里见"
+    },
+    {
+      "side": "right",
+      "text": "你负责做梦就行"
+    },
+    {
+      "side": "left",
+      "text": "那你呢"
+    },
+    {
+      "side": "right",
+      "text": "我负责把你丑醒",
+      "typing": true
+    },
+    {
+      "side": "left",
+      "meme": "shock"
+    },
+    {
+      "side": "left",
+      "text": "？？？下头"
+    },
+    {
+      "side": "right",
+      "text": "打错了，是叫醒",
+      "punch": true,
+      "sfx": "damage"
+    },
+    {
+      "side": "left",
+      "text": "绝交一小时",
+      "sfx": "awkward"
+    },
+    {
+      "side": "right",
+      "text": "好的，五十九分钟后见",
+      "sfx": "laugh_baby"
+    }
+  ]
+}

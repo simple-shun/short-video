@@ -1,0 +1,72 @@
+{
+  "title": "不放香菜就报警",
+  "hook": "备注写“不放香菜就报警”😱",
+  "chat_title": "和麻辣烫老板的聊天",
+  "left": {
+    "avatar": "🐼",
+    "bg": "#FCE4EC"
+  },
+  "right": {
+    "avatar": "🍲",
+    "bg": "#FFF3E0"
+  },
+  "bgm": "silly",
+  "messages": [
+    {
+      "side": "left",
+      "text": "老板备注看到了吗"
+    },
+    {
+      "side": "right",
+      "text": "看到了不放香菜嘛",
+      "typing": true
+    },
+    {
+      "side": "left",
+      "text": "对千万别放求求了"
+    },
+    {
+      "side": "right",
+      "text": "放心一片叶子没放"
+    },
+    {
+      "side": "left",
+      "meme": "smug"
+    },
+    {
+      "side": "left",
+      "text": "那咋铺了一层葱花？？",
+      "punch": true,
+      "sfx": "dun"
+    },
+    {
+      "side": "right",
+      "text": "你只说不放香菜啊",
+      "sfx": "awkward"
+    },
+    {
+      "side": "left",
+      "text": "我葱过敏会死的…",
+      "sfx": "fail"
+    },
+    {
+      "side": "right",
+      "text": "哈哈哈哈哈哈哈",
+      "sfx": "laugh"
+    },
+    {
+      "side": "left",
+      "text": "你还笑我报警了",
+      "sfx": "boom"
+    },
+    {
+      "side": "right",
+      "text": "别别我给你重做"
+    },
+    {
+      "side": "left",
+      "text": "那我要多放蒜泥",
+      "sfx": "suona"
+    }
+  ]
+}

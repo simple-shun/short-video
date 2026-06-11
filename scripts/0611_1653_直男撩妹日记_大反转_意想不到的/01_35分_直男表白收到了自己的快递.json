@@ -1,0 +1,86 @@
+{
+  "title": "直男表白收到了自己的快递",
+  "hook": "他表白成功了但有点不对劲🎁",
+  "chat_title": "暗恋对象周周",
+  "left": {
+    "avatar": "🌸",
+    "bg": "#fff0f5"
+  },
+  "right": {
+    "avatar": "📦",
+    "bg": "#e8f4ff"
+  },
+  "bgm": "sneaky",
+  "messages": [
+    {
+      "side": "right",
+      "text": "周周我有句话憋了好久"
+    },
+    {
+      "side": "left",
+      "text": "说吧"
+    },
+    {
+      "side": "right",
+      "text": "我喜欢你"
+    },
+    {
+      "side": "right",
+      "text": "从上学期图书馆就喜欢了"
+    },
+    {
+      "side": "left",
+      "text": "收到了",
+      "sfx": "ding"
+    },
+    {
+      "side": "right",
+      "meme": "love"
+    },
+    {
+      "side": "right",
+      "text": "那我们可以在一起吗"
+    },
+    {
+      "side": "left",
+      "text": "签收了不代表同意哦"
+    },
+    {
+      "side": "right",
+      "meme": "confused"
+    },
+    {
+      "side": "right",
+      "text": "？？什么意思"
+    },
+    {
+      "side": "left",
+      "text": "我是快递站的",
+      "punch": true,
+      "sfx": "boom"
+    },
+    {
+      "side": "left",
+      "text": "你的手机在这里签收一下",
+      "sfx": "goose"
+    },
+    {
+      "side": "right",
+      "meme": "shock"
+    },
+    {
+      "side": "right",
+      "text": "那周周是谁"
+    },
+    {
+      "side": "left",
+      "text": "上一个取件的她手机也忘拿了",
+      "sfx": "laugh_duck"
+    },
+    {
+      "side": "right",
+      "text": "我现在的心情比手机更需要被找回来",
+      "sfx": "damage"
+    }
+  ]
+}

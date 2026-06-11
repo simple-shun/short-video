@@ -1,0 +1,65 @@
+{
+  "title": "问她有没有男朋友",
+  "hook": "问她有没男朋友，她回答绝了 🔥",
+  "chat_title": "和女神的聊天",
+  "left": {
+    "avatar": "😏",
+    "bg": "#FFE4B5"
+  },
+  "right": {
+    "avatar": "🐒",
+    "bg": "#98FB98"
+  },
+  "bgm": "upbeat",
+  "messages": [
+    {
+      "side": "right",
+      "text": "你有男朋友吗"
+    },
+    {
+      "side": "left",
+      "text": "你猜"
+    },
+    {
+      "side": "right",
+      "text": "没有"
+    },
+    {
+      "side": "left",
+      "text": "再猜"
+    },
+    {
+      "side": "right",
+      "text": "有了？"
+    },
+    {
+      "side": "left",
+      "text": "你再猜"
+    },
+    {
+      "side": "right",
+      "meme": "tired"
+    },
+    {
+      "side": "right",
+      "text": "到底有没有",
+      "typing": true
+    },
+    {
+      "side": "left",
+      "text": "薛定谔的男朋友",
+      "punch": true,
+      "sfx": "bruh"
+    },
+    {
+      "side": "right",
+      "text": "那我就是那只猫",
+      "sfx": "laugh_baby"
+    },
+    {
+      "side": "left",
+      "text": "？？？",
+      "sfx": "huh"
+    }
+  ]
+}

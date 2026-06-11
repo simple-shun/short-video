@@ -1,0 +1,86 @@
+{
+  "title": "改星座撩妹",
+  "hook": "他为了追我，把星座法改了…",
+  "chat_title": "和那个观星的朋友",
+  "left": {
+    "avatar": "😒",
+    "bg": "#FFE4E1"
+  },
+  "right": {
+    "avatar": "🔭",
+    "bg": "#E0F7FA"
+  },
+  "bgm": "silly",
+  "messages": [
+    {
+      "side": "left",
+      "text": "我们真的不适合，星座相克"
+    },
+    {
+      "side": "right",
+      "text": "别急，我帮你改"
+    },
+    {
+      "side": "left",
+      "text": "？改什么"
+    },
+    {
+      "side": "right",
+      "text": "改星座，你等我打个电话",
+      "typing": true
+    },
+    {
+      "side": "right",
+      "text": "搞定了。从今天起你是巨蟹座",
+      "sfx": "ding"
+    },
+    {
+      "side": "left",
+      "text": "？？你疯了？"
+    },
+    {
+      "side": "right",
+      "text": "刚联系了宇宙民政局，给你调了档"
+    },
+    {
+      "side": "left",
+      "text": "宇宙民政局是什么鬼"
+    },
+    {
+      "side": "right",
+      "meme": "scheme"
+    },
+    {
+      "side": "right",
+      "text": "文件发你了，萝卜章公证件"
+    },
+    {
+      "side": "left",
+      "text": "这章是你自己刻的吧……"
+    },
+    {
+      "side": "right",
+      "text": "别瞎说，局长月老亲自批的",
+      "punch": true,
+      "sfx": "dun"
+    },
+    {
+      "side": "left",
+      "text": "月老？！"
+    },
+    {
+      "side": "right",
+      "text": "对，我兼职月老，牵线500对，你是第501个"
+    },
+    {
+      "side": "right",
+      "text": "现在咱俩绝配，巨蟹配天蝎，命中率99%",
+      "sfx": "tada"
+    },
+    {
+      "side": "right",
+      "text": "下凡一趟不容易，珍惜这段缘",
+      "sfx": "goose"
+    }
+  ]
+}

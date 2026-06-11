@@ -1,0 +1,86 @@
+{
+  "title": "直男送礼物送出去一栋楼",
+  "hook": "他送了女朋友一个礼物差点被分手💍",
+  "chat_title": "女朋友大人",
+  "left": {
+    "avatar": "👸",
+    "bg": "#ffe8f0"
+  },
+  "right": {
+    "avatar": "🪨",
+    "bg": "#e0f0ff"
+  },
+  "bgm": "chaos",
+  "messages": [
+    {
+      "side": "left",
+      "text": "你知道我生日是啥时候吗"
+    },
+    {
+      "side": "right",
+      "text": "知道"
+    },
+    {
+      "side": "left",
+      "text": "那你准备送我什么"
+    },
+    {
+      "side": "right",
+      "text": "惊喜"
+    },
+    {
+      "side": "left",
+      "meme": "scheme"
+    },
+    {
+      "side": "left",
+      "text": "给个提示嘛"
+    },
+    {
+      "side": "right",
+      "text": "比较大",
+      "sfx": "drumroll"
+    },
+    {
+      "side": "left",
+      "text": "多大"
+    },
+    {
+      "side": "right",
+      "text": "32层",
+      "punch": true,
+      "sfx": "dun"
+    },
+    {
+      "side": "left",
+      "meme": "shock"
+    },
+    {
+      "side": "left",
+      "text": "啊？？？你买楼了？？"
+    },
+    {
+      "side": "right",
+      "text": "没有"
+    },
+    {
+      "side": "right",
+      "text": "我在32层的蛋糕店订了个蛋糕",
+      "sfx": "bruh"
+    },
+    {
+      "side": "right",
+      "text": "电梯坏了要爬楼梯所以提前告诉你练体力",
+      "sfx": "goose"
+    },
+    {
+      "side": "left",
+      "meme": "angry"
+    },
+    {
+      "side": "left",
+      "text": "你的惊喜我收到了，分手协议我也准备好了",
+      "sfx": "suona"
+    }
+  ]
+}

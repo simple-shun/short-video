@@ -1,0 +1,99 @@
+{
+  "title": "直男情话翻译机",
+  "hook": "直男把骂人翻译成情话😭",
+  "chat_title": "女神（建议拉黑）",
+  "left": {
+    "avatar": "👩",
+    "bg": "#FFB6C1"
+  },
+  "right": {
+    "avatar": "🤡",
+    "bg": "#87CEEB"
+  },
+  "bgm": "silly",
+  "messages": [
+    {
+      "side": "left",
+      "text": "你有病吧"
+    },
+    {
+      "side": "right",
+      "text": "病字里有个丙",
+      "sfx": "goose"
+    },
+    {
+      "side": "right",
+      "text": "丙是天干第三位"
+    },
+    {
+      "side": "right",
+      "text": "代表你在我心里排第三"
+    },
+    {
+      "side": "left",
+      "text": "？？前两位是谁"
+    },
+    {
+      "side": "right",
+      "text": "第一是昨天的你",
+      "sfx": "ding"
+    },
+    {
+      "side": "right",
+      "text": "第二是明天的你"
+    },
+    {
+      "side": "left",
+      "meme": "confused"
+    },
+    {
+      "side": "left",
+      "text": "那你给我滚"
+    },
+    {
+      "side": "right",
+      "text": "滚是三点水",
+      "typing": true
+    },
+    {
+      "side": "right",
+      "text": "你对我的思念如滚滚流水往东流",
+      "punch": true,
+      "sfx": "dun"
+    },
+    {
+      "side": "left",
+      "text": "我让你去死你也能翻译？"
+    },
+    {
+      "side": "right",
+      "text": "死字下面是匕首插心",
+      "sfx": "goose"
+    },
+    {
+      "side": "right",
+      "text": "证明你已经刺穿了我的心脏",
+      "sfx": "laugh_evil"
+    },
+    {
+      "side": "left",
+      "meme": "angry"
+    },
+    {
+      "side": "left",
+      "text": "你就是个神经病我今天算看透了",
+      "sfx": "damage"
+    },
+    {
+      "side": "right",
+      "text": "神经是人体最敏感的地方",
+      "punch": true,
+      "sfx": "boom"
+    },
+    {
+      "side": "right",
+      "text": "谢谢你说我是你最敏感的那根神经🥰",
+      "sfx": "laugh_duck"
+    }
+  ]
+}

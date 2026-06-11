@@ -1,0 +1,65 @@
+{
+  "title": "女生说肚子疼",
+  "hook": "女生说肚子疼，直男竟开药方 💊",
+  "chat_title": "和女神的聊天",
+  "left": {
+    "avatar": "🤒",
+    "bg": "#F5DEB3"
+  },
+  "right": {
+    "avatar": "🩺",
+    "bg": "#B0C4DE"
+  },
+  "bgm": "sad",
+  "messages": [
+    {
+      "side": "left",
+      "text": "肚子疼……"
+    },
+    {
+      "side": "right",
+      "text": "多喝热水"
+    },
+    {
+      "side": "left",
+      "text": "不想喝"
+    },
+    {
+      "side": "right",
+      "text": "那就吃药"
+    },
+    {
+      "side": "left",
+      "meme": "tired"
+    },
+    {
+      "side": "right",
+      "text": "布洛芬，一次一粒",
+      "typing": true
+    },
+    {
+      "side": "left",
+      "text": "没力气去买"
+    },
+    {
+      "side": "right",
+      "text": "给你跑腿叫了",
+      "punch": true,
+      "sfx": "ding"
+    },
+    {
+      "side": "left",
+      "text": "啊？谢谢"
+    },
+    {
+      "side": "right",
+      "text": "记得五星好评",
+      "sfx": "laugh_duck"
+    },
+    {
+      "side": "left",
+      "text": "你是美团骑手吧",
+      "sfx": "damage"
+    }
+  ]
+}

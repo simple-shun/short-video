@@ -1,0 +1,59 @@
+{
+  "title": "灭火约会",
+  "hook": "我说发烧了，他带着灭火器来敲门🚒",
+  "chat_title": "我和AI的对话（人机恋）",
+  "left": {
+    "avatar": "🤒",
+    "bg": "#FFDAB9"
+  },
+  "right": {
+    "avatar": "🧯",
+    "bg": "#CD5C5C"
+  },
+  "bgm": "upbeat",
+  "messages": [
+    {
+      "side": "left",
+      "text": "我好像发烧了，38度5"
+    },
+    {
+      "side": "right",
+      "text": "多少度？熟了没？"
+    },
+    {
+      "side": "left",
+      "text": "你能不能正经点"
+    },
+    {
+      "side": "right",
+      "text": "等等，我马上到"
+    },
+    {
+      "side": "left",
+      "meme": "shock"
+    },
+    {
+      "side": "left",
+      "text": "你拿灭火器干嘛？？"
+    },
+    {
+      "side": "right",
+      "text": "怕你烧着，先物理降温"
+    },
+    {
+      "side": "left",
+      "text": "我是发烧不是着火！",
+      "sfx": "damage"
+    },
+    {
+      "side": "right",
+      "text": "顺带测了下你脑回路，也短路了",
+      "punch": true,
+      "sfx": "boom"
+    },
+    {
+      "side": "right",
+      "text": "灭火器押金200，现金还是扫码"
+    }
+  ]
+}

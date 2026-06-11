@@ -1,0 +1,57 @@
+{
+  "title": "女生发照片求夸",
+  "hook": "女友发美照，他夸得我想报警 🚨",
+  "chat_title": "和女神的聊天",
+  "left": {
+    "avatar": "✨",
+    "bg": "#FFF0F5"
+  },
+  "right": {
+    "avatar": "🤖",
+    "bg": "#D3D3D3"
+  },
+  "bgm": "sneaky",
+  "messages": [
+    {
+      "side": "left",
+      "text": "今天自拍好看吗"
+    },
+    {
+      "side": "right",
+      "text": "美颜开挺大"
+    },
+    {
+      "side": "left",
+      "text": "我没有！"
+    },
+    {
+      "side": "right",
+      "text": "那背景墙都歪了"
+    },
+    {
+      "side": "left",
+      "meme": "shock"
+    },
+    {
+      "side": "right",
+      "text": "不过审美不错",
+      "typing": true
+    },
+    {
+      "side": "right",
+      "text": "墙是S形的，艺术",
+      "punch": true,
+      "sfx": "goose"
+    },
+    {
+      "side": "left",
+      "text": "你才是S形！",
+      "sfx": "laugh_squid"
+    },
+    {
+      "side": "right",
+      "text": "那你是美",
+      "sfx": "laugh_evil"
+    }
+  ]
+}

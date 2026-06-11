@@ -1,0 +1,81 @@
+{
+  "title": "女神怼相亲",
+  "hook": "相亲男问我配不配他😅",
+  "chat_title": "相亲对象（档案馆）",
+  "left": {
+    "avatar": "💅",
+    "bg": "#98FB98"
+  },
+  "right": {
+    "avatar": "🧢",
+    "bg": "#B0C4DE"
+  },
+  "bgm": "scheming",
+  "messages": [
+    {
+      "side": "right",
+      "text": "我年薪50万，你觉得自己配吗"
+    },
+    {
+      "side": "left",
+      "text": "不配",
+      "sfx": "ding"
+    },
+    {
+      "side": "right",
+      "text": "？你很诚实啊"
+    },
+    {
+      "side": "left",
+      "text": "我年薪80万",
+      "punch": true,
+      "sfx": "dun"
+    },
+    {
+      "side": "right",
+      "meme": "shock"
+    },
+    {
+      "side": "right",
+      "text": "那……那你找我干嘛"
+    },
+    {
+      "side": "left",
+      "text": "我妈让我来的"
+    },
+    {
+      "side": "left",
+      "text": "她说你爸是她年轻时候的备胎"
+    },
+    {
+      "side": "left",
+      "text": "她想把这段孽缘延续到下一代",
+      "sfx": "suona"
+    },
+    {
+      "side": "right",
+      "meme": "confused"
+    },
+    {
+      "side": "right",
+      "text": "这……这不合理吧",
+      "sfx": "bruh"
+    },
+    {
+      "side": "left",
+      "text": "合理的",
+      "typing": true
+    },
+    {
+      "side": "left",
+      "text": "你爸当年也问过我妈：你觉得自己配吗",
+      "punch": true,
+      "sfx": "boom"
+    },
+    {
+      "side": "left",
+      "text": "一模一样的话，你们家祖传的？",
+      "sfx": "laugh_evil"
+    }
+  ]
+}

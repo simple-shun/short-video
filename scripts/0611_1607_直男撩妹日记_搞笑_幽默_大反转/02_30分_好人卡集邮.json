@@ -1,0 +1,61 @@
+{
+  "title": "好人卡集邮",
+  "hook": "被拒后他发朋友圈庆祝，说要凑齐七张😵",
+  "chat_title": "和死直男的尬聊记录",
+  "left": {
+    "avatar": "😐",
+    "bg": "#E8D1D1"
+  },
+  "right": {
+    "avatar": "😎",
+    "bg": "#B0E0E6"
+  },
+  "bgm": "chaos",
+  "messages": [
+    {
+      "side": "left",
+      "text": "你是个好人，但我们不合适"
+    },
+    {
+      "side": "right",
+      "text": "谢谢，我也觉得自己挺好的"
+    },
+    {
+      "side": "left",
+      "meme": "speechless"
+    },
+    {
+      "side": "right",
+      "text": "[朋友圈截图] 第5张好人卡到手✨"
+    },
+    {
+      "side": "left",
+      "text": "你有病？这还发出来"
+    },
+    {
+      "side": "right",
+      "text": "对啊，你有药吗",
+      "sfx": "laugh_duck"
+    },
+    {
+      "side": "left",
+      "text": "……没救了"
+    },
+    {
+      "side": "right",
+      "text": "哎有人评论有药了",
+      "punch": true,
+      "sfx": "drumroll"
+    },
+    {
+      "side": "right",
+      "text": "我问他几盒，他说三盒一疗程",
+      "sfx": "goose"
+    },
+    {
+      "side": "right",
+      "text": "先买俩疗程试试，支持货到付款吗",
+      "sfx": "vl_nigan"
+    }
+  ]
+}

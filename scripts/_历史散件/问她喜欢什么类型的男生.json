@@ -1,0 +1,56 @@
+{
+  "title": "问她喜欢什么类型的男生",
+  "hook": "问她喜欢什么类型，结果扎心了 💘",
+  "chat_title": "和女神的聊天",
+  "left": {
+    "avatar": "🌸",
+    "bg": "#E6E6FA"
+  },
+  "right": {
+    "avatar": "🐶",
+    "bg": "#90EE90"
+  },
+  "bgm": "tension",
+  "messages": [
+    {
+      "side": "right",
+      "text": "你喜欢什么样的男生"
+    },
+    {
+      "side": "left",
+      "text": "阳光，爱运动"
+    },
+    {
+      "side": "right",
+      "text": "比如呢"
+    },
+    {
+      "side": "left",
+      "text": "彭于晏那种"
+    },
+    {
+      "side": "right",
+      "meme": "confused"
+    },
+    {
+      "side": "right",
+      "text": "我问的是性格"
+    },
+    {
+      "side": "left",
+      "text": "性格最好是哑巴",
+      "punch": true,
+      "sfx": "bruh"
+    },
+    {
+      "side": "right",
+      "text": "……",
+      "sfx": "awkward"
+    },
+    {
+      "side": "left",
+      "text": "开玩笑的啦哈哈哈",
+      "sfx": "laugh"
+    }
+  ]
+}

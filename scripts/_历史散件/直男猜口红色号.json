@@ -1,0 +1,66 @@
+{
+  "title": "直男猜口红色号",
+  "hook": "直男猜口红色号，直接上色卡 🎨",
+  "chat_title": "和女朋友的聊天",
+  "left": {
+    "avatar": "💄",
+    "bg": "#FFC0CB"
+  },
+  "right": {
+    "avatar": "🎨",
+    "bg": "#4682B4"
+  },
+  "bgm": "chaos",
+  "messages": [
+    {
+      "side": "left",
+      "text": "猜我今天涂的什么色"
+    },
+    {
+      "side": "right",
+      "text": "红色？"
+    },
+    {
+      "side": "left",
+      "text": "烂番茄色！"
+    },
+    {
+      "side": "right",
+      "text": "那不就是红色"
+    },
+    {
+      "side": "left",
+      "meme": "angry"
+    },
+    {
+      "side": "right",
+      "text": "给你看个东西",
+      "typing": true
+    },
+    {
+      "side": "right",
+      "text": "[图片]",
+      "typing": true
+    },
+    {
+      "side": "left",
+      "text": "这是啥"
+    },
+    {
+      "side": "right",
+      "text": "潘通色卡，你比一下",
+      "punch": true,
+      "sfx": "dun"
+    },
+    {
+      "side": "left",
+      "text": "分了吧",
+      "sfx": "slap"
+    },
+    {
+      "side": "right",
+      "text": "？我说错了什么",
+      "sfx": "huh"
+    }
+  ]
+}

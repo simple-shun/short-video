@@ -1,0 +1,99 @@
+{
+  "title": "直男问暗号问出了人生阴影",
+  "hook": "他以为找到了女神结果找到了什么👀",
+  "chat_title": "相亲对象（待定）",
+  "left": {
+    "avatar": "🎀",
+    "bg": "#fff3e0"
+  },
+  "right": {
+    "avatar": "🕵️",
+    "bg": "#e8ffe8"
+  },
+  "bgm": "scheming",
+  "messages": [
+    {
+      "side": "right",
+      "text": "你好我是你朋友介绍的"
+    },
+    {
+      "side": "right",
+      "text": "她说你穿红色外套在咖啡店等我"
+    },
+    {
+      "side": "left",
+      "text": "对我在二楼靠窗",
+      "sfx": "ding"
+    },
+    {
+      "side": "right",
+      "text": "好看的哦"
+    },
+    {
+      "side": "left",
+      "text": "谢谢你也不错"
+    },
+    {
+      "side": "right",
+      "text": "我下楼了",
+      "typing": true
+    },
+    {
+      "side": "right",
+      "text": "我穿的黑色羽绒服",
+      "sfx": "drumroll"
+    },
+    {
+      "side": "left",
+      "text": "我看到你了长得挺高的"
+    },
+    {
+      "side": "right",
+      "text": "对！那我过去了"
+    },
+    {
+      "side": "left",
+      "meme": "confused"
+    },
+    {
+      "side": "left",
+      "text": "等等你怎么是个女的",
+      "punch": true,
+      "sfx": "boom"
+    },
+    {
+      "side": "right",
+      "text": "你不也是",
+      "sfx": "goose"
+    },
+    {
+      "side": "left",
+      "text": "你朋友介绍的谁"
+    },
+    {
+      "side": "right",
+      "text": "张伟"
+    },
+    {
+      "side": "left",
+      "text": "我朋友是李伟",
+      "sfx": "bruh"
+    },
+    {
+      "side": "right",
+      "text": "那咖啡我请了",
+      "sfx": "laugh_duck"
+    },
+    {
+      "side": "right",
+      "text": "反正我也单身",
+      "sfx": "vl_wudi"
+    },
+    {
+      "side": "left",
+      "text": "这世界上的伟真的不能再多了",
+      "punch": true,
+      "sfx": "suona"
+    }
+  ]
+}

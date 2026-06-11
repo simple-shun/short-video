@@ -1,0 +1,85 @@
+{
+  "title": "深情撩妹市侩收尾",
+  "hook": "他深情告白最后一句亮了😭",
+  "chat_title": "暗恋的人（努力中）",
+  "left": {
+    "avatar": "🌸",
+    "bg": "#FFE4E1"
+  },
+  "right": {
+    "avatar": "🌚",
+    "bg": "#696969"
+  },
+  "bgm": "sad",
+  "messages": [
+    {
+      "side": "right",
+      "text": "如果有一天全世界都抛弃你"
+    },
+    {
+      "side": "right",
+      "text": "记得来找我"
+    },
+    {
+      "side": "left",
+      "text": "为什么……"
+    },
+    {
+      "side": "right",
+      "text": "因为不管多晚",
+      "typing": true
+    },
+    {
+      "side": "right",
+      "text": "不管多远"
+    },
+    {
+      "side": "right",
+      "text": "我都会在你身边",
+      "sfx": "ding"
+    },
+    {
+      "side": "left",
+      "meme": "love"
+    },
+    {
+      "side": "left",
+      "text": "你……你真的这么想我吗"
+    },
+    {
+      "side": "right",
+      "text": "想的",
+      "sfx": "drumroll"
+    },
+    {
+      "side": "right",
+      "text": "我认识好几个人贩子",
+      "punch": true,
+      "sfx": "boom"
+    },
+    {
+      "side": "right",
+      "text": "到时候跟他们打个招呼，把你买回来"
+    },
+    {
+      "side": "left",
+      "meme": "angry"
+    },
+    {
+      "side": "left",
+      "text": "你是人吗？？？",
+      "sfx": "damage"
+    },
+    {
+      "side": "right",
+      "text": "是的我是人",
+      "sfx": "vl_wudi"
+    },
+    {
+      "side": "right",
+      "text": "而且是一个为了你连人贩子都肯认识的人",
+      "punch": true,
+      "sfx": "laugh_evil"
+    }
+  ]
+}

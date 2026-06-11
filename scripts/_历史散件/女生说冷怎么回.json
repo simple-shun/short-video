@@ -1,0 +1,58 @@
+{
+  "title": "女生说冷怎么回",
+  "hook": "女生说好冷，直男的神回复 🥶",
+  "chat_title": "和暧昧对象的聊天",
+  "left": {
+    "avatar": "🥺",
+    "bg": "#FFDAB9"
+  },
+  "right": {
+    "avatar": "🧑‍💻",
+    "bg": "#ADD8E6"
+  },
+  "bgm": "goofy",
+  "messages": [
+    {
+      "side": "left",
+      "text": "今天好冷啊"
+    },
+    {
+      "side": "right",
+      "text": "多喝热水",
+      "typing": true
+    },
+    {
+      "side": "left",
+      "text": "你就不能抱抱我吗"
+    },
+    {
+      "side": "right",
+      "text": "我胳膊不够长"
+    },
+    {
+      "side": "left",
+      "meme": "tired"
+    },
+    {
+      "side": "right",
+      "text": "但我可以给你个建议",
+      "typing": true
+    },
+    {
+      "side": "right",
+      "text": "你靠暖气片上啊",
+      "punch": true,
+      "sfx": "boom"
+    },
+    {
+      "side": "left",
+      "text": "你比暖气片还铁",
+      "sfx": "damage"
+    },
+    {
+      "side": "right",
+      "text": "哈哈哈那必须",
+      "sfx": "laugh_devil"
+    }
+  ]
+}

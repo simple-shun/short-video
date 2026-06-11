@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>短视频渲染器</title>
+<style>
+/* 设计尺寸 540x960（CSS px），Playwright 用 deviceScaleFactor=2 截出 1080x1920 */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body { width: 540px; height: 960px; overflow: hidden; }
+
+body {
+  background: radial-gradient(120% 90% at 50% 0%, #2a2a35 0%, #15151a 60%, #0d0d10 100%);
+  font-family: -apple-system, 'PingFang SC', 'Helvetica Neue', sans-serif;
+  position: relative;
+}
+
+/* ── 顶部钩子标题 ── */
+.hook {
+  position: absolute;
+  top: 26px; left: 20px; right: 20px;
+  text-align: center;
+  font-size: 38px;
+  font-weight: 900;
+  line-height: 1.25;
+  color: #fff;
+  z-index: 50;
+  text-shadow:
+    -3px -3px 0 #000, 3px -3px 0 #000, -3px 3px 0 #000, 3px 3px 0 #000,
+    0 6px 14px rgba(0,0,0,.6);
+}
+.hook .em { color: #ffd91c; }
+
+/* ── 手机外壳 ── */
+.phone-wrap {
+  position: absolute;
+  top: 150px; left: 50%;
+  width: 430px; height: 760px;
+  margin-left: -215px;
+  /* punch 缩放在这层做 */
+}
+.phone {
+  width: 100%; height: 100%;
+  background: #ededed;
+  border-radius: 48px;
+  border: 11px solid #1c1c1e;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 0 2px #3a3a3e, 0 30px 70px rgba(0,0,0,.85);
+  position: relative;
+}
+/* 灵动岛 */
+.island {
+  position: absolute;
+  top: 11px; left: 50%;
+  transform: translateX(-50%);
+  width: 110px; height: 30px;
+  background: #000;
+  border-radius: 16px;
+  z-index: 100;
+}
+
+/* iOS 状态栏：左时间，右信号/5G/电池 */
+.status-bar {
+  height: 52px;
+  background: #ededed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 30px 0;
+  flex-shrink: 0;
+}
+.sb-time {
+  font-size: 16px;
+  font-weight: 700;
+  color: #000;
+  letter-spacing: .2px;
+  font-variant-numeric: tabular-nums;
+}
+.sb-right { display: flex; align-items: center; gap: 6px; }
+.sb-5g { font-size: 13px; font-weight: 700; color: #000; }
+/* 信号四格 */
+.sb-signal { display: flex; align-items: flex-end; gap: 1.5px; height: 12px; }
+.sb-signal i {
+  width: 3.5px; background: #000; border-radius: 1px; display: block;
+}
+.sb-signal i:nth-child(1) { height: 5px; }
+.sb-signal i:nth-child(2) { height: 7px; }
+.sb-signal i:nth-child(3) { height: 9.5px; }
+.sb-signal i:nth-child(4) { height: 12px; }
+/* 电池 */
+.sb-batt {
+  width: 27px; height: 13px;
+  border: 1.5px solid rgba(0,0,0,.5);
+  border-radius: 4px;
+  position: relative;
+}
+.sb-batt::before {
+  content: ''; position: absolute;
+  left: 1.5px; top: 1.5px; bottom: 1.5px;
+  width: 17px;
+  background: #000; border-radius: 2px;
+}
+.sb-batt::after {
+  content: ''; position: absolute;
+  right: -4.5px; top: 3.5px;
+  width: 2.5px; height: 5px;
+  background: rgba(0,0,0,.5);
+  border-radius: 0 2px 2px 0;
+}
+
+/* 微信导航栏：‹返回+未读  标题  ··· */
+.chat-header {
+  background: #ededed;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  border-bottom: .5px solid #d5d5d5;
+  padding: 0 14px;
+  flex-shrink: 0;
+}
+.nav-left {
+  display: flex; align-items: center;
+  width: 76px; flex-shrink: 0;
+}
+.nav-back {
+  font-size: 26px; color: #111;
+  font-weight: 400; line-height: 1;
+  margin-top: -3px;
+}
+.nav-unread {
+  margin-left: 2px;
+  background: #f2f2f2;
+  border: .5px solid #ddd;
+  color: #111;
+  font-size: 12.5px;
+  padding: 1px 7px;
+  border-radius: 10px;
+}
+.nav-title {
+  flex: 1;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  color: #111;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.nav-more {
+  width: 76px; flex-shrink: 0;
+  text-align: right;
+  font-size: 19px; color: #111;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+}
+
+/* 时间戳（聊天顶部居中灰字） */
+.timestamp {
+  text-align: center;
+  font-size: 13px;
+  color: #b2b2b2;
+  padding: 2px 0 4px;
+}
+
+.messages {
+  flex: 1;
+  overflow: hidden;            /* 滚动由 seek 直接设置 scrollTop */
+  padding: 12px 14px 8px;
+  background: #ededed;
+  position: relative;
+}
+.messages-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.msg-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  visibility: hidden;          /* seek 控制显隐与入场动画 */
+}
+.msg-row.right { flex-direction: row-reverse; }
+
+.avatar {
+  width: 46px; height: 46px;
+  border-radius: 9px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 29px;
+  overflow: hidden;
+  user-select: none;
+}
+.avatar img { width: 100%; height: 100%; object-fit: cover; }
+
+.bubble {
+  max-width: 270px;
+  font-size: 19px;
+  line-height: 1.5;
+  word-break: break-all;
+}
+.bubble.text { padding: 10px 14px; color: #111; position: relative; }
+.msg-row.left  .bubble.text { background: #fff;    border-radius: 6px; }
+.msg-row.right .bubble.text { background: #95ec69; border-radius: 6px; }
+/* 微信式小尾巴：对准头像中线的小三角 */
+.msg-row.left .bubble.text::before {
+  content: ''; position: absolute;
+  left: -4px; top: 16px;
+  width: 9px; height: 9px;
+  background: #fff;
+  transform: rotate(45deg);
+  border-radius: 1.5px;
+}
+.msg-row.right .bubble.text::before {
+  content: ''; position: absolute;
+  right: -4px; top: 16px;
+  width: 9px; height: 9px;
+  background: #95ec69;
+  transform: rotate(45deg);
+  border-radius: 1.5px;
+}
+
+.bubble.image { padding: 0; background: transparent; }
+.bubble.image img {
+  max-width: 220px;
+  max-height: 240px;
+  border-radius: 8px;
+  display: block;
+}
+
+/* 打字指示器（由 seek 控制显隐） */
+.typing-bubble {
+  padding: 12px 16px;
+  border-radius: 6px;
+  background: #fff;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  position: relative;
+}
+.msg-row.right .typing-bubble { background: #95ec69; }
+.msg-row.left .typing-bubble::before {
+  content: ''; position: absolute;
+  left: -4px; top: 16px;
+  width: 9px; height: 9px;
+  background: #fff;
+  transform: rotate(45deg);
+  border-radius: 1.5px;
+}
+.msg-row.right .typing-bubble::before {
+  content: ''; position: absolute;
+  right: -4px; top: 16px;
+  width: 9px; height: 9px;
+  background: #95ec69;
+  transform: rotate(45deg);
+  border-radius: 1.5px;
+}
+.typing-bubble span {
+  width: 8px; height: 8px;
+  background: #aaa;
+  border-radius: 50%;
+  display: block;
+}
+
+.input-bar {
+  background: #f7f7f7;
+  border-top: .5px solid #d5d5d5;
+  padding: 10px 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+.input-bar .input-mock {
+  flex: 1; height: 38px;
+  background: #fff;
+  border-radius: 6px;
+}
+.input-bar svg {
+  width: 29px; height: 29px;
+  stroke: #1a1a1a;
+  stroke-width: 1.7;
+  fill: none;
+  flex-shrink: 0;
+}
+
+.home-line {
+  height: 26px;
+  background: #ededed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.home-line div { width: 120px; height: 5px; background: #333; border-radius: 3px; }
+
+/* 全屏插播（打断聊天的吐槽卡） */
+.cutaway {
+  position: absolute;
+  inset: 0;
+  background: rgba(8, 8, 12, .88);
+  z-index: 200;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 26px;
+  visibility: hidden;
+}
+.cutaway img {
+  max-width: 78%;
+  max-height: 52%;
+  border-radius: 14px;
+  box-shadow: 0 18px 60px rgba(0,0,0,.7);
+}
+.cutaway .caption {
+  max-width: 86%;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 900;
+  line-height: 1.3;
+  color: #ffd91c;
+  text-shadow: -3px -3px 0 #000, 3px -3px 0 #000, -3px 3px 0 #000, 3px 3px 0 #000;
+}
+
+/* 封面（单帧渲染，土味大字报风） */
+.cover {
+  position: absolute;
+  inset: 0;
+  z-index: 300;
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 36px;
+  background:
+    radial-gradient(110% 80% at 50% 30%, rgba(0,0,0,0) 0%, rgba(0,0,0,.55) 100%),
+    repeating-conic-gradient(from 0deg at 50% 36%, #262633 0deg 9deg, #17171f 9deg 18deg);
+}
+.cover .ctitle {
+  max-width: 92%;
+  text-align: center;
+  font-size: 58px;
+  font-weight: 900;
+  line-height: 1.22;
+  color: #ffd91c;
+  text-shadow: -4px -4px 0 #000, 4px -4px 0 #000, -4px 4px 0 #000, 4px 4px 0 #000, 0 10px 24px rgba(0,0,0,.6);
+}
+.cover img {
+  max-width: 72%;
+  max-height: 42%;
+  border: 6px solid #fff;
+  border-radius: 18px;
+  transform: rotate(-3deg);
+  box-shadow: 0 24px 70px rgba(0,0,0,.8);
+}
+.cover .csub {
+  background: #ff2e2e;
+  color: #fff;
+  font-size: 31px;
+  font-weight: 900;
+  padding: 12px 26px;
+  border-radius: 12px;
+  transform: rotate(1.5deg);
+  box-shadow: 0 10px 30px rgba(0,0,0,.5);
+}
+
+/* 结尾贴片 */
+.endcard {
+  position: absolute;
+  bottom: 18px; left: 0; right: 0;
+  text-align: center;
+  font-size: 26px;
+  font-weight: 800;
+  color: #ffd91c;
+  z-index: 50;
+  visibility: hidden;
+  text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+}
+</style>
+</head>
+<body>
+
+<div class="hook" id="hook"></div>
+
+<div class="phone-wrap" id="phoneWrap">
+  <div class="phone">
+    <div class="island"></div>
+    <div class="status-bar">
+      <span class="sb-time">9:41</span>
+      <div class="sb-right">
+        <div class="sb-signal"><i></i><i></i><i></i><i></i></div>
+        <span class="sb-5g">5G</span>
+        <div class="sb-batt"></div>
+      </div>
+    </div>
+    <div class="chat-header">
+      <div class="nav-left"><span class="nav-back">‹</span><span class="nav-unread">23</span></div>
+      <div class="nav-title" id="chatTitle"></div>
+      <div class="nav-more">•••</div>
+    </div>
+    <div class="messages" id="messages"><div class="messages-inner" id="messagesInner"></div></div>
+    <div class="input-bar">
+      <svg viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.5 11.5a6.5 6.5 0 0 0 13 0"/><line x1="12" y1="18" x2="12" y2="21"/></svg>
+      <div class="input-mock"></div>
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="8.6" cy="9.5" r="0.6" fill="#1a1a1a"/><circle cx="15.4" cy="9.5" r="0.6" fill="#1a1a1a"/><path d="M7.5 13.5a5.2 5.2 0 0 0 9 0"/></svg>
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><line x1="12" y1="7.5" x2="12" y2="16.5"/><line x1="7.5" y1="12" x2="16.5" y2="12"/></svg>
+    </div>
+    <div class="home-line"><div></div></div>
+  </div>
+</div>
+
+<div id="cutaways"></div>
+<div class="cover" id="cover"></div>
+<div class="endcard" id="endcard">关注我，下集更炸 🔥</div>
+
+<script>
+/* ═══════════════════════════════════════════════════════════
+   确定性渲染器：window.SV.load(payload) + window.SV.seek(ms)
+   payload = {
+     hook, chatTitle, endcard,
+     left:  { avatar, bg },        // avatar: emoji 或 file:// 图片
+     right: { avatar, bg },
+     messages: [{
+       side: 'left'|'right',
+       text 或 image(file:// 绝对路径),
+       t: 出现时刻 ms,
+       typing_ms: 出现前打字指示时长(0=无),
+       punch: 是否重点强调(缩放+震动)
+     }]
+   }
+   所有动画都是 t 的纯函数，seek 同一时刻必得同一画面。
+   ═══════════════════════════════════════════════════════════ */
+
+const ENTER_MS = 260;       // 消息入场动画时长
+const SCROLL_MS = 320;      // 滚动跟随时长
+const PUNCH_MS = 650;       // punch 特效时长
+const TITLE_MS = 380;       // 标题入场
+
+let P = null;               // payload
+let rows = [];              // 每条消息的 DOM 行
+let typingRows = [];        // 每条消息的打字指示行（按需创建）
+let scrollTargets = [];     // 第 i 条消息出现后的目标 scrollTop
+let cutawayEls = [];        // 全屏插播卡
+let msgBox = null, inner = null, phoneWrap = null;
+
+const clamp01 = u => Math.max(0, Math.min(1, u));
+const easeOut = u => 1 - Math.pow(1 - u, 3);
+// 带回弹的入场
+const easeOutBack = u => { const c = 1.70158; const v = u - 1; return 1 + (c + 1) * v * v * v + c * v * v; };
+
+function makeAvatar(cfg) {
+  const el = document.createElement('div');
+  el.className = 'avatar';
+  el.style.background = cfg.bg || '#ddd';
+  if (cfg.avatar && /^(file|https?):/.test(cfg.avatar)) {
+    const img = document.createElement('img');
+    img.src = cfg.avatar;
+    el.appendChild(img);
+  } else {
+    el.textContent = cfg.avatar || '🙂';
+  }
+  return el;
+}
+
+async function load(payload) {
+  P = payload;
+  msgBox = document.getElementById('messages');
+  inner = document.getElementById('messagesInner');
+  phoneWrap = document.getElementById('phoneWrap');
+
+  document.getElementById('hook').innerHTML = payload.hookHtml || '';
+  if (!payload.hookHtml && payload.hook) document.getElementById('hook').textContent = payload.hook;
+  document.getElementById('chatTitle').textContent = payload.chatTitle || '';
+  document.getElementById('endcard').textContent = payload.endcard || '关注我，下集更炸 🔥';
+  inner.innerHTML = '';
+  rows = []; typingRows = []; scrollTargets = [];
+
+  // 聊天顶部时间戳
+  const ts = document.createElement('div');
+  ts.className = 'timestamp';
+  ts.textContent = payload.timeLabel || '晚上 9:41';
+  inner.appendChild(ts);
+
+  for (const msg of payload.messages) {
+    const side = msg.side === 'right' ? 'right' : 'left';
+    const cfg = payload[side] || {};
+
+    // 打字指示行（仅 typing_ms>0 时创建，位置在消息行之前，同一行高占位切换）
+    let typingRow = null;
+    if (msg.typing_ms > 0) {
+      typingRow = document.createElement('div');
+      typingRow.className = `msg-row ${side}`;
+      typingRow.appendChild(makeAvatar(cfg));
+      const tb = document.createElement('div');
+      tb.className = 'typing-bubble';
+      tb.innerHTML = '<span></span><span></span><span></span>';
+      typingRow.appendChild(tb);
+      typingRow.style.position = 'absolute';   // 不占布局，浮在消息行位置
+      inner.appendChild(typingRow);
+    }
+    typingRows.push(typingRow);
+
+    const row = document.createElement('div');
+    row.className = `msg-row ${side}`;
+    row.appendChild(makeAvatar(cfg));
+
+    const bubble = document.createElement('div');
+    if (msg.image) {
+      bubble.className = 'bubble image';
+      const img = document.createElement('img');
+      img.src = msg.image;
+      bubble.appendChild(img);
+    } else {
+      bubble.className = 'bubble text';
+      bubble.textContent = msg.text || '';
+    }
+    row.appendChild(bubble);
+    inner.appendChild(row);
+    rows.push(row);
+  }
+
+  // 全屏插播卡（每条一个独立节点，提前建好避免 seek 时换 src 闪烁）
+  const cutawaysBox = document.getElementById('cutaways');
+  cutawaysBox.innerHTML = '';
+  cutawayEls = [];
+  for (const c of (payload.cutaways || [])) {
+    const el = document.createElement('div');
+    el.className = 'cutaway';
+    if (c.image) {
+      const img = document.createElement('img');
+      img.src = c.image;
+      el.appendChild(img);
+    }
+    if (c.caption) {
+      const cap = document.createElement('div');
+      cap.className = 'caption';
+      cap.textContent = c.caption;
+      if (c.big) cap.style.fontSize = '54px';   // 开场白用大字
+      el.appendChild(cap);
+    }
+    cutawaysBox.appendChild(el);
+    cutawayEls.push(el);
+  }
+
+  // 等所有图片解码完成，保证测量准确
+  const imgs = [...inner.querySelectorAll('img'), ...cutawaysBox.querySelectorAll('img')];
+  await Promise.all(imgs.map(im => im.decode().catch(() => {})));
+
+  // 逐条测量：第 i 条出现后内容总高 → 目标 scrollTop
+  const boxH = msgBox.clientHeight;
+  const padTop = 12, padBottom = 8;
+  for (let i = 0; i < rows.length; i++) {
+    const r = rows[i];
+    const bottom = r.offsetTop + r.offsetHeight;
+    scrollTargets.push(Math.max(0, bottom + padBottom - boxH + padTop));
+    // 打字行浮在对应消息行的位置
+    if (typingRows[i]) {
+      typingRows[i].style.top = r.offsetTop + 'px';
+      typingRows[i].style.left = '0';
+      typingRows[i].style.right = '0';
+    }
+  }
+  return { ok: true, count: rows.length };
+}
+
+function seek(ms) {
+  // 标题入场
+  const tu = clamp01(ms / TITLE_MS);
+  const hook = document.getElementById('hook');
+  hook.style.transform = `scale(${0.6 + 0.4 * easeOutBack(tu)})`;
+  hook.style.opacity = String(clamp01(tu * 2));
+
+  // 消息显隐 + 入场动画
+  let lastShown = -1;
+  for (let i = 0; i < rows.length; i++) {
+    const m = P.messages[i];
+    const row = rows[i];
+    const tr = typingRows[i];
+
+    if (ms >= m.t) {
+      lastShown = i;
+      row.style.visibility = 'visible';
+      const u = clamp01((ms - m.t) / ENTER_MS);
+      const e = easeOutBack(u);
+      row.style.opacity = String(clamp01(u * 2.5));
+      row.style.transform = `translateY(${(1 - e) * 14}px) scale(${0.92 + 0.08 * e})`;
+      if (tr) tr.style.visibility = 'hidden';
+    } else {
+      row.style.visibility = 'hidden';
+      if (tr) {
+        const show = m.typing_ms > 0 && ms >= m.t - m.typing_ms;
+        tr.style.visibility = show ? 'visible' : 'hidden';
+        if (show) {
+          // 三个点的呼吸动画（确定性）
+          const dots = tr.querySelectorAll('span');
+          for (let d = 0; d < dots.length; d++) {
+            const ph = ((ms / 1100) + d * 0.18) % 1;
+            const on = ph < 0.4 ? ph / 0.4 : Math.max(0, 1 - (ph - 0.4) / 0.4);
+            dots[d].style.opacity = String(0.3 + 0.7 * on);
+            dots[d].style.transform = `scale(${0.8 + 0.4 * on})`;
+          }
+        }
+      }
+    }
+  }
+
+  // 打字指示需要的滚动量（让浮动的 typing 气泡露出视口）
+  const typingNeed = i =>
+    Math.max(0, rows[i].offsetTop + 56 + 8 - msgBox.clientHeight + 12);
+
+  // 滚动：从上一条目标位置插值到当前目标位置
+  let scroll = 0;
+  if (lastShown >= 0) {
+    const m = P.messages[lastShown];
+    let from = lastShown > 0 ? scrollTargets[lastShown - 1] : 0;
+    // 本条带 typing 时，typing 期已提前滚出 typingNeed，插值起点要接上，否则切换帧回跳
+    if (m.typing_ms > 0) from = Math.max(from, typingNeed(lastShown));
+    const to = scrollTargets[lastShown];
+    const u = easeOut(clamp01((ms - m.t) / SCROLL_MS));
+    scroll = from + (to - from) * u;
+  }
+  // 打字指示属于"下一条"，若其位置超出视口，提前滚动露出
+  const next = lastShown + 1;
+  if (next < rows.length) {
+    const nm = P.messages[next];
+    if (nm.typing_ms > 0 && ms >= nm.t - nm.typing_ms) {
+      scroll = Math.max(scroll, typingNeed(next));
+    }
+  }
+  msgBox.scrollTop = scroll;
+
+  // punch：瞬间放大 + 衰减震动
+  let scale = 1, dx = 0, dy = 0;
+  for (let i = 0; i <= lastShown; i++) {
+    const m = P.messages[i];
+    if (!m.punch) continue;
+    const dtp = ms - m.t;
+    if (dtp >= 0 && dtp < PUNCH_MS) {
+      const u = dtp / PUNCH_MS;
+      scale = 1 + 0.13 * Math.exp(-3.2 * u);
+      const amp = 8 * Math.exp(-5 * u);
+      dx = amp * Math.sin(u * 42);
+      dy = amp * 0.6 * Math.sin(u * 55 + 1.3);
+    }
+  }
+  phoneWrap.style.transform = `translate(${dx}px, ${dy}px) scale(${scale})`;
+  phoneWrap.style.transformOrigin = '50% 42%';
+
+  // 全屏插播：在 [t, t+dur) 内显示，弹入 + 尾段淡出
+  for (let ci = 0; ci < cutawayEls.length; ci++) {
+    const c = P.cutaways[ci];
+    const el = cutawayEls[ci];
+    const dt = ms - c.t;
+    if (dt >= 0 && dt < c.dur) {
+      el.style.visibility = 'visible';
+      const uin = clamp01(dt / 220);
+      const uout = clamp01((c.dur - dt) / 160);
+      el.style.opacity = String(Math.min(clamp01(uin * 2), uout));
+      const e = easeOutBack(uin);
+      el.style.transform = `scale(${0.82 + 0.18 * e}) rotate(${-3 + 2 * e}deg)`;
+    } else {
+      el.style.visibility = 'hidden';
+    }
+  }
+
+  // 结尾贴片：最后一条出现 1s 后显示
+  const endcard = document.getElementById('endcard');
+  if (rows.length > 0) {
+    const lastT = P.messages[rows.length - 1].t;
+    const show = ms >= lastT + 1000;
+    endcard.style.visibility = show ? 'visible' : 'hidden';
+    if (show) {
+      const u = clamp01((ms - lastT - 1000) / 300);
+      endcard.style.opacity = String(u);
+      endcard.style.transform = `translateY(${(1 - easeOut(u)) * 16}px)`;
+    }
+  }
+  return true;
+}
+
+/* 封面单帧渲染（与时间轴无关，单独截图用） */
+async function showCover(c) {
+  const el = document.getElementById('cover');
+  el.innerHTML = '';
+  const t = document.createElement('div');
+  t.className = 'ctitle';
+  t.textContent = c.title || '';
+  el.appendChild(t);
+  if (c.image) {
+    const im = document.createElement('img');
+    im.src = c.image;
+    el.appendChild(im);
+    await im.decode().catch(() => {});
+  }
+  if (c.sub) {
+    const s = document.createElement('div');
+    s.className = 'csub';
+    s.textContent = c.sub;
+    el.appendChild(s);
+  }
+  document.getElementById('hook').style.visibility = 'hidden';
+  el.style.visibility = 'visible';
+  return true;
+}
+
+function hideCover() {
+  document.getElementById('cover').style.visibility = 'hidden';
+  document.getElementById('hook').style.visibility = 'visible';
+}
+
+window.SV = { load, seek, showCover, hideCover };
+</script>
+</body>
+</html>
