@@ -1,0 +1,23 @@
+{
+  "mode": "magic",
+  "title": "魔性健身猫",
+  "intro": { "text": "注意看，这只猫练了三年" },
+  "cover": { "title": "这只猫\n练疯了", "sub": "最后一秒绷不住" },
+  "bgm": "chaos",
+  "bgm_tempo": 1.3,
+  "shots": [
+    { "image": "gen:一只肌肉爆炸的橘猫在健身房举巨型杠铃，表情狰狞青筋暴起，鱼眼镜头，过曝闪光灯",
+      "animate": true, "motion_prompt": "肌肉爆炸的橘猫狂吼着把杠铃猛地举过头顶，肌肉颤抖，健身房闪光灯爆闪，镜头微微震动，魔性夸张风格",
+      "dur": 4000, "motion": "drift", "caption": "练！", "narration": "注意它的眼神，已经没有感情了", "sfx": "boom" },
+    { "image": "gen:同一只肌肉橘猫对着镜子亲吻自己的二头肌，背景土味红色放射线，油腻写实风",
+      "motion": "spin_in", "caption": "自恋时刻", "narration": "它说镜子里的才是真正的对手", "sfx": "laugh_evil" },
+    { "image": "gen:肌肉橘猫在跑步机上狂奔，毛发飞舞动作模糊，背景火焰特效，高饱和",
+      "motion": "strobe_zoom", "caption": "燃烧吧", "narration": "时速四十公里，物业已经报警了", "sfx": "suona" },
+    { "image": "gen:肌肉橘猫瘫倒在健身房地板上肚皮朝天，眼神空洞望着天花板，顶光戏剧打光",
+      "motion": "drift", "narration": "但是练完它突然悟了", "sfx": "awkward" },
+    { "image": "gen:超广角俯拍，刚才的健身房其实是个纸箱，橘猫只是一只趴在纸箱里的普通肥猫，旁边散落猫粮",
+      "motion": "pull_back", "caption": "？？？", "narration": "原来这一切都是它的幻想", "sfx": "dun" },
+    { "image": "assets/memes/angry/xiongmaotou_angry_1.gif", "motion": "shake", "caption": "就这？", "narration": "它现在连猫爬架都上不去", "sfx": "bruh", "sticker": "meme:laugh" },
+    { "image": "assets/images/avatar_crazy_m.png", "motion": "glitch", "caption": "关注养猫人", "narration": "明天教它卧推", "sfx": "vl_haha" }
+  ]
+}

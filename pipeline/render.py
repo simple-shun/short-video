@@ -7,7 +7,8 @@ from playwright.sync_api import sync_playwright
 from . import config
 
 
-def render_frames(payload: dict, total_ms: int, frames_dir, cover_path=None):
+def render_frames(payload: dict, total_ms: int, frames_dir, cover_path=None,
+                  renderer_html=None):
     frames_dir.mkdir(parents=True, exist_ok=True)
     n_frames = math.ceil(total_ms / 1000 * config.FPS)
 
@@ -17,7 +18,7 @@ def render_frames(payload: dict, total_ms: int, frames_dir, cover_path=None):
             viewport={"width": config.VIEW_W, "height": config.VIEW_H},
             device_scale_factor=config.SCALE,
         )
-        page.goto(config.RENDERER_HTML.resolve().as_uri())
+        page.goto((renderer_html or config.RENDERER_HTML).resolve().as_uri())
         info = page.evaluate(f"window.SV.load({json.dumps(payload, ensure_ascii=False)})")
         if not info.get("ok"):
             raise RuntimeError(f"渲染器 load 失败: {info}")

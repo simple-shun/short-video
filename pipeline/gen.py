@@ -12,11 +12,16 @@ def main():
     ap.add_argument("--model", default=None,
                     help=f"OpenRouter 模型 id（默认 {config.DEFAULT_MODEL}）")
     ap.add_argument("--no-judge", action="store_true", help="跳过评分（省一次调用）")
+    ap.add_argument("--magic", action="store_true", help="生成魔性短片分镜（5~20s 全屏运镜模式）")
     ap.add_argument("--make", action="store_true", help="生成后直接出片（仅评分≥30的）")
     args = ap.parse_args()
 
-    print(f"▶ 用 {args.model or config.DEFAULT_MODEL} 生成 {args.n} 个段子：{args.topic}")
-    scripts = script_gen.generate(args.topic, n=args.n, model=args.model)
+    kind = "魔性短片分镜" if args.magic else "段子"
+    print(f"▶ 用 {args.model or config.DEFAULT_MODEL} 生成 {args.n} 个{kind}：{args.topic}")
+    if args.magic:
+        scripts = script_gen.generate_magic(args.topic, n=args.n, model=args.model)
+    else:
+        scripts = script_gen.generate(args.topic, n=args.n, model=args.model)
     print(f"  通过校验 {len(scripts)} 个")
 
     # 评分是判别任务，固定用默认便宜模型即可（创作模型由 --model 决定）

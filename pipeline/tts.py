@@ -1,6 +1,7 @@
 """逐条消息 TTS（edge-tts），返回每条的音频文件与时长。"""
 import asyncio
 import re
+from pathlib import Path
 
 import edge_tts
 
@@ -94,6 +95,50 @@ async def _synth_all_async(script, audio_dir):
         results.append((i, path))
     results.sort()
     return [p for _, p in results]
+
+
+def synth_texts(items, audio_dir, prefix="nar"):
+    """通用逐条合成（魔性短片旁白等用）。
+    items: [{"text", "voice"?, "rate"?, "pitch"?}]，voice 可为别名/edge 音色 id，默认 narrator。
+    返回 [(path|None, duration_s)] 与 items 一一对应。
+    """
+    audio_dir = Path(audio_dir)
+
+    async def go():
+        audio_dir.mkdir(parents=True, exist_ok=True)
+        sem = asyncio.Semaphore(4)
+
+        async def work(i, it):
+            text = tts_text(it.get("text", ""))
+            if not text:
+                return i, None
+            v = it.get("voice") or "narrator"
+            cfg = dict(config.VOICES.get(v) or {**config.VOICES["narrator"], "voice": v})
+            for k in ("rate", "pitch"):
+                if it.get(k):
+                    cfg[k] = it[k]
+            raw = audio_dir / f"{prefix}_{i:03d}.raw.mp3"
+            out = audio_dir / f"{prefix}_{i:03d}.wav"
+            async with sem:
+                for attempt in range(3):
+                    try:
+                        await _synth_one(text, cfg, raw)
+                        break
+                    except edge_tts.exceptions.NoAudioReceived:
+                        return i, None
+                    except Exception:
+                        if attempt == 2:
+                            raise
+                        await asyncio.sleep(1.5 * (attempt + 1))
+            media.trim_silence(raw, out)
+            raw.unlink(missing_ok=True)
+            return i, out
+
+        res = await asyncio.gather(*[work(i, it) for i, it in enumerate(items)])
+        return sorted(res)
+
+    paths = asyncio.run(go())
+    return [(p, media.probe_duration(p)) if p else (None, 0.0) for _, p in paths]
 
 
 def synth_script(script: dict, audio_dir):

@@ -10,6 +10,18 @@ from . import config
 BUILTIN_DIR = config.SFX_DIR / "builtin"
 
 
+def gif_to_mp4(src, dst):
+    """动图 GIF → mp4（魔性短片可当动态底片；尺寸取偶防编码报错）。"""
+    Path(dst).parent.mkdir(parents=True, exist_ok=True)
+    subprocess.run(
+        ["ffmpeg", "-y", "-v", "error", "-i", str(src),
+         "-vf", "scale=trunc(iw/2)*2:trunc(ih/2)*2,fps=30",
+         "-pix_fmt", "yuv420p", "-movflags", "+faststart", str(dst)],
+        check=True, capture_output=True,
+    )
+    return Path(dst)
+
+
 def trim_silence(src, dst, head_keep=0.04, tail_keep=0.10):
     """裁掉音频首尾静音（edge-tts 每条自带 ~0.6s 静音，拖节奏）。"""
     af = (

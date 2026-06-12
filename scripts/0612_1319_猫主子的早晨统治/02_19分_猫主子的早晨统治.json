@@ -1,0 +1,53 @@
+{
+  "mode": "magic",
+  "title": "猫主子的早晨统治",
+  "intro": {
+    "text": "注意看，它已经不把你当人了"
+  },
+  "cover": {
+    "title": "猫主子开始统治了",
+    "sub": "你只是它的早饭闹钟"
+  },
+  "bgm": "suona",
+  "shots": [
+    {
+      "image": "gen: 一只橘猫坐在熟睡人类的脸上，屁股精准覆盖口鼻，猫表情高冷鄙视，鱼眼镜头极度变形，高饱和油腻写实风，背景放射状金光爆闪，像皇帝登基",
+      "motion": "punch_in",
+      "caption": "它落座了",
+      "narration": "早上六点，皇帝陛下选好了龙椅",
+      "sfx": "boom",
+      "sticker": "meme:doge"
+    },
+    {
+      "image": "gen: 猫用一只爪子慢慢拨人类眼皮，表情极其认真严肃，像外科医生做手术，过曝白光打侧面，超近景特写，油腻写实，爪子上有一圈神圣光环",
+      "motion": "drift",
+      "caption": "开灯了",
+      "narration": "它说，朕允许你睁眼了",
+      "sfx": "whoosh",
+      "sticker": null
+    },
+    {
+      "image": "gen: 猫站在空猫碗里，仰天长啸，嘴巴张到不科学的夸张程度，背景土味放射线爆炸，碗发出钻石般的耀眼光芒，猫眼里燃烧着复仇的火焰，高饱和癫狂写实",
+      "motion": "shake",
+      "caption": "朕饿了！",
+      "narration": "碗是空的！这是对皇权的挑衅！",
+      "sfx": "dun",
+      "sticker": null
+    },
+    {
+      "image": "gen: 人类颤抖着双手捧着满满一碗猫粮跪地奉上，猫高坐椅背俯视，背景出现虚假的皇宫廊柱，猫头上PS了一顶金色皇冠，土味合成感极强，人类表情卑微到尘埃里",
+      "motion": "pull_back",
+      "caption": "跪下吧",
+      "narration": "它低头嗅了一下，然后走开了",
+      "sfx": "boom",
+      "sticker": null
+    },
+    {
+      "image": "gen: 猫蜷缩在阳光里睡成一个完美的面包形，表情祥和满足，嘴角微微上扬像在笑，镜头拉远显示人类还跪在原地捧着碗，画面分成天堂地狱两半，高饱和暖光vs冷光",
+      "motion": "strobe_zoom",
+      "caption": "朕乏了",
+      "narration": "它已经忘了你，但你永远忘不了它",
+      "sticker": "meme:this_is_fine"
+    }
+  ]
+}

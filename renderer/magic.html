@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>魔性短片渲染器</title>
+<style>
+/* 设计尺寸 540x960（CSS px），Playwright deviceScaleFactor=2 → 1080x1920 */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 540px; height: 960px; overflow: hidden; }
+body { background: #000; font-family: -apple-system, 'PingFang SC', 'Helvetica Neue', sans-serif; position: relative; }
+
+/* ── 画面层：抖音式构图（虚化背景填充 + 主体居中适距） ── */
+.shot {
+  position: absolute;
+  inset: 0;
+  display: none;   /* 用 display 隐藏：子元素的显式 visibility 无法穿透 */
+  overflow: hidden;
+  background: #0a0a0e;
+}
+.shot .bg {
+  position: absolute;
+  inset: -40px;                 /* 放大裁边，模糊后不露黑边 */
+  width: calc(100% + 80px);
+  height: calc(100% + 80px);
+  object-fit: cover;
+  filter: blur(34px) brightness(.45) saturate(1.3);
+}
+.shot .fgwrap {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 70px 36px 200px;     /* 底部留出字幕区 */
+}
+.shot .fg {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 16px;
+  box-shadow: 0 22px 70px rgba(0,0,0,.65);
+  will-change: transform, filter;
+}
+
+/* ── 大字幕层 ── */
+.caption {
+  position: absolute;
+  left: 20px; right: 20px;
+  bottom: 110px;
+  text-align: center;
+  font-size: 56px;
+  font-weight: 900;
+  line-height: 1.2;
+  color: #ffd91c;
+  z-index: 10;
+  visibility: hidden;
+  text-shadow: -4px -4px 0 #000, 4px -4px 0 #000, -4px 4px 0 #000, 4px 4px 0 #000, 0 10px 24px rgba(0,0,0,.6);
+}
+
+/* ── 贴纸层（表情包飞入） ── */
+.sticker {
+  position: absolute;
+  top: 110px; right: 24px;
+  width: 150px;
+  z-index: 15;
+  visibility: hidden;
+  filter: drop-shadow(0 10px 26px rgba(0,0,0,.6));
+}
+.sticker img { width: 100%; border-radius: 12px; }
+
+/* ── 转场白闪 ── */
+.flash {
+  position: absolute;
+  inset: 0;
+  background: #fff;
+  z-index: 20;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* ── 全屏插播（与聊天渲染器同款） ── */
+.cutaway {
+  position: absolute; inset: 0;
+  background: rgba(8,8,12,.88);
+  z-index: 200;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  gap: 26px;
+  visibility: hidden;
+}
+.cutaway img { max-width: 78%; max-height: 52%; border-radius: 14px; box-shadow: 0 18px 60px rgba(0,0,0,.7); }
+.cutaway .ccap {
+  max-width: 86%; text-align: center;
+  font-size: 40px; font-weight: 900; line-height: 1.3;
+  color: #ffd91c;
+  text-shadow: -3px -3px 0 #000, 3px -3px 0 #000, -3px 3px 0 #000, 3px 3px 0 #000;
+}
+
+/* ── 封面（土味大字报） ── */
+.cover {
+  position: absolute; inset: 0; z-index: 300; visibility: hidden;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 36px;
+  background:
+    radial-gradient(110% 80% at 50% 30%, rgba(0,0,0,0) 0%, rgba(0,0,0,.55) 100%),
+    repeating-conic-gradient(from 0deg at 50% 36%, #262633 0deg 9deg, #17171f 9deg 18deg);
+}
+.cover .ctitle {
+  max-width: 92%; text-align: center;
+  font-size: 58px; font-weight: 900; line-height: 1.22;
+  color: #ffd91c;
+  text-shadow: -4px -4px 0 #000, 4px -4px 0 #000, -4px 4px 0 #000, 4px 4px 0 #000, 0 10px 24px rgba(0,0,0,.6);
+}
+.cover img { max-width: 72%; max-height: 42%; border: 6px solid #fff; border-radius: 18px; transform: rotate(-3deg); box-shadow: 0 24px 70px rgba(0,0,0,.8); }
+.cover .csub { background: #ff2e2e; color: #fff; font-size: 31px; font-weight: 900; padding: 12px 26px; border-radius: 12px; transform: rotate(1.5deg); box-shadow: 0 10px 30px rgba(0,0,0,.5); }
+
+/* ── 结尾贴片 ── */
+.endcard {
+  position: absolute;
+  bottom: 26px; left: 0; right: 0;
+  text-align: center;
+  font-size: 27px; font-weight: 800;
+  color: #ffd91c;
+  z-index: 50;
+  visibility: hidden;
+  text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+}
+</style>
+</head>
+<body>
+
+<div id="shots"></div>
+<div id="cutaways"></div>
+<div class="flash" id="flash"></div>
+<div class="cover" id="cover"></div>
+<div class="endcard" id="endcard"></div>
+
+<script>
+/* ═══════════════════════════════════════════════════════════
+   魔性短片确定性渲染器：window.SV.load(payload) + seek(ms)
+   payload.shots[i] 用 image 或 video（file URI）做底片：
+     { t, dur, image|video, motion, caption, sticker }
+   video 底片用 currentTime 逐帧定位（等 seeked），保持确定性；
+   不足镜头时长自动循环。
+   ═══════════════════════════════════════════════════════════ */
+const FLASH_MS = 90;
+const CAPTION_IN = 240;
+const STICKER_IN = 380;
+
+let P = null;
+let shotEls = [], capEls = [], stkEls = [], cutawayEls = [];
+let mediaPairs = [];   // 每镜头 [bgEl, fgEl]（video 时需要逐帧 seek）
+
+const clamp01 = u => Math.max(0, Math.min(1, u));
+const easeOut = u => 1 - Math.pow(1 - u, 3);
+const easeOutBack = u => { const c = 1.70158; const v = u - 1; return 1 + (c + 1) * v * v * v + c * v * v; };
+const hash01 = n => { const x = Math.sin(n * 7919.31) * 43758.5453; return x - Math.floor(x); };
+
+/* ── 运镜预设（作用于居中的主体 fg） ── */
+const MOTIONS = {
+  punch_in(dt, dur) {
+    const u = easeOut(clamp01(dt / Math.min(500, dur * 0.4)));
+    return { transform: `scale(${1 + 0.18 * u})` };
+  },
+  pull_back(dt) {
+    const u = easeOut(clamp01(dt / 300));
+    return { transform: `scale(${1.32 - 0.32 * u})` };
+  },
+  shake(dt) {
+    const u = clamp01(dt / 650);
+    const amp = 10 * Math.exp(-4.2 * u);
+    const dx = amp * Math.sin(dt * 0.09);
+    const dy = amp * 0.7 * Math.sin(dt * 0.117 + 1.3);
+    return { transform: `translate(${dx}px, ${dy}px) scale(1.05)` };
+  },
+  spin_in(dt) {
+    const e = easeOutBack(clamp01(dt / 380));
+    return { transform: `rotate(${-10 + 10 * e}deg) scale(${1.14 - 0.14 * e})` };
+  },
+  drift(dt, dur) {
+    const u = dt / Math.max(dur, 1);
+    return { transform: `translateX(${-10 + 20 * u}px) scale(${1.04 + 0.04 * Math.sin(u * Math.PI)})` };
+  },
+  strobe_zoom(dt) {
+    const step = Math.floor(dt / 330) % 3;
+    return { transform: `scale(${1 + 0.06 * step})` };
+  },
+  glitch(dt) {
+    const win = Math.floor(dt / 480);
+    const inGlitch = (dt % 480) < 90;
+    if (!inGlitch) return { transform: 'scale(1.02)', filter: 'none' };
+    const dx = (hash01(win) - 0.5) * 24;
+    const dy = (hash01(win + 99) - 0.5) * 16;
+    const hue = Math.floor(hash01(win + 7) * 300);
+    return {
+      transform: `translate(${dx}px, ${dy}px) scale(1.05)`,
+      filter: `hue-rotate(${hue}deg) saturate(2.2) contrast(1.25)`,
+    };
+  },
+};
+
+function makeMedia(src, isVideo, cls) {
+  let el;
+  if (isVideo) {
+    el = document.createElement('video');
+    el.src = src;
+    el.muted = true;
+    el.preload = 'auto';
+  } else {
+    el = document.createElement('img');
+    el.src = src;
+  }
+  el.className = cls;
+  return el;
+}
+
+async function load(payload) {
+  P = payload;
+  document.getElementById('endcard').textContent = payload.endcard || '关注我，下集更癫 🤪';
+
+  const shotsBox = document.getElementById('shots');
+  shotsBox.innerHTML = '';
+  shotEls = []; capEls = []; stkEls = []; mediaPairs = [];
+
+  for (const s of (payload.shots || [])) {
+    const isVideo = !!s.video;
+    const src = s.video || s.image;
+
+    const el = document.createElement('div');
+    el.className = 'shot';
+
+    const bg = makeMedia(src, isVideo, 'bg');
+    el.appendChild(bg);
+    const wrap = document.createElement('div');
+    wrap.className = 'fgwrap';
+    const fg = makeMedia(src, isVideo, 'fg');
+    wrap.appendChild(fg);
+    el.appendChild(wrap);
+    mediaPairs.push(isVideo ? [bg, fg] : null);
+
+    let cap = null;
+    if (s.caption) {
+      cap = document.createElement('div');
+      cap.className = 'caption';
+      cap.textContent = s.caption;
+      el.appendChild(cap);
+    }
+    capEls.push(cap);
+
+    let stk = null;
+    if (s.sticker) {
+      stk = document.createElement('div');
+      stk.className = 'sticker';
+      const si = document.createElement('img');
+      si.src = s.sticker;
+      stk.appendChild(si);
+      el.appendChild(stk);
+    }
+    stkEls.push(stk);
+
+    shotsBox.appendChild(el);
+    shotEls.push(el);
+  }
+
+  // 插播
+  const cutawaysBox = document.getElementById('cutaways');
+  cutawaysBox.innerHTML = '';
+  cutawayEls = [];
+  for (const c of (payload.cutaways || [])) {
+    const el = document.createElement('div');
+    el.className = 'cutaway';
+    if (c.image) {
+      const img = document.createElement('img');
+      img.src = c.image;
+      el.appendChild(img);
+    }
+    if (c.caption) {
+      const cap = document.createElement('div');
+      cap.className = 'ccap';
+      cap.textContent = c.caption;
+      if (c.big) cap.style.fontSize = '54px';
+      el.appendChild(cap);
+    }
+    cutawaysBox.appendChild(el);
+    cutawayEls.push(el);
+  }
+
+  // 等图片解码 + 视频元数据就绪
+  const imgs = [...document.querySelectorAll('img')];
+  await Promise.all(imgs.map(im => im.decode().catch(() => {})));
+  const vids = [...document.querySelectorAll('video')];
+  await Promise.all(vids.map(v => new Promise(res => {
+    if (v.readyState >= 2) return res();
+    v.addEventListener('loadeddata', res, { once: true });
+    v.addEventListener('error', res, { once: true });
+  })));
+  return { ok: true, count: shotEls.length };
+}
+
+/* 视频确定性定位：设 currentTime 并等 seeked */
+function seekVideo(v, sec) {
+  return new Promise(res => {
+    const dur = v.duration || 0;
+    const target = dur > 0.05 ? sec % dur : 0;
+    if (Math.abs(v.currentTime - target) < 0.001) return res();
+    v.addEventListener('seeked', res, { once: true });
+    v.addEventListener('error', res, { once: true });
+    v.currentTime = target;
+    setTimeout(res, 1500);   // 兜底防卡死
+  });
+}
+
+async function seek(ms) {
+  let flashAlpha = 0;
+  const waits = [];
+
+  for (let i = 0; i < shotEls.length; i++) {
+    const s = P.shots[i];
+    const el = shotEls[i];
+    const active = ms >= s.t && ms < s.t + s.dur;
+    el.style.display = active ? 'block' : 'none';
+    if (!active) continue;
+
+    const dt = ms - s.t;
+    // 视频底片：背景和主体都定位到同一时刻
+    if (mediaPairs[i]) {
+      for (const v of mediaPairs[i]) waits.push(seekVideo(v, dt / 1000));
+    }
+    // 运镜
+    const m = MOTIONS[s.motion] || MOTIONS.punch_in;
+    const fx = m(dt, s.dur);
+    const fg = el.querySelector('.fg');
+    fg.style.transform = fx.transform || 'none';
+    fg.style.filter = fx.filter || 'none';
+
+    if (dt < FLASH_MS && i > 0) flashAlpha = Math.max(flashAlpha, 1 - dt / FLASH_MS);
+
+    if (capEls[i]) {
+      const cu = clamp01((dt - 60) / CAPTION_IN);
+      capEls[i].style.visibility = cu > 0 ? 'visible' : 'hidden';
+      capEls[i].style.opacity = String(clamp01(cu * 2));
+      capEls[i].style.transform = `scale(${0.5 + 0.5 * easeOutBack(cu)})`;
+    }
+    if (stkEls[i]) {
+      const su = clamp01((dt - 220) / STICKER_IN);
+      stkEls[i].style.visibility = su > 0 ? 'visible' : 'hidden';
+      const e = easeOutBack(su);
+      stkEls[i].style.transform = `translateX(${(1 - e) * 260}px) rotate(${25 - 33 * e}deg)`;
+    }
+  }
+  document.getElementById('flash').style.opacity = String(flashAlpha * 0.85);
+
+  for (let ci = 0; ci < cutawayEls.length; ci++) {
+    const c = P.cutaways[ci];
+    const el = cutawayEls[ci];
+    const dt = ms - c.t;
+    if (dt >= 0 && dt < c.dur) {
+      el.style.visibility = 'visible';
+      const uin = clamp01(dt / 220);
+      const uout = clamp01((c.dur - dt) / 160);
+      el.style.opacity = String(Math.min(clamp01(uin * 2), uout));
+      el.style.transform = `scale(${0.82 + 0.18 * easeOutBack(uin)}) rotate(${-3 + 2 * easeOutBack(uin)}deg)`;
+    } else {
+      el.style.visibility = 'hidden';
+    }
+  }
+
+  const endcard = document.getElementById('endcard');
+  if (P.shots && P.shots.length) {
+    const last = P.shots[P.shots.length - 1];
+    const show = ms >= last.t + last.dur * 0.45;
+    endcard.style.visibility = show ? 'visible' : 'hidden';
+    if (show) {
+      const u = clamp01((ms - last.t - last.dur * 0.45) / 300);
+      endcard.style.opacity = String(u);
+      endcard.style.transform = `translateY(${(1 - easeOut(u)) * 16}px)`;
+    }
+  }
+
+  if (waits.length) await Promise.all(waits);
+  return true;
+}
+
+/* 封面单帧渲染 */
+async function showCover(c) {
+  const el = document.getElementById('cover');
+  el.innerHTML = '';
+  const t = document.createElement('div');
+  t.className = 'ctitle';
+  t.textContent = c.title || '';
+  el.appendChild(t);
+  if (c.image) {
+    const im = document.createElement('img');
+    im.src = c.image;
+    el.appendChild(im);
+    await im.decode().catch(() => {});
+  }
+  if (c.sub) {
+    const s = document.createElement('div');
+    s.className = 'csub';
+    s.textContent = c.sub;
+    el.appendChild(s);
+  }
+  el.style.visibility = 'visible';
+  return true;
+}
+function hideCover() { document.getElementById('cover').style.visibility = 'hidden'; }
+
+window.SV = { load, seek, showCover, hideCover };
+</script>
+</body>
+</html>
