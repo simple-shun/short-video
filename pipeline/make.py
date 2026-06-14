@@ -61,7 +61,10 @@ def make_video(script_path, keep_frames=False):
                               tl["total_ms"], fx_wav)
     compose.build_master_track(voice_wav, fx_wav, tl["bgm"], tl["total_ms"], master_wav,
                                bgm_volume=tl.get("bgm_volume", 0.16),
-                               bgm_tempo=tl.get("bgm_tempo", 1.0))
+                               bgm_tempo=tl.get("bgm_tempo", 1.0),
+                               duck_ratio=tl.get("bgm_duck_ratio", 5.0),
+                               duck_threshold=tl.get("bgm_duck_threshold", 0.03),
+                               duck_release=tl.get("bgm_duck_release", 850))
 
     print(f"▶ [{slug}] 5/5 封装 MP4")
     out_mp4 = workdir / f"{slug}.mp4"

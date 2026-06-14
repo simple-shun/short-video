@@ -194,6 +194,7 @@ const STICKER_IN = 360;
 let P = null;
 let shotEls = [], capEls = [], stkEls = [], cutawayEls = [];
 let mediaPairs = [];
+let hasEndcard = true;
 
 const clamp01    = u => Math.max(0, Math.min(1, u));
 const easeOut    = u => 1 - Math.pow(1 - u, 3);
@@ -247,6 +248,11 @@ const MOTIONS = {
     const osc = Math.abs(Math.sin(u * Math.PI * 3)) * Math.exp(-u * 3);
     return { transform: `translateY(${-osc * 18}px) scale(${1 + osc * 0.06})` };
   },
+  /* 新增：pop——弹出+轻微放大后稳定（金句快剪默认，匹配参考视频卡点弹出） */
+  pop(dt) {
+    const u = easeOutBack(clamp01(dt / 260));
+    return { transform: `scale(${0.6 + 0.4 * u})` };
+  },
 };
 
 function makeMedia(src, isVideo, cls) {
@@ -265,16 +271,25 @@ function makeMedia(src, isVideo, cls) {
 async function load(payload) {
   P = payload;
 
-  /* ── 结尾贴片：支持对象格式 {main, sub, cta} 或纯字符串向下兼容 ── */
-  const ec = payload.endcard || '关注我，下集更癫 🤪';
+  /* 进度条：金句快剪等干净构图可隐藏 */
+  document.getElementById('progress').style.display = payload.hide_progress ? 'none' : 'block';
+
+  /* ── 结尾贴片：支持对象格式 {main, sub, cta} 或纯字符串；为空则完全不显示（金句快剪用） ── */
   const ecEl = document.getElementById('endcard');
   ecEl.innerHTML = '';
-  if (typeof ec === 'object') {
-    if (ec.main) { const d = document.createElement('div'); d.className = 'ec-main'; d.textContent = ec.main; ecEl.appendChild(d); }
-    if (ec.sub)  { const d = document.createElement('div'); d.className = 'ec-sub';  d.textContent = ec.sub;  ecEl.appendChild(d); }
-    if (ec.cta)  { const d = document.createElement('div'); d.className = 'ec-cta';  d.textContent = ec.cta;  ecEl.appendChild(d); }
-  } else {
-    const d = document.createElement('div'); d.className = 'ec-main'; d.textContent = String(ec); ecEl.appendChild(d);
+  const rawEc = payload.endcard;
+  hasEndcard = !!(rawEc && (typeof rawEc === 'object'
+    ? (rawEc.main || rawEc.sub || rawEc.cta)
+    : String(rawEc).trim()));
+  if (hasEndcard) {
+    const ec = rawEc;
+    if (typeof ec === 'object') {
+      if (ec.main) { const d = document.createElement('div'); d.className = 'ec-main'; d.textContent = ec.main; ecEl.appendChild(d); }
+      if (ec.sub)  { const d = document.createElement('div'); d.className = 'ec-sub';  d.textContent = ec.sub;  ecEl.appendChild(d); }
+      if (ec.cta)  { const d = document.createElement('div'); d.className = 'ec-cta';  d.textContent = ec.cta;  ecEl.appendChild(d); }
+    } else {
+      const d = document.createElement('div'); d.className = 'ec-main'; d.textContent = String(ec); ecEl.appendChild(d);
+    }
   }
 
   const shotsBox = document.getElementById('shots');
@@ -439,7 +454,7 @@ async function seek(ms) {
 
   /* ── 结尾贴片：最后一个镜头 45% 处淡入 ── */
   const ecEl = document.getElementById('endcard');
-  if (P.shots && P.shots.length) {
+  if (hasEndcard && P.shots && P.shots.length) {
     const last = P.shots[P.shots.length - 1];
     const show = ms >= last.t + last.dur * 0.45;
     ecEl.style.visibility = show ? 'visible' : 'hidden';

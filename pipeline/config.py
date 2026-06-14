@@ -45,6 +45,8 @@ VOICES = {
     "narrator": {"voice": "zh-CN-YunjianNeural",          "rate": "+30%", "pitch": "+12Hz"},  # 魔性解说
     "dongbei":  {"voice": "zh-CN-liaoning-XiaobeiNeural", "rate": "+18%", "pitch": "+0Hz"},   # 东北话
     "shaanxi":  {"voice": "zh-CN-shaanxi-XiaoniNeural",   "rate": "+18%", "pitch": "+0Hz"},   # 陕西话
+    "liao":     {"voice": "zh-CN-YunxiNeural",            "rate": "+6%",  "pitch": "-2Hz"},   # 暧昧调侃男声（备用）
+    "moxing":   {"voice": "zh-CN-YunxiaNeural",           "rate": "+40%", "pitch": "+40Hz"},  # 抖音魔性贱萌搞怪音（全局可复用，金句快剪默认）
 }
 
 # ── 时间轴参数（毫秒）──
@@ -56,5 +58,6 @@ PUNCH_EXTRA = 350     # punch 消息额外停顿
 END_HOLD = 2400       # 结尾定格
 
 # 表情包情绪目录（与 assets/memes/ 子目录对应）
+# abstract = 抽象/鬼畜/扭曲脸风格池（金句快剪 punchline 专用，对齐参考视频）
 EMOTIONS = ["shock", "speechless", "laugh", "cry", "doge", "angry", "smug", "confused",
-            "money", "scheme", "no", "love", "tired", "surprised", "dizzy"]
+            "money", "scheme", "no", "love", "tired", "surprised", "dizzy", "abstract"]

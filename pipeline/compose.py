@@ -62,8 +62,13 @@ def _loudnorm_two_pass(in_wav, out_wav, total_s):
 
 
 def build_master_track(voice_wav, fx_wav, bgm_path, total_ms, out_wav,
-                       bgm_volume=0.16, bgm_tempo=1.0):
-    """BGM 循环铺底 + 旁链闪避（仅配音触发，提示音/音效不触发）+ 两遍响度归一。"""
+                       bgm_volume=0.16, bgm_tempo=1.0,
+                       duck_ratio=5.0, duck_threshold=0.03, duck_release=850):
+    """BGM 循环铺底 + 旁链闪避（仅配音触发，提示音/音效不触发）+ 两遍响度归一。
+
+    duck_ratio 越小闪避越轻（配音时 BGM 压得越少，更容易听见）。
+    配音密集的快剪适合用轻闪避（ratio≈2）+ 较高 bgm_volume。
+    """
     total_s = total_ms / 1000
     pre = out_wav.with_suffix(".pre.wav")
     if not bgm_path:
@@ -73,11 +78,12 @@ def build_master_track(voice_wav, fx_wav, bgm_path, total_ms, out_wav,
               "-t", f"{total_s:.3f}", str(pre)])
     else:
         tempo = f"atempo={bgm_tempo}," if bgm_tempo and bgm_tempo != 1.0 else ""
-        # ratio 5 / release 850ms：消息间隙 BGM 缓慢回升，避免一抽一抽的泵感
+        # release 长 → 消息间隙 BGM 缓慢回升，避免一抽一抽的泵感
         fc = (
             f"[2]aresample=48000,aformat=sample_fmts=fltp:channel_layouts=stereo,"
             f"{tempo}volume={bgm_volume}[bgm];"
-            f"[bgm][0]sidechaincompress=threshold=0.03:ratio=5:attack=20:release=850[duck];"
+            f"[bgm][0]sidechaincompress=threshold={duck_threshold}:ratio={duck_ratio}:"
+            f"attack=20:release={duck_release}[duck];"
             f"[0][duck][1]amix=inputs=3:normalize=0:dropout_transition=0[out]"
         )
         _run(["ffmpeg", "-y",

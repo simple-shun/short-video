@@ -1,0 +1,25 @@
+{
+  "mode": "meme",
+  "style": "punchline",
+  "title": "烦你一辈子",
+
+  "cover": {
+    "title": "舒服是留给死人的 💀",
+    "sub": "活一天烦你一天"
+  },
+
+  "shots": [
+    { "meme": "abstract", "text": "烦我了吗", "voice": "moxing" },
+    { "meme": "abstract", "text": "烦就对了", "voice": "moxing" },
+    { "meme": "abstract", "text": "朋友你记住", "voice": "moxing" },
+    { "meme": "abstract", "text": "舒服是留给死人的", "voice": "moxing" },
+    { "meme": "abstract", "text": "只要你活一天", "voice": "moxing" },
+    { "meme": "abstract", "text": "就要被我烦一天", "voice": "moxing" }
+  ],
+
+  "_post": {
+    "title": "舒服是留给死人的，只要你活着就要被我烦一天😂",
+    "tags": ["#毒舌", "#扎心语录", "#沙雕", "#抽象", "#表情包", "#段子", "#每日一笑", "#损友"],
+    "caption": "这是哪个损友的嘴替😭 烦你是因为还把你当活人 评论区@出那个天天烦你的"
+  }
+}

@@ -67,6 +67,19 @@ def resolve_bgm(tag: str = None):
     return candidates[0] if candidates else None
 
 
+def random_bgm(tags, rng: random.Random):
+    """从给定 tag 集合里随机挑一首 BGM（用于喜感快剪每条随机配乐）；无匹配返回 None。"""
+    manifest = _load_manifest(config.BGM_DIR)
+    pool = []
+    tagset = set(tags)
+    for item in manifest:
+        if item.get("tag") in tagset:
+            p = _manifest_path(config.BGM_DIR, item["file"])
+            if p:
+                pool.append(p)
+    return rng.choice(sorted(pool)) if pool else None
+
+
 def resolve_meme(emotion: str, rng: random.Random):
     """从 assets/memes/<emotion>/ 随机选一张；目录为空返回 None。"""
     d = config.MEME_DIR / emotion

@@ -1,0 +1,24 @@
+{
+  "mode": "meme",
+  "style": "punchline",
+  "title": "6000万原始森林野人",
+
+  "cover": {
+    "title": "6000万换朋友当野人 😈",
+    "sub": "你选哪个"
+  },
+
+  "shots": [
+    { "meme": "abstract", "text": "你会为了6000万让朋友去原始森林当野人吗", "voice": "moxing" },
+    { "meme": "abstract", "text": "A：舍不得他", "voice": "moxing" },
+    { "meme": "abstract", "text": "B：艾特他",   "voice": "moxing" },
+    { "meme": "abstract", "text": "C：由不得他", "voice": "moxing" },
+    { "meme": "abstract", "text": "D：现在立刻就出发", "voice": "moxing" }
+  ],
+
+  "_post": {
+    "title": "你会为了6000万让朋友去原始森林当野人吗？我选D😂",
+    "tags": ["#灵魂拷问", "#选择题", "#抽象", "#表情包", "#段子", "#搞笑", "#人性测试", "#每日一笑"],
+    "caption": "6000万啊家人们，我刚想说舍不得，手已经艾特他了😭 你选几？评论区见"
+  }
+}
