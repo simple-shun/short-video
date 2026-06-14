@@ -3,7 +3,11 @@ import os
 import re
 from pathlib import Path
 
+from dotenv import load_dotenv
+
 ROOT = Path(__file__).resolve().parents[1]
+load_dotenv(ROOT / ".env")
+
 ASSETS = ROOT / "assets"
 SFX_DIR = ASSETS / "sfx"
 BGM_DIR = ASSETS / "bgm"
@@ -19,22 +23,17 @@ VIEW_W, VIEW_H = 540, 960
 SCALE = 2
 
 # ── OpenRouter ──
-OPENROUTER_BASE = "https://openrouter.ai/api/v1"
+OPENROUTER_BASE = os.environ.get("OPENROUTER_BASE", "https://openrouter.ai/api/v1")
 # 段子生成默认模型；可用 --model 覆盖。中文梗类创作 deepseek 性价比高，
 # 想要更强可换 anthropic/claude-sonnet-latest 等
-DEFAULT_MODEL = "deepseek/deepseek-v4-pro"
+DEFAULT_MODEL = os.environ.get("OPENROUTER_MODEL", "deepseek/deepseek-v4-pro")
 
 
 def openrouter_key() -> str:
     key = os.environ.get("OPENROUTER_API_KEY")
     if key:
         return key
-    md = ROOT / "openrouter.md"
-    if md.exists():
-        m = re.search(r'(sk-or-[A-Za-z0-9-]+)', md.read_text())
-        if m:
-            return m.group(1)
-    raise RuntimeError("找不到 OpenRouter key：请设置 OPENROUTER_API_KEY 或在 openrouter.md 中提供")
+    raise RuntimeError("找不到 OpenRouter key：请在 .env 中设置 OPENROUTER_API_KEY")
 
 
 # ── 默认音色（edge-tts）──
@@ -58,4 +57,4 @@ END_HOLD = 2400       # 结尾定格
 
 # 表情包情绪目录（与 assets/memes/ 子目录对应）
 EMOTIONS = ["shock", "speechless", "laugh", "cry", "doge", "angry", "smug", "confused",
-            "money", "scheme", "no", "love", "tired"]
+            "money", "scheme", "no", "love", "tired", "surprised", "dizzy"]

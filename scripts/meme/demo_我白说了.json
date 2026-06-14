@@ -1,0 +1,77 @@
+{
+  "mode": "meme",
+  "title": "我白说了",
+
+  "hook": {
+    "text": "注意看他准备好好讲述这段感情了"
+  },
+
+  "cover": {
+    "title": "深情三年💀",
+    "sub": "对方：你是哪位"
+  },
+
+  "bgm": "scheming",
+  "bgm_tempo": 1.3,
+  "bgm_volume": 0.40,
+
+  "endcard": {
+    "main": "有同款经历的扣1 👇",
+    "sub": "不是你的问题，是缘分不够",
+    "cta": "关注我，明天讲更惨的 🔥"
+  },
+
+  "shots": [
+    {
+      "meme": "love",
+      "text": "他记得两个人认识的第一天",
+      "voice": "narrator",
+      "motion": "spin_in"
+    },
+    {
+      "meme": "smug",
+      "text": "记得她当时穿着什么颜色的衣服",
+      "voice": "narrator"
+    },
+    {
+      "meme": "shock",
+      "text": "记得她说的每一句话 每个标点",
+      "voice": "narrator",
+      "sfx": "wow"
+    },
+    {
+      "meme": "love",
+      "text": "他觉得这就是命中注定",
+      "voice": "narrator"
+    },
+    {
+      "meme": "confused",
+      "text": "然后他鼓起勇气发出了那条消息",
+      "voice": "dongbei"
+    },
+    {
+      "meme": "doge",
+      "text": "对方问 你是哪位",
+      "voice": "narrator",
+      "punch": true,
+      "sfx": "boom"
+    },
+    {
+      "meme": "speechless",
+      "text": "好好好",
+      "voice": "boy"
+    },
+    {
+      "meme": "tired",
+      "text": "那三年就当交了学费",
+      "voice": "dongbei",
+      "sfx": "fail"
+    }
+  ],
+
+  "_post": {
+    "title": "暗恋三年记住她每个细节，发消息对方问：你是哪位😭",
+    "tags": ["#深情错付", "#搞笑表情包", "#反转", "#暗恋", "#情感", "#段子", "#每日一笑", "#魔性", "#脱口秀"],
+    "caption": "家人们谁懂啊😭 记住她所有细节 结果她连他是谁都不知道\n有同款经历的扣1，一起组队抱团"
+  }
+}

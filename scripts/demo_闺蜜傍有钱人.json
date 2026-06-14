@@ -1,0 +1,50 @@
+{
+  "mode": "magic",
+  "title": "闺蜜傍有钱人",
+  "intro": { "text": "注意看，年底了她真的扛不住了", "sfx": "drumroll" },
+  "cover": { "title": "闺蜜\n求你了！", "sub": "看到最后笑死我了" },
+  "bgm": "scheming",
+  "bgm_tempo": 1.35,
+  "endcard": "关注我，下集更离谱 🔥",
+  "shots": [
+    {
+      "image": "gen:两个表情夸张的中国女孩闺蜜，一个跪地抱着另一个的大腿苦苦哀求，眼神绝望，漫画搞笑风格，高饱和大色块，抖音魔性插画感",
+      "motion": "punch_in",
+      "dur": 2800,
+      "narration": "闺蜜，你上点手段得不得！",
+      "voice": "dongbei",
+      "caption": "求你了！",
+      "sfx": "vl_nigan"
+    },
+    {
+      "image": "gen:同款搞笑漫画风，一个打扮精致的女生站在豪车前摆pose，旁边穿着破洞裤的闺蜜眼冒金星满脸羡慕，大夸张表情，喜剧感强",
+      "motion": "drift",
+      "dur": 2600,
+      "narration": "傍个有钱人，我求你了！",
+      "voice": "dongbei",
+      "caption": "傍个有钱人！",
+      "sfx": "wow",
+      "sticker": "meme:money"
+    },
+    {
+      "image": "gen:同款漫画风，一个女生手里拿着账单哭唧唧，账单上全是欠款数字，年底倒计时日历在旁边燃烧，眼泪哗哗的，魔性搞怪风",
+      "motion": "shake",
+      "dur": 2400,
+      "narration": "年底了，我真的扛不住了！",
+      "voice": "dongbei",
+      "caption": "年底了撑不住了😭",
+      "sfx": "damage",
+      "sticker": "meme:cry"
+    },
+    {
+      "image": "gen:同款漫画搞笑风，闺蜜回头一脸平静淡定，背后站着一个秃顶肥胖油腻大叔捧着玫瑰花，闺蜜竖大拇指，魔性反转表情包风格",
+      "motion": "pull_back",
+      "dur": 2200,
+      "narration": "闺蜜说：我已经在路上了",
+      "voice": "left",
+      "caption": "我已经在路上了😏",
+      "sfx": "suona",
+      "sticker": "meme:scheme"
+    }
+  ]
+}

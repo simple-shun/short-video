@@ -1,0 +1,81 @@
+{
+  "mode": "meme",
+  "title": "消失的朋友",
+  "hook": {
+    "text": "有一种朋友，专门在你最难的时候消失"
+  },
+  "cover": {
+    "title": "最难时消失的朋友",
+    "sub": "你遇到过吗"
+  },
+  "bgm": "sad",
+  "bgm_tempo": 1.28,
+  "bgm_volume": 0.4,
+  "endcard": {
+    "main": "你遇到过这种朋友吗 扣1",
+    "sub": "人走茶凉是常态，别怪谁",
+    "cta": "关注我，明天讲更扎心的"
+  },
+  "shots": [
+    {
+      "meme": "love",
+      "text": "他曾经以为自己有一帮过命的兄弟",
+      "voice": "narrator",
+      "motion": "spin_in"
+    },
+    {
+      "meme": "smug",
+      "text": "每次聚会都说有事儿打电话肯定到",
+      "voice": "narrator"
+    },
+    {
+      "meme": "shock",
+      "text": "他信了",
+      "voice": "narrator",
+      "sfx": "wow"
+    },
+    {
+      "meme": "love",
+      "text": "直到他真遇上事儿了",
+      "voice": "narrator"
+    },
+    {
+      "meme": "confused",
+      "text": "挨个打电话 第一个说在忙",
+      "voice": "dongbei"
+    },
+    {
+      "meme": "doge",
+      "text": "第二个说信号不好 第三个直接关机",
+      "voice": "narrator",
+      "punch": true,
+      "sfx": "boom"
+    },
+    {
+      "meme": "speechless",
+      "text": "他一个人在医院走廊站了一夜",
+      "voice": "boy"
+    },
+    {
+      "meme": "tired",
+      "text": "后来他悟了 朋友分两种 能借钱的跟不能借的",
+      "voice": "dongbei",
+      "sfx": "fail"
+    }
+  ],
+  "_post": {
+    "title": "有一种朋友专门在你最难的时候消失，你遇到过吗？",
+    "tags": [
+      "#搞笑",
+      "#表情包",
+      "#反转",
+      "#抽象",
+      "#段子",
+      "#每日一笑",
+      "#魔性",
+      "#鬼畜",
+      "#脱口秀"
+    ],
+    "caption": "你把他当兄弟，他把你当过客。评论区说说你经历过的最寒心的瞬间，我看看有多少同款。"
+  }
+}

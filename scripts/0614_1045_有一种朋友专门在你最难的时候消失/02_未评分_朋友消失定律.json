@@ -1,0 +1,81 @@
+{
+  "mode": "meme",
+  "title": "朋友消失定律",
+  "hook": {
+    "text": "我总结了一个朋友定律，越想帮忙的越找不到人"
+  },
+  "cover": {
+    "title": "朋友消失定律",
+    "sub": "越难越没人"
+  },
+  "bgm": "scheming",
+  "bgm_tempo": 1.28,
+  "bgm_volume": 0.4,
+  "endcard": {
+    "main": "同样经历扣1",
+    "sub": "成年人的友谊，经不起考验",
+    "cta": "关注我，明天讲怎么鉴别真假朋友"
+  },
+  "shots": [
+    {
+      "meme": "smug",
+      "text": "我手机里存了一千多个联系人",
+      "voice": "narrator",
+      "motion": "spin_in"
+    },
+    {
+      "meme": "love",
+      "text": "每次发朋友圈都有一堆人点赞",
+      "voice": "narrator"
+    },
+    {
+      "meme": "smug",
+      "text": "我以为这就是人脉",
+      "voice": "narrator"
+    },
+    {
+      "meme": "shock",
+      "text": "直到我失业那天",
+      "voice": "narrator",
+      "sfx": "wow"
+    },
+    {
+      "meme": "confused",
+      "text": "群发消息问有没有工作机会",
+      "voice": "dongbei"
+    },
+    {
+      "meme": "doge",
+      "text": "五百个已读 零个回复",
+      "voice": "narrator",
+      "punch": true,
+      "sfx": "boom"
+    },
+    {
+      "meme": "speechless",
+      "text": "连平时最爱聊天的兄弟都装死",
+      "voice": "boy"
+    },
+    {
+      "meme": "tired",
+      "text": "现在我明白了 朋友数量跟点赞成正比 跟困难成反比",
+      "voice": "dongbei",
+      "sfx": "fail"
+    }
+  ],
+  "_post": {
+    "title": "一千个联系人，失业时没一个回复，这就是成年人的友谊？",
+    "tags": [
+      "#搞笑",
+      "#表情包",
+      "#反转",
+      "#抽象",
+      "#段子",
+      "#每日一笑",
+      "#魔性",
+      "#鬼畜",
+      "#脱口秀"
+    ],
+    "caption": "平时点赞最积极的那些人，关键时刻连个标点符号都不给你。你遇到过这种“朋友”吗？评论区集合。"
+  }
+}

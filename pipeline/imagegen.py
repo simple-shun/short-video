@@ -1,6 +1,7 @@
-"""AI 生图（gemini-2.5-flash-image）：按提示词 sha1 缓存，同图不重复花钱。"""
+"""AI 生图：按提示词 sha1 缓存，同图不重复花钱。"""
 import base64
 import hashlib
+import os
 from pathlib import Path
 
 import requests
@@ -8,7 +9,7 @@ import requests
 from . import config
 
 CACHE_DIR = config.ASSETS / "gen_cache"
-MODEL = "google/gemini-2.5-flash-image"
+MODEL = os.environ.get("IMAGE_MODEL", "google/gemini-3.1-flash-image-preview")
 
 
 def generate_image(prompt: str, out_path=None, timeout=120) -> Path:

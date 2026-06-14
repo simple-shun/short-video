@@ -18,10 +18,18 @@ def make_video(script_path, keep_frames=False):
     audio_dir = workdir / "audio"
     workdir.mkdir(parents=True, exist_ok=True)
 
-    is_magic = script.get("mode") == "magic"
-    renderer_html = magic.MAGIC_HTML if is_magic else None
+    mode = script.get("mode")
+    is_magic = mode == "magic"
+    is_meme = mode == "meme"
+    renderer_html = magic.MAGIC_HTML if (is_magic or is_meme) else None
 
-    if is_magic:
+    if is_meme:
+        from . import meme_build
+        print(f"▶ [{slug}] 1-2/5 TTS 配音+时间轴 (meme)")
+        tl = meme_build.build(script)
+        print(f"  {len(tl['payload']['shots'])} 个表情包镜头，总时长 {tl['total_ms'] / 1000:.1f}s，"
+              f"BGM: {Path(tl['bgm']).name if tl['bgm'] else '无'}")
+    elif is_magic:
         print(f"▶ [{slug}] 1-2/5 分镜解析+生图+旁白 (magic)")
         tl = magic.build(script)
         print(f"  {len(tl['payload']['shots'])} 个镜头，总时长 {tl['total_ms'] / 1000:.1f}s，"

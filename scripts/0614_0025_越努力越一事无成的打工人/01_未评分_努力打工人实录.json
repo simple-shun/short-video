@@ -1,0 +1,80 @@
+{
+  "mode": "meme",
+  "title": "努力打工人实录",
+  "hook": {
+    "text": "他研究了所有升职加薪的方法"
+  },
+  "cover": {
+    "title": "努力的人最可笑了",
+    "sub": "越努力越一事无成"
+  },
+  "bgm": "scheming",
+  "bgm_tempo": 1.28,
+  "bgm_volume": 0.4,
+  "endcard": {
+    "main": "同款打工人扣1 👇",
+    "sub": "努力不一定有结果，但一定有黑眼圈",
+    "cta": "关注我，下期教你摸鱼哲学 🔥"
+  },
+  "shots": [
+    {
+      "meme": "love",
+      "text": "他每天第一个到公司最后一个走",
+      "voice": "narrator",
+      "motion": "spin_in"
+    },
+    {
+      "meme": "smug",
+      "text": "老板画的大饼他每张都当真",
+      "voice": "narrator"
+    },
+    {
+      "meme": "shock",
+      "text": "他熬夜学习各种技能考了八个证书",
+      "voice": "narrator",
+      "sfx": "wow"
+    },
+    {
+      "meme": "love",
+      "text": "他觉得只要足够努力就能当上总监",
+      "voice": "narrator"
+    },
+    {
+      "meme": "confused",
+      "text": "结果公司裁员名单第一个就是他",
+      "voice": "dongbei"
+    },
+    {
+      "meme": "doge",
+      "text": "理由是他工作太努力显得别人不努力",
+      "voice": "narrator",
+      "punch": true,
+      "sfx": "boom"
+    },
+    {
+      "meme": "speechless",
+      "text": "好好好 这么玩是吧",
+      "voice": "boy"
+    },
+    {
+      "meme": "tired",
+      "text": "努力三年 成功从正式工变成了灵活就业",
+      "voice": "dongbei",
+      "sfx": "fail"
+    }
+  ],
+  "_post": {
+    "title": "越努力越一事无成？这个打工人被裁理由绝了",
+    "tags": [
+      "#搞笑",
+      "#表情包",
+      "#打工人",
+      "#裁员",
+      "#反转",
+      "#职场",
+      "#越努力越心酸",
+      "#段子"
+    ],
+    "caption": "努力了三年，最后因为太努力被裁了。老板说影响了团队氛围。有没有同款经历的？评论区集合，咱们抱头哭。"
+  }
+}
