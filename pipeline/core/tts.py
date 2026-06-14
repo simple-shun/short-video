@@ -5,7 +5,8 @@ from pathlib import Path
 
 import edge_tts
 
-from . import config, media
+from .. import config
+from . import media
 
 # 去掉 emoji 等 TTS 念不出的字符
 _EMOJI_RE = re.compile(

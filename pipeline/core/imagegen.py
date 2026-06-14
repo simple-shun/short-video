@@ -6,7 +6,7 @@ from pathlib import Path
 
 import requests
 
-from . import config
+from .. import config
 
 CACHE_DIR = config.ASSETS / "gen_cache"
 MODEL = os.environ.get("IMAGE_MODEL", "google/gemini-3.1-flash-image-preview")

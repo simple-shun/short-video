@@ -61,3 +61,13 @@ END_HOLD = 2400       # 结尾定格
 # abstract = 抽象/鬼畜/扭曲脸风格池（金句快剪 punchline 专用，对齐参考视频）
 EMOTIONS = ["shock", "speechless", "laugh", "cry", "doge", "angry", "smug", "confused",
             "money", "scheme", "no", "love", "tired", "surprised", "dizzy", "abstract"]
+
+# 音效 tag 词表（生成器校验/提示词用；实际文件解析见 assets.resolve_sfx）
+SFX_TAGS = ["laugh", "boom", "suona", "dun", "whoosh", "ding", "fail",
+            "applause", "awkward", "scratch",
+            # 二期魔性扩展
+            "laugh_evil", "laugh_devil", "laugh_duck", "laugh_baby", "laugh_squid",
+            "goose", "bruh", "damage", "error", "wow", "huh", "boing", "pop_cat",
+            "drumroll", "tada", "slap",
+            # 中文梗语音
+            "vl_nigan", "vl_wudi", "vl_haha"]

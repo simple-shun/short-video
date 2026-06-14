@@ -1,5 +1,8 @@
 # 密钥：key 只存本地，仓库里用 openrouter.md.example 说明格式
 openrouter.md
+.env
+.env.*
+!.env.example
 
 # 构建产物（可由脚本+素材随时重新生成）
 output/

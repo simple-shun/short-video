@@ -10,7 +10,8 @@ python3 -m pipeline.gen "话题" --punchline
 """
 import re
 
-from . import assets, config, llm, script_gen
+from ..core import assets, llm
+from .. import config
 
 # 金句快剪音色：以抖音魔性贱萌搞怪音 moxing 为主，可少量穿插 narrator/boy/dongbei 制造起伏
 PUNCHLINE_VOICES = ["moxing", "narrator", "boy", "dongbei"]

@@ -3,7 +3,8 @@ import hashlib
 import random
 from pathlib import Path
 
-from . import assets, config, imagegen, media, tts, videogen
+from ..core import assets, imagegen, media, tts, videogen
+from .. import config
 
 MAGIC_HTML = config.ROOT / "renderer" / "magic.html"
 MOTIONS = ["punch_in", "pull_back", "shake", "spin_in", "drift", "strobe_zoom", "glitch"]

@@ -3,7 +3,8 @@ import json
 import random
 from pathlib import Path
 
-from . import config, media
+from .. import config
+from . import media
 
 AUDIO_EXT = {".mp3", ".wav", ".m4a", ".ogg", ".flac"}
 IMAGE_EXT = {".jpg", ".jpeg", ".png", ".gif", ".webp"}

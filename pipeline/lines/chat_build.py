@@ -1,7 +1,17 @@
 """时间轴编排：由配音时长驱动消息节奏，产出渲染 payload 和音频事件表。"""
 import random
 
-from . import assets, config, media
+from ..core import assets, media, tts
+from .. import config
+
+
+def build(script: dict):
+    """自包含构建（统一 BUILDERS 的 build(script) 接口）：
+    开场预处理 → 逐条 TTS → 编排时间轴。等价于原 make.py 里 chat 的三步。"""
+    preprocess(script)
+    audio_dir = config.OUTPUT_DIR / script["_slug"] / "audio"
+    tts_results = tts.synth_script(script, audio_dir)
+    return assemble(script, tts_results)
 
 
 def preprocess(script: dict) -> dict:
@@ -23,7 +33,7 @@ def preprocess(script: dict) -> dict:
     return script
 
 
-def build(script: dict, tts_results, seed: str = ""):
+def assemble(script: dict, tts_results, seed: str = ""):
     """
     script: 段子 JSON；tts_results: [(audio_path|None, duration_s)] 与消息对应。
     返回 {payload, audio_events, total_ms, bgm}

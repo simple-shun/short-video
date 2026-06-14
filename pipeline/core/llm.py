@@ -2,7 +2,7 @@
 import json
 import requests
 
-from . import config
+from .. import config
 
 
 def chat(messages, model=None, temperature=0.9, max_tokens=8000, timeout=180):

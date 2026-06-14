@@ -10,7 +10,8 @@ python3 -m pipeline.gen "话题" --meme
 import json
 import re
 
-from . import assets, config, llm, script_gen
+from ..core import assets, llm
+from .. import config
 
 # meme 模式专用音色：都是"旁白/说书人"性质，无"角色扮演"概念
 # narrator = 魔性解说（主力）

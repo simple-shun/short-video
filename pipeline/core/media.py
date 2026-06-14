@@ -5,7 +5,7 @@ import subprocess
 import wave
 from pathlib import Path
 
-from . import config
+from .. import config
 
 BUILTIN_DIR = config.SFX_DIR / "builtin"
 

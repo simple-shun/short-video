@@ -4,7 +4,7 @@ import math
 
 from playwright.sync_api import sync_playwright
 
-from . import config
+from .. import config
 
 
 def render_frames(payload: dict, total_ms: int, frames_dir, cover_path=None,

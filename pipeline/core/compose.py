@@ -3,7 +3,7 @@ import json
 import re
 import subprocess
 
-from . import config
+from .. import config
 
 
 def _run(cmd):

@@ -15,7 +15,7 @@ from pathlib import Path
 
 import requests
 
-from . import config
+from .. import config
 
 CLIPS_DIR = config.ASSETS / "clips"
 DEFAULT_MODEL = os.environ.get("VIDEO_MODEL", "google/veo-3.1-lite")

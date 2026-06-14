@@ -5,7 +5,8 @@
 import random
 from pathlib import Path
 
-from . import assets, config, tts
+from ..core import assets, tts
+from .. import config
 
 MEME_HTML = config.ROOT / "renderer" / "magic.html"
 
