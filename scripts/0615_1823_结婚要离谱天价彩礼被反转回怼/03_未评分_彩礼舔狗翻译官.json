@@ -1,0 +1,82 @@
+{
+  "title": "彩礼舔狗翻译官",
+  "hook": "被要88万彩礼还在贴贴？🤡",
+  "intro": {
+    "text": "注意看，这个男的被骂了还在翻译情话"
+  },
+  "cover": {
+    "title": "她骂他穷光蛋他说谢谢",
+    "sub": "最后她先破防了"
+  },
+  "chat_title": "心里有她就够了",
+  "left": {
+    "avatar": "🧊",
+    "bg": "#4A4A8A"
+  },
+  "right": {
+    "avatar": "🐶",
+    "bg": "#8B4513"
+  },
+  "bgm": "silly",
+  "messages": [
+    {
+      "side": "left",
+      "text": "没有100万彩礼你给我消失"
+    },
+    {
+      "side": "right",
+      "text": "消失是冫加肖，冫是你清冷的眼神，肖是你的姓，你想让我记住你"
+    },
+    {
+      "side": "left",
+      "text": "你有病吧，穷光蛋！",
+      "sfx": "damage"
+    },
+    {
+      "side": "right",
+      "text": "穷是穴宝盖下面一个力，说明你觉得我身体里藏着宝贝"
+    },
+    {
+      "cutaway": "speechless",
+      "caption": "他真的我哭死",
+      "sfx": "bruh"
+    },
+    {
+      "side": "left",
+      "text": "滚出我的世界！"
+    },
+    {
+      "side": "right",
+      "text": "世界是圆的，我滚一圈还会回到你身边",
+      "sfx": "boing"
+    },
+    {
+      "side": "left",
+      "text": "……你脑子有问题"
+    },
+    {
+      "side": "right",
+      "text": "脑子想的都是你，这叫有你"
+    },
+    {
+      "cutaway": "no",
+      "caption": "姐姐快跑这人不正常",
+      "sfx": "laugh_duck"
+    },
+    {
+      "side": "left",
+      "text": "行吧，彩礼8万8行了",
+      "punch": true,
+      "sfx": "dun"
+    },
+    {
+      "side": "right",
+      "text": "8万8我凑凑，那车和房呢"
+    },
+    {
+      "side": "left",
+      "text": "都是浮云，你这嘴要了",
+      "sfx": "laugh"
+    }
+  ]
+}

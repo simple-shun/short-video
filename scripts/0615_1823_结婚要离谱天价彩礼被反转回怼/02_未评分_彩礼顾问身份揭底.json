@@ -1,0 +1,86 @@
+{
+  "title": "彩礼顾问身份揭底",
+  "hook": "相亲谈彩礼，她一分没要到😅",
+  "intro": {
+    "text": "注意看，这个男的全程记账，有问题"
+  },
+  "cover": {
+    "title": "她要天价彩礼男的全记下了",
+    "sub": "账单最后寄到了她家里"
+  },
+  "chat_title": "相亲群-男嘉宾03号",
+  "left": {
+    "avatar": "💅",
+    "bg": "#C9A96E"
+  },
+  "right": {
+    "avatar": "📋",
+    "bg": "#2D4A22"
+  },
+  "bgm": "sneaky",
+  "messages": [
+    {
+      "side": "left",
+      "text": "彩礼88万8，这是底线"
+    },
+    {
+      "side": "right",
+      "text": "记录在案，继续"
+    },
+    {
+      "side": "left",
+      "text": "车要奔驰GLE，颜色曜石黑"
+    },
+    {
+      "side": "right",
+      "text": "含税落地价约89万，记录在案"
+    },
+    {
+      "side": "left",
+      "text": "婚房必须学区房，140平以上"
+    },
+    {
+      "side": "right",
+      "text": "按均价折算约680万，记录在案",
+      "sfx": "ding"
+    },
+    {
+      "cutaway": "confused",
+      "caption": "这男的在干嘛？？",
+      "sfx": "huh"
+    },
+    {
+      "side": "left",
+      "text": "你一直说记录在案是什么意思"
+    },
+    {
+      "side": "right",
+      "text": "今日彩礼咨询总额：857万8",
+      "typing": true
+    },
+    {
+      "side": "right",
+      "text": "咨询费按0.1%收，您需支付8578元",
+      "punch": true,
+      "sfx": "boom"
+    },
+    {
+      "cutaway": "shock",
+      "caption": "家人们她被收咨询费了",
+      "sfx": "suona"
+    },
+    {
+      "side": "right",
+      "text": "我是婚恋财务规划师，红娘拉错群了"
+    },
+    {
+      "side": "right",
+      "text": "发票已开，抬头写您全名",
+      "sfx": "laugh_evil"
+    },
+    {
+      "side": "left",
+      "meme": "dizzy"
+    }
+  ]
+}

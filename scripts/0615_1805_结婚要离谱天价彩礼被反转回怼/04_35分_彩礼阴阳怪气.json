@@ -1,0 +1,81 @@
+{
+  "title": "彩礼阴阳怪气",
+  "hook": "婆婆说彩礼是陋习，她笑了😊",
+  "intro": {
+    "text": "注意看，这个笑容背后住着一把刀"
+  },
+  "cover": {
+    "title": "婆婆说彩礼是陋习",
+    "sub": "儿媳说您说得太对了"
+  },
+  "chat_title": "婆婆（天使）",
+  "left": {
+    "avatar": "😇",
+    "bg": "#A29BFE"
+  },
+  "right": {
+    "avatar": "🌸",
+    "bg": "#FD79A8"
+  },
+  "bgm": "sneaky",
+  "messages": [
+    {
+      "side": "left",
+      "text": "彩礼是封建陋习，咱们不兴这个"
+    },
+    {
+      "side": "right",
+      "text": "妈您说得对"
+    },
+    {
+      "side": "right",
+      "text": "毕竟您吃的盐比我吃的饭多",
+      "sfx": "ding"
+    },
+    {
+      "side": "left",
+      "text": "是吧，年轻人要想开"
+    },
+    {
+      "side": "right",
+      "text": "我特别想开了"
+    },
+    {
+      "side": "right",
+      "text": "想开到婚纱都选好了",
+      "sfx": "boing"
+    },
+    {
+      "side": "left",
+      "meme": "smug"
+    },
+    {
+      "side": "left",
+      "text": "那嫁妆我们也不出了，对等嘛"
+    },
+    {
+      "side": "right",
+      "text": "妈您真是通透",
+      "punch": true,
+      "sfx": "dun"
+    },
+    {
+      "cutaway": "scheme",
+      "caption": "刀要出来了家人们",
+      "sfx": "drumroll"
+    },
+    {
+      "side": "right",
+      "text": "房本我名字都没写，嫁妆确实不用出"
+    },
+    {
+      "side": "right",
+      "text": "省下的钱给自己买养老保险，注意身体哈",
+      "sfx": "laugh_evil"
+    },
+    {
+      "side": "left",
+      "meme": "angry"
+    }
+  ]
+}

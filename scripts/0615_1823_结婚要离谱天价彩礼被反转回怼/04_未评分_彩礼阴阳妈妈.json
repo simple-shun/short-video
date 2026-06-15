@@ -1,0 +1,87 @@
+{
+  "title": "彩礼阴阳妈妈",
+  "hook": "彩礼砍价被婆婆阴阳回去了😅",
+  "intro": {
+    "text": "注意看，这个婆婆每句话都带刀"
+  },
+  "cover": {
+    "title": "彩礼要少了婆婆说没关系",
+    "sub": "后面每句话都是刀"
+  },
+  "chat_title": "未来婆婆（礼貌）",
+  "left": {
+    "avatar": "😊",
+    "bg": "#8B0000"
+  },
+  "right": {
+    "avatar": "💍",
+    "bg": "#FFE4B5"
+  },
+  "bgm": "sneaky",
+  "messages": [
+    {
+      "side": "right",
+      "text": "阿姨好！彩礼88万是不是能少点"
+    },
+    {
+      "side": "left",
+      "text": "当然可以呀，没关系的"
+    },
+    {
+      "side": "right",
+      "text": "那太好了！"
+    },
+    {
+      "side": "left",
+      "text": "我儿子找个便宜点的，对他也好",
+      "sfx": "awkward"
+    },
+    {
+      "cutaway": "confused",
+      "caption": "等等她说什么？",
+      "sfx": "huh"
+    },
+    {
+      "side": "right",
+      "text": "阿姨您的意思是……"
+    },
+    {
+      "side": "left",
+      "text": "你理解得很对，孩子，悟性不错呢"
+    },
+    {
+      "side": "left",
+      "text": "你省的钱可以买身好看的嫁衣",
+      "sfx": "scratch"
+    },
+    {
+      "side": "left",
+      "text": "毕竟婚礼照要挂客厅好多年的",
+      "typing": true
+    },
+    {
+      "side": "left",
+      "text": "我家客厅采光特别好，照片上每个细节都看得清清楚楚",
+      "punch": true,
+      "sfx": "dun"
+    },
+    {
+      "cutaway": "angry",
+      "caption": "她真的我哭死婆婆杀手级别",
+      "sfx": "suona"
+    },
+    {
+      "side": "right",
+      "text": "阿姨……彩礼88万我们不少了"
+    },
+    {
+      "side": "left",
+      "text": "哎呀这才对嘛，门当户对最重要，你说是不是",
+      "sfx": "vl_haha"
+    },
+    {
+      "side": "right",
+      "meme": "tired"
+    }
+  ]
+}

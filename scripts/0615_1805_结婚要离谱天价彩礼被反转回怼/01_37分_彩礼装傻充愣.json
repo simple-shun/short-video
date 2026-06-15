@@ -1,0 +1,81 @@
+{
+  "title": "彩礼装傻充愣",
+  "hook": "她要彩礼要到怀疑人生😶",
+  "intro": {
+    "text": "注意看，这个男人把彩礼谈成了进货"
+  },
+  "cover": {
+    "title": "要88万他说太少",
+    "sub": "然后她沉默了三分钟"
+  },
+  "chat_title": "相亲对象",
+  "left": {
+    "avatar": "💁‍♀️",
+    "bg": "#E84393"
+  },
+  "right": {
+    "avatar": "🪨",
+    "bg": "#636E72"
+  },
+  "bgm": "goofy",
+  "messages": [
+    {
+      "side": "left",
+      "text": "我们家彩礼要88万"
+    },
+    {
+      "side": "right",
+      "text": "有点少"
+    },
+    {
+      "side": "left",
+      "meme": "confused"
+    },
+    {
+      "side": "left",
+      "text": "……什么？"
+    },
+    {
+      "side": "right",
+      "text": "88万起步的货，售后怎么算"
+    },
+    {
+      "side": "left",
+      "text": "什么售后，我是人不是货！"
+    },
+    {
+      "side": "right",
+      "text": "对，人折旧率更高",
+      "sfx": "bruh"
+    },
+    {
+      "side": "right",
+      "text": "88万没有延保我不考虑",
+      "typing": true
+    },
+    {
+      "cutaway": "speechless",
+      "caption": "家人们谁懂啊",
+      "sfx": "awkward"
+    },
+    {
+      "side": "left",
+      "text": "你脑子有问题吧"
+    },
+    {
+      "side": "right",
+      "text": "脑子是易损件",
+      "punch": true,
+      "sfx": "dun"
+    },
+    {
+      "side": "right",
+      "text": "所以你们家售后方案里包含吗",
+      "sfx": "goose"
+    },
+    {
+      "side": "left",
+      "meme": "dizzy"
+    }
+  ]
+}

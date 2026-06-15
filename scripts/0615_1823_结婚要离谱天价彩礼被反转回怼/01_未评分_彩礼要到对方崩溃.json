@@ -1,0 +1,86 @@
+{
+  "title": "彩礼要到对方崩溃",
+  "hook": "彩礼要88万被秒同意了😨",
+  "intro": {
+    "text": "注意看，这个女人要彩礼要出事了"
+  },
+  "cover": {
+    "title": "彩礼要88万他秒答应",
+    "sub": "结果她哭着退彩礼了"
+  },
+  "chat_title": "相亲对象王总",
+  "left": {
+    "avatar": "👸",
+    "bg": "#FFB6C1"
+  },
+  "right": {
+    "avatar": "🤵",
+    "bg": "#2C3E50"
+  },
+  "bgm": "scheming",
+  "messages": [
+    {
+      "side": "left",
+      "text": "彩礼要66万，车房另算"
+    },
+    {
+      "side": "right",
+      "text": "好的",
+      "sfx": "ding"
+    },
+    {
+      "side": "left",
+      "text": "房本必须写我名字"
+    },
+    {
+      "side": "right",
+      "text": "好的"
+    },
+    {
+      "side": "left",
+      "text": "婚后工资卡上交"
+    },
+    {
+      "side": "right",
+      "text": "好的"
+    },
+    {
+      "cutaway": "smug",
+      "caption": "姐妹们这男的有病吧",
+      "sfx": "laugh_duck"
+    },
+    {
+      "side": "left",
+      "text": "我还要粉色大G一辆"
+    },
+    {
+      "side": "right",
+      "text": "好的，我让她开过来",
+      "typing": true
+    },
+    {
+      "side": "left",
+      "text": "让谁开过来？？"
+    },
+    {
+      "side": "right",
+      "text": "我现任，她刚好要换车",
+      "punch": true,
+      "sfx": "boom"
+    },
+    {
+      "cutaway": "shock",
+      "caption": "家人们谁懂啊救命",
+      "sfx": "suona"
+    },
+    {
+      "side": "right",
+      "text": "你顺便帮我问一下你妈，婚礼差个全福人"
+    },
+    {
+      "side": "left",
+      "text": "…",
+      "sfx": "bruh"
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "title": "彩礼发疯文学",
+  "hook": "他妈说不给彩礼，她当场崩了😭",
+  "intro": {
+    "text": "注意看，这个女人的精神状态要美丽了"
+  },
+  "cover": {
+    "title": "婆婆说彩礼免了",
+    "sub": "她的世界在这一刻塌了"
+  },
+  "chat_title": "婆婆（未来的）",
+  "left": {
+    "avatar": "👵",
+    "bg": "#8B4513"
+  },
+  "right": {
+    "avatar": "🌪️",
+    "bg": "#9B59B6"
+  },
+  "bgm": "chaos",
+  "messages": [
+    {
+      "side": "left",
+      "text": "彩礼就免了吧，都是自家人"
+    },
+    {
+      "side": "right",
+      "text": "您说什么？"
+    },
+    {
+      "side": "right",
+      "text": "我养了26年",
+      "typing": true
+    },
+    {
+      "side": "right",
+      "text": "26年！！"
+    },
+    {
+      "side": "right",
+      "text": "我妈喂我的每一口饭您算过吗",
+      "sfx": "damage"
+    },
+    {
+      "side": "left",
+      "meme": "doge"
+    },
+    {
+      "side": "right",
+      "text": "我人生最好的年华要就这么免了？！"
+    },
+    {
+      "cutaway": "abstract",
+      "caption": "她开始进入战斗状态了",
+      "sfx": "suona"
+    },
+    {
+      "side": "right",
+      "text": "我的青春我的胶原蛋白我的发量！",
+      "punch": true,
+      "sfx": "boom"
+    },
+    {
+      "side": "left",
+      "text": "你冷静一下……"
+    },
+    {
+      "side": "right",
+      "text": "我冷静个锤子"
+    },
+    {
+      "side": "right",
+      "text": "彩礼就是我发量的回购价",
+      "sfx": "laugh_duck"
+    },
+    {
+      "side": "right",
+      "text": "掉一根涨一千，目前行情88万整",
+      "sfx": "laugh_evil"
+    }
+  ]
+}

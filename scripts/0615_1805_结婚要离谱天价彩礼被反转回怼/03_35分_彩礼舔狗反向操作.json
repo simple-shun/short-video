@@ -1,0 +1,77 @@
+{
+  "title": "彩礼舔狗反向操作",
+  "hook": "她让他滚，他说滚字好美🥺",
+  "intro": {
+    "text": "注意看，这个男人把侮辱翻译成情书了"
+  },
+  "cover": {
+    "title": "嫌他穷让他滚",
+    "sub": "他说谢谢你爱我"
+  },
+  "chat_title": "女朋友（暂定）",
+  "left": {
+    "avatar": "👸",
+    "bg": "#FF4757"
+  },
+  "right": {
+    "avatar": "🐶",
+    "bg": "#FFA502"
+  },
+  "bgm": "silly",
+  "messages": [
+    {
+      "side": "left",
+      "text": "没有88万彩礼你就是穷鬼，滚"
+    },
+    {
+      "side": "right",
+      "text": "滚是三点水"
+    },
+    {
+      "side": "right",
+      "text": "水代表我对你的情意，绵延不绝",
+      "sfx": "boing"
+    },
+    {
+      "side": "left",
+      "meme": "confused"
+    },
+    {
+      "side": "left",
+      "text": "你有病吧，我骂你呢"
+    },
+    {
+      "side": "right",
+      "text": "骂字上面是马"
+    },
+    {
+      "side": "right",
+      "text": "马到成功，你在祝我发财凑彩礼",
+      "sfx": "laugh_duck"
+    },
+    {
+      "cutaway": "doge",
+      "caption": "他真的我哭死",
+      "sfx": "goose"
+    },
+    {
+      "side": "left",
+      "text": "那你什么时候能凑够88万？"
+    },
+    {
+      "side": "right",
+      "text": "凑字是两个人",
+      "punch": true,
+      "sfx": "dun"
+    },
+    {
+      "side": "right",
+      "text": "意思是要你跟我一起挣"
+    },
+    {
+      "side": "right",
+      "text": "你看你都开始替咱们规划未来了",
+      "sfx": "laugh_evil"
+    }
+  ]
+}

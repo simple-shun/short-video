@@ -1,0 +1,83 @@
+{
+  "title": "彩礼术语流反杀",
+  "hook": "要88万彩礼，他打开了计算器📊",
+  "intro": {
+    "text": "注意看，这个男人开始算账了"
+  },
+  "cover": {
+    "title": "彩礼88万他秒同意",
+    "sub": "结果他拿出了一张表"
+  },
+  "chat_title": "准岳母（洽谈中）",
+  "left": {
+    "avatar": "👩",
+    "bg": "#FF6B9D"
+  },
+  "right": {
+    "avatar": "🧮",
+    "bg": "#4A90D9"
+  },
+  "bgm": "scheming",
+  "messages": [
+    {
+      "side": "left",
+      "text": "彩礼88万，少一分不嫁"
+    },
+    {
+      "side": "right",
+      "text": "收到，我做了个尽调报告"
+    },
+    {
+      "side": "right",
+      "text": "您女儿资产负债表我算完了",
+      "typing": true
+    },
+    {
+      "side": "left",
+      "meme": "confused"
+    },
+    {
+      "side": "right",
+      "text": "学历资产溢价：3万2",
+      "sfx": "ding"
+    },
+    {
+      "side": "right",
+      "text": "外貌市场估值：均值偏下，折价12%"
+    },
+    {
+      "side": "right",
+      "text": "脾气波动率：近三年高达87%",
+      "sfx": "damage"
+    },
+    {
+      "cutaway": "scheme",
+      "caption": "家人们他在算什么",
+      "sfx": "goose"
+    },
+    {
+      "side": "right",
+      "text": "综合定价：建议彩礼6万8",
+      "punch": true,
+      "sfx": "boom"
+    },
+    {
+      "side": "left",
+      "meme": "angry"
+    },
+    {
+      "side": "left",
+      "text": "你什么意思！"
+    },
+    {
+      "side": "right",
+      "text": "报告已抄送您女儿本人",
+      "sfx": "ding"
+    },
+    {
+      "side": "right",
+      "text": "她说定价太高了，让我再砍砍",
+      "sfx": "laugh_evil"
+    }
+  ]
+}
