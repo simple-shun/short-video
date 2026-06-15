@@ -1,0 +1,79 @@
+{
+  "title": "婆婆要管钱-理性怼人精",
+  "hook": "婆婆要管家里的钱？💸",
+  "intro": {
+    "text": "注意看，这个女人赢得很漂亮"
+  },
+  "cover": {
+    "title": "婆婆要管我的卡",
+    "sub": "她没想到我早准备好了"
+  },
+  "chat_title": "老公（财务顾问）",
+  "left": {
+    "avatar": "👩",
+    "bg": "#FFE4E1"
+  },
+  "right": {
+    "avatar": "🧔",
+    "bg": "#E1F0FF"
+  },
+  "bgm": "scheming",
+  "messages": [
+    {
+      "side": "right",
+      "text": "我妈想搬过来住，顺便帮咱管管家里的钱"
+    },
+    {
+      "side": "left",
+      "text": "我去查了咱俩的工资流水"
+    },
+    {
+      "side": "left",
+      "text": "我收入占家庭总收入的73.6%"
+    },
+    {
+      "side": "left",
+      "meme": "scheme"
+    },
+    {
+      "side": "left",
+      "text": "按股权结构，管钱的应该是大股东",
+      "punch": true,
+      "sfx": "dun"
+    },
+    {
+      "cutaway": "scheme",
+      "caption": "家人们她开始算了",
+      "sfx": "drumroll"
+    },
+    {
+      "side": "right",
+      "text": "你什么意思……"
+    },
+    {
+      "side": "left",
+      "text": "我成立了家庭财务委员会"
+    },
+    {
+      "side": "left",
+      "text": "你妈可以申请监事席位"
+    },
+    {
+      "side": "left",
+      "text": "无投票权，有列席资格"
+    },
+    {
+      "side": "right",
+      "meme": "dizzy"
+    },
+    {
+      "side": "left",
+      "text": "董事会通知她下周一报道",
+      "sfx": "tada"
+    },
+    {
+      "side": "left",
+      "text": "记得带身份证，我要存档"
+    }
+  ]
+}

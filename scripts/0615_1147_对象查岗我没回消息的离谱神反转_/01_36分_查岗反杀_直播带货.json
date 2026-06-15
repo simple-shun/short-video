@@ -1,0 +1,91 @@
+{
+  "title": "查岗反杀_直播带货",
+  "hook": "查岗没回我，他在直播间卖我😭",
+  "intro": {
+    "text": "注意看，这条消息让我原地蒸发"
+  },
+  "cover": {
+    "title": "他直播卖了我什么",
+    "sub": "我当场想报警"
+  },
+  "chat_title": "那个男的",
+  "left": {
+    "avatar": "🐰",
+    "bg": "#FFF0F5"
+  },
+  "right": {
+    "avatar": "🐸",
+    "bg": "#E8F5E9"
+  },
+  "bgm": "chaos",
+  "messages": [
+    {
+      "side": "left",
+      "text": "你一下午没回我，去哪了"
+    },
+    {
+      "side": "right",
+      "text": "开播了，忙",
+      "typing": true
+    },
+    {
+      "side": "left",
+      "text": "你做直播？？？卖什么的"
+    },
+    {
+      "side": "right",
+      "text": "情感类"
+    },
+    {
+      "side": "left",
+      "text": "啊？你懂情感？"
+    },
+    {
+      "side": "right",
+      "text": "我把你跟我吵架的聊天记录截图打包卖",
+      "sfx": "drumroll"
+    },
+    {
+      "side": "right",
+      "text": "9块9一套，总共173套",
+      "punch": true,
+      "sfx": "boom"
+    },
+    {
+      "cutaway": "shock",
+      "caption": "家人们谁懂啊",
+      "sfx": "goose"
+    },
+    {
+      "side": "left",
+      "text": "你！你卖了多少钱！！"
+    },
+    {
+      "side": "right",
+      "text": "1556.7元"
+    },
+    {
+      "side": "right",
+      "text": "给你转一半"
+    },
+    {
+      "side": "right",
+      "text": "毕竟素材是你提供的，你是联合创始人",
+      "sfx": "laugh_evil"
+    },
+    {
+      "cutaway": "money",
+      "caption": "他真的在认真分红",
+      "sfx": "suona"
+    },
+    {
+      "side": "left",
+      "text": "……你是人吗"
+    },
+    {
+      "side": "right",
+      "text": "是，我是CEO，你是COO，欢迎入职",
+      "sfx": "vl_wudi"
+    }
+  ]
+}

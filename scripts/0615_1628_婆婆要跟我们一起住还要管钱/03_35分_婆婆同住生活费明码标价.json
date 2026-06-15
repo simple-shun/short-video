@@ -1,0 +1,89 @@
+{
+  "title": "婆婆同住生活费明码标价",
+  "hook": "婆婆住进来第一天开口了😶",
+  "intro": {
+    "text": "注意看，这个媳妇报了一份账单"
+  },
+  "cover": {
+    "title": "婆婆住进来要管钱",
+    "sub": "我也正好要跟她算笔账"
+  },
+  "chat_title": "婆婆（同住第1天）",
+  "left": {
+    "avatar": "👵",
+    "bg": "#FF8C69"
+  },
+  "right": {
+    "avatar": "🧏‍♀️",
+    "bg": "#85C1E9"
+  },
+  "bgm": "sneaky",
+  "messages": [
+    {
+      "side": "left",
+      "text": "我住进来了，以后家里买菜的钱给我，我来管"
+    },
+    {
+      "side": "right",
+      "text": "好，我把账单发给您对一下"
+    },
+    {
+      "side": "left",
+      "text": "什么账单？"
+    },
+    {
+      "side": "right",
+      "text": "主卧占用费：床位市值每月1800"
+    },
+    {
+      "side": "right",
+      "text": "WiFi使用费：19.9/月，已出账单"
+    },
+    {
+      "side": "right",
+      "text": "热水器折旧分摊：每次4毛3，昨晚您洗了22分钟"
+    },
+    {
+      "side": "left",
+      "meme": "shock"
+    },
+    {
+      "side": "right",
+      "text": "水费电费按人头三等分，您那份本月预计67块8",
+      "typing": true
+    },
+    {
+      "side": "right",
+      "text": "合计首月入住成本：2314块6毛1",
+      "punch": true,
+      "sfx": "boom"
+    },
+    {
+      "cutaway": "money",
+      "caption": "家人们她真的算到分了",
+      "sfx": "suona"
+    },
+    {
+      "side": "left",
+      "text": "你……你这是什么意思！"
+    },
+    {
+      "side": "right",
+      "text": "您说要管钱，我觉得从管自己的账单开始比较好"
+    },
+    {
+      "side": "right",
+      "text": "支持微信支付宝，不支持白条",
+      "sfx": "laugh_evil"
+    },
+    {
+      "side": "left",
+      "meme": "angry"
+    },
+    {
+      "side": "right",
+      "text": "温馨提示：提前30天结清可享9折优惠",
+      "sfx": "goose"
+    }
+  ]
+}

@@ -371,6 +371,32 @@ body {
   box-shadow: 0 10px 30px rgba(0,0,0,.5);
 }
 
+/* 封面·聊天截图模式：手机聊天(含反转气泡)做主视觉，大字压顶 */
+.cover.chat {
+  justify-content: space-between;
+  gap: 0;
+  background: none;            /* 透出后面的手机 */
+  padding: 0;
+}
+.cover.chat .ctop {
+  width: 100%;
+  padding: 40px 26px 26px;
+  background: linear-gradient(180deg, rgba(0,0,0,.95) 0%, rgba(0,0,0,.85) 70%, rgba(0,0,0,0) 100%);
+  text-align: center;
+}
+.cover.chat .ctitle {
+  font-size: 52px;
+  line-height: 1.15;
+  text-shadow: -4px -4px 0 #000, 4px -4px 0 #000, -4px 4px 0 #000, 4px 4px 0 #000, 0 0 50px rgba(255,180,0,.55);
+}
+.cover.chat .cbot {
+  width: 100%;
+  padding: 30px 26px 70px;
+  background: linear-gradient(0deg, rgba(0,0,0,.92) 0%, rgba(0,0,0,.7) 55%, rgba(0,0,0,0) 100%);
+  display: flex;
+  justify-content: center;
+}
+
 /* 结尾贴片 */
 .endcard {
   position: absolute;
@@ -689,6 +715,35 @@ function seek(ms) {
 async function showCover(c) {
   const el = document.getElementById('cover');
   el.innerHTML = '';
+  document.getElementById('hook').style.visibility = 'hidden';
+
+  // 聊天截图模式：手机停在反转气泡，大字压顶+红条压底
+  if (c.mode === 'chat') {
+    if (typeof c.seekMs === 'number') seek(c.seekMs);   // 让反转气泡出现在画面里
+    const phoneWrap = document.getElementById('phoneWrap');
+    if (phoneWrap) phoneWrap.style.transform = 'scale(1.04)';  // 轻微放大更像封面
+    el.className = 'cover chat';
+    const top = document.createElement('div');
+    top.className = 'ctop';
+    const t = document.createElement('div');
+    t.className = 'ctitle';
+    t.textContent = c.title || '';
+    top.appendChild(t);
+    el.appendChild(top);
+    const bot = document.createElement('div');
+    bot.className = 'cbot';
+    if (c.sub) {
+      const s = document.createElement('div');
+      s.className = 'csub';
+      s.textContent = c.sub;
+      bot.appendChild(s);
+    }
+    el.appendChild(bot);
+    el.style.visibility = 'visible';
+    return true;
+  }
+
+  el.className = 'cover';
   const t = document.createElement('div');
   t.className = 'ctitle';
   t.textContent = c.title || '';
@@ -705,7 +760,6 @@ async function showCover(c) {
     s.textContent = c.sub;
     el.appendChild(s);
   }
-  document.getElementById('hook').style.visibility = 'hidden';
   el.style.visibility = 'visible';
   return true;
 }

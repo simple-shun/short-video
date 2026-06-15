@@ -39,8 +39,8 @@ def openrouter_key() -> str:
 # ── 默认音色（edge-tts）──
 # 左右默认用"尖快女声 vs 浑厚男声"的强反差组合，加速升调制造魔性感
 VOICES = {
-    "left":     {"voice": "zh-CN-XiaoyiNeural",           "rate": "+28%", "pitch": "+22Hz"},  # 尖快做作女声
-    "right":    {"voice": "zh-CN-YunjianNeural",          "rate": "+22%", "pitch": "+0Hz"},   # 浑厚解说男声
+    "left":     {"voice": "zh-CN-XiaoyiNeural",           "rate": "+42%", "pitch": "+42Hz"},  # 癫狂尖贱女声（魔性）
+    "right":    {"voice": "zh-CN-YunjianNeural",          "rate": "+32%", "pitch": "+12Hz"},  # 浑厚猥琐解说男声（魔性，与left强对比）
     "boy":      {"voice": "zh-CN-YunxiaNeural",           "rate": "+20%", "pitch": "+0Hz"},   # 贱萌男声
     "narrator": {"voice": "zh-CN-YunjianNeural",          "rate": "+30%", "pitch": "+12Hz"},  # 魔性解说
     "dongbei":  {"voice": "zh-CN-liaoning-XiaobeiNeural", "rate": "+18%", "pitch": "+0Hz"},   # 东北话

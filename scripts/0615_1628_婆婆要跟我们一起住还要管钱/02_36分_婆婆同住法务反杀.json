@@ -1,0 +1,93 @@
+{
+  "title": "婆婆同住法务反杀",
+  "hook": "婆婆说住进来就是女主人👑",
+  "intro": {
+    "text": "注意看，这个媳妇拿出了一份文件"
+  },
+  "cover": {
+    "title": "婆婆说这房子她做主",
+    "sub": "她没看过房产证"
+  },
+  "chat_title": "婆婆（法务审查中）",
+  "left": {
+    "avatar": "👸",
+    "bg": "#F9A7B0"
+  },
+  "right": {
+    "avatar": "📋",
+    "bg": "#ABEBC6"
+  },
+  "bgm": "tension",
+  "messages": [
+    {
+      "side": "left",
+      "text": "我住进来了，这个家我说了算，钱的事我管"
+    },
+    {
+      "side": "right",
+      "text": "我理解您的诉求，我去查了一下相关法律"
+    },
+    {
+      "side": "left",
+      "text": "查什么法律，我是你婆婆！"
+    },
+    {
+      "side": "right",
+      "text": "《民法典》第一千零六十二条"
+    },
+    {
+      "side": "right",
+      "text": "夫妻共同财产由双方平等处理"
+    },
+    {
+      "side": "right",
+      "text": "共同财产里不含婆婆"
+    },
+    {
+      "side": "left",
+      "meme": "angry"
+    },
+    {
+      "side": "left",
+      "text": "你这是什么态度！"
+    },
+    {
+      "side": "right",
+      "text": "房产证我也带来了",
+      "typing": true
+    },
+    {
+      "side": "right",
+      "text": "上面有两个名字，都不是您的",
+      "punch": true,
+      "sfx": "dun"
+    },
+    {
+      "cutaway": "speechless",
+      "caption": "她真的查了房产证我哭死",
+      "sfx": "boom"
+    },
+    {
+      "side": "left",
+      "text": "你……我儿子肯定站我这边！"
+    },
+    {
+      "side": "right",
+      "text": "他刚才在楼下，我已经让他在文件上签字了"
+    },
+    {
+      "side": "right",
+      "text": "联合声明，他也不同意变更财务管理权",
+      "sfx": "laugh_duck"
+    },
+    {
+      "side": "left",
+      "meme": "dizzy"
+    },
+    {
+      "side": "right",
+      "text": "欢迎住进来，但管钱这个职位，编制已满",
+      "sfx": "vl_wudi"
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "title": "婆婆管钱-阴阳怪气",
+  "hook": "婆婆说她最会理财💅",
+  "intro": {
+    "text": "注意看，这个儿媳妇夸得很致命"
+  },
+  "cover": {
+    "title": "婆婆说她理财很厉害",
+    "sub": "儿媳：您说得太对了"
+  },
+  "chat_title": "婆婆大人",
+  "left": {
+    "avatar": "👵",
+    "bg": "#FFE8F5"
+  },
+  "right": {
+    "avatar": "💅",
+    "bg": "#F5FFE8"
+  },
+  "bgm": "sneaky",
+  "messages": [
+    {
+      "side": "left",
+      "text": "我理财有经验，家里的钱交我管最放心"
+    },
+    {
+      "side": "right",
+      "text": "妈您说得对"
+    },
+    {
+      "side": "right",
+      "text": "毕竟您比我多活了三十年"
+    },
+    {
+      "side": "right",
+      "text": "经验肯定在那里摆着的",
+      "sfx": "awkward"
+    },
+    {
+      "side": "left",
+      "text": "那当然，我年轻时……"
+    },
+    {
+      "side": "right",
+      "text": "我查了一下您之前投的那个理财"
+    },
+    {
+      "side": "right",
+      "text": "22年那个，跑路那个"
+    },
+    {
+      "side": "left",
+      "meme": "angry"
+    },
+    {
+      "side": "right",
+      "text": "没事妈，人都会交学费的",
+      "punch": true,
+      "sfx": "dun"
+    },
+    {
+      "cutaway": "smug",
+      "caption": "笑死她到底在安慰谁",
+      "sfx": "laugh_evil"
+    },
+    {
+      "side": "right",
+      "text": "您说得对，您来管"
+    },
+    {
+      "side": "right",
+      "text": "注意身体哈，别累着"
+    },
+    {
+      "side": "left",
+      "meme": "speechless"
+    }
+  ]
+}

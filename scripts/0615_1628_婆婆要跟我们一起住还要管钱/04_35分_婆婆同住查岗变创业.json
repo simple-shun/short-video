@@ -1,0 +1,89 @@
+{
+  "title": "婆婆同住查岗变创业",
+  "hook": "婆婆管钱还查我收入来源👀",
+  "intro": {
+    "text": "注意看，这个媳妇把婆婆变成了股东"
+  },
+  "cover": {
+    "title": "婆婆说我钱来路不正",
+    "sub": "我说对了一半"
+  },
+  "chat_title": "婆婆（审计中）",
+  "left": {
+    "avatar": "🕵️‍♀️",
+    "bg": "#F0B27A"
+  },
+  "right": {
+    "avatar": "💁‍♀️",
+    "bg": "#A9CCE3"
+  },
+  "bgm": "scheming",
+  "messages": [
+    {
+      "side": "left",
+      "text": "你每个月工资就那几千，哪来钱买这些东西？说清楚"
+    },
+    {
+      "side": "right",
+      "text": "副业收入"
+    },
+    {
+      "side": "left",
+      "text": "什么副业？"
+    },
+    {
+      "side": "right",
+      "text": "我把您每次来我家说的话录下来卖段子"
+    },
+    {
+      "side": "right",
+      "text": "上个月卖了1173块5"
+    },
+    {
+      "side": "left",
+      "meme": "shock"
+    },
+    {
+      "side": "left",
+      "text": "你！你卖我说的话？！"
+    },
+    {
+      "side": "right",
+      "text": "您是公司联合创始人，持股比例100%",
+      "typing": true
+    },
+    {
+      "side": "right",
+      "text": "毕竟素材全是您提供的",
+      "punch": true,
+      "sfx": "boom"
+    },
+    {
+      "cutaway": "scheme",
+      "caption": "家人们她反将一军了",
+      "sfx": "suona"
+    },
+    {
+      "side": "left",
+      "text": "我……我要分钱！"
+    },
+    {
+      "side": "right",
+      "text": "可以，但入股需要签对赌协议"
+    },
+    {
+      "side": "right",
+      "text": "要求：每周提供不少于三条原创语录",
+      "sfx": "laugh_evil"
+    },
+    {
+      "side": "left",
+      "meme": "confused"
+    },
+    {
+      "side": "right",
+      "text": "刚才那句\"说清楚\"已经预售出去37份了，您继续",
+      "sfx": "goose"
+    }
+  ]
+}

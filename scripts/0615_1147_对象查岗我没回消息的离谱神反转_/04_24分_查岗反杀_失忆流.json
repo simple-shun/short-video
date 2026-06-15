@@ -1,0 +1,97 @@
+{
+  "title": "查岗反杀_失忆流",
+  "hook": "查岗没回我，他说他失忆了🤯",
+  "intro": {
+    "text": "注意看，他说这句话的时候我信了"
+  },
+  "cover": {
+    "title": "他失忆忘了谁",
+    "sub": "后面那句我没想到"
+  },
+  "chat_title": "另一半（待确认）",
+  "left": {
+    "avatar": "🦊",
+    "bg": "#FFF3E0"
+  },
+  "right": {
+    "avatar": "🐧",
+    "bg": "#E3F2FD"
+  },
+  "bgm": "goofy",
+  "messages": [
+    {
+      "side": "left",
+      "text": "你消失一下午，解释一下"
+    },
+    {
+      "side": "right",
+      "text": "不好意思，我失忆了",
+      "typing": true,
+      "sfx": "huh"
+    },
+    {
+      "side": "left",
+      "text": "……什么"
+    },
+    {
+      "side": "right",
+      "text": "忘了很多事"
+    },
+    {
+      "side": "left",
+      "text": "比如"
+    },
+    {
+      "side": "right",
+      "text": "比如忘了你叫什么"
+    },
+    {
+      "side": "right",
+      "text": "忘了你生日"
+    },
+    {
+      "side": "right",
+      "text": "忘了上个月借你的300块",
+      "punch": true,
+      "sfx": "boom"
+    },
+    {
+      "cutaway": "scheme",
+      "caption": "家人们他是装的",
+      "sfx": "laugh_evil"
+    },
+    {
+      "side": "left",
+      "text": "你记得借钱这件事吗"
+    },
+    {
+      "side": "right",
+      "text": "我失忆了，不记得",
+      "sfx": "vl_wudi"
+    },
+    {
+      "side": "left",
+      "text": "那你记得我们在一起吗"
+    },
+    {
+      "side": "right",
+      "text": "失忆了",
+      "sfx": "boing"
+    },
+    {
+      "side": "right",
+      "text": "但我记得你妈做的红烧肉，清晰得像4K画质",
+      "sfx": "laugh_duck"
+    },
+    {
+      "cutaway": "angry",
+      "caption": "他真的我哭死",
+      "sfx": "suona"
+    },
+    {
+      "side": "left",
+      "text": "300块今晚转给我，否则我帮你失忆",
+      "sfx": "damage"
+    }
+  ]
+}

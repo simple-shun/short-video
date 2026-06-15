@@ -1,0 +1,100 @@
+{
+  "title": "押金反杀_工商术语流",
+  "hook": "中介要扣我押金💀我查了三天",
+  "intro": {
+    "text": "注意看，这个男人要扣我三个月押金"
+  },
+  "cover": {
+    "title": "押金扣了2400我没哭",
+    "sub": "因为我查到他营业执照了"
+  },
+  "chat_title": "中介王总（扣押金专业户）",
+  "left": {
+    "avatar": "🦹",
+    "bg": "#c0392b"
+  },
+  "right": {
+    "avatar": "🧾",
+    "bg": "#2c3e50"
+  },
+  "bgm": "scheming",
+  "messages": [
+    {
+      "side": "left",
+      "text": "你墙上那个钉孔扣200，窗帘发黄扣300，自然损耗不算的"
+    },
+    {
+      "side": "right",
+      "text": "记住了"
+    },
+    {
+      "side": "left",
+      "text": "地板有道划痕再扣500，总计押金2400全扣，你还倒欠80"
+    },
+    {
+      "side": "right",
+      "text": "记住了",
+      "typing": true
+    },
+    {
+      "side": "left",
+      "meme": "smug"
+    },
+    {
+      "side": "right",
+      "text": "我查了《民法典》第703条和住建部租赁合同示范文本第11条",
+      "punch": true,
+      "sfx": "drumroll"
+    },
+    {
+      "side": "right",
+      "text": "自然损耗由出租方承担，举证责任在您这边"
+    },
+    {
+      "side": "right",
+      "text": "钉孔和窗帘发黄属于正常使用损耗，不构成赔偿事由"
+    },
+    {
+      "side": "left",
+      "text": "我们行规就这样，你爱告不告"
+    },
+    {
+      "cutaway": "laugh",
+      "caption": "家人们，行规二字拉满我了",
+      "sfx": "laugh_duck"
+    },
+    {
+      "side": "right",
+      "text": "好的，我去12345投诉了",
+      "typing": true
+    },
+    {
+      "side": "right",
+      "text": "顺手查了下您公司营业执照，经营范围里没有房屋租赁中介"
+    },
+    {
+      "side": "right",
+      "text": "您这叫无证经营，我帮您填了个举报表，单号给您截图了",
+      "punch": true,
+      "sfx": "boom"
+    },
+    {
+      "side": "left",
+      "meme": "shock"
+    },
+    {
+      "side": "left",
+      "text": "押金我转你，咱能不能别闹"
+    },
+    {
+      "side": "right",
+      "text": "转之前加上这三年通货膨胀损失利息，我算了，37块8，凑2437块8",
+      "sfx": "dun"
+    },
+    {
+      "side": "right",
+      "text": "精确到角，我比较在乎零头",
+      "sfx": "laugh_evil"
+    }
+  ]
+}

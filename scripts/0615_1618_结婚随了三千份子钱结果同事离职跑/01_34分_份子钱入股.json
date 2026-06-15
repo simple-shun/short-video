@@ -1,0 +1,111 @@
+{
+  "title": "份子钱入股",
+  "hook": "同事跑路了我却说恭喜你🤑",
+  "intro": {
+    "text": "注意看，他把份子钱算成了天使轮"
+  },
+  "cover": {
+    "title": "随礼变投资？",
+    "sub": "他的逻辑我没法反驳"
+  },
+  "chat_title": "前同事李梅（跑路的）",
+  "left": {
+    "avatar": "🧮",
+    "bg": "#00b894"
+  },
+  "right": {
+    "avatar": "💨",
+    "bg": "#fdcb6e"
+  },
+  "bgm": "scheming",
+  "messages": [
+    {
+      "side": "right",
+      "text": "陈哥我离职了，你随的份子钱不好意思啊"
+    },
+    {
+      "side": "left",
+      "text": "李梅你误会了"
+    },
+    {
+      "side": "left",
+      "text": "我从不把份子钱当人情"
+    },
+    {
+      "side": "right",
+      "text": "啊？那你当什么"
+    },
+    {
+      "side": "left",
+      "text": "天使轮投资",
+      "punch": true,
+      "sfx": "dun"
+    },
+    {
+      "side": "right",
+      "meme": "confused"
+    },
+    {
+      "side": "left",
+      "text": "3000块，换你婚姻项目3%股权"
+    },
+    {
+      "side": "left",
+      "text": "当时你们估值10万，我投得挺划算的"
+    },
+    {
+      "cutaway": "abstract",
+      "caption": "家人们谁懂啊",
+      "sfx": "goose"
+    },
+    {
+      "side": "right",
+      "text": "什么婚姻项目股权啊这"
+    },
+    {
+      "side": "left",
+      "text": "别急，我做了个估值模型",
+      "typing": true
+    },
+    {
+      "side": "left",
+      "text": "你们现在房贷30年月供8000"
+    },
+    {
+      "side": "left",
+      "text": "孩子计划两个，教育支出预估180万"
+    },
+    {
+      "side": "left",
+      "text": "你离职降薪导致项目现金流预警"
+    },
+    {
+      "side": "left",
+      "text": "我建议你老公追加融资，否则我要行使优先清算权"
+    },
+    {
+      "side": "right",
+      "meme": "dizzy"
+    },
+    {
+      "side": "right",
+      "text": "你到底想怎样"
+    },
+    {
+      "side": "left",
+      "text": "下次你们公司有人结婚记得叫我",
+      "sfx": "ding"
+    },
+    {
+      "side": "left",
+      "text": "我要把3000滚成30000",
+      "punch": true,
+      "sfx": "laugh_evil"
+    },
+    {
+      "cutaway": "money",
+      "caption": "纯爱战神变成了创投教父",
+      "sfx": "suona"
+    }
+  ]
+}

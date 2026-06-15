@@ -1,0 +1,80 @@
+{
+  "title": "婆婆要住进来-发疯文学",
+  "hook": "婆婆说要搬进来住😭",
+  "intro": {
+    "text": "注意看，她已经完全崩了"
+  },
+  "cover": {
+    "title": "婆婆要住进我家",
+    "sub": "她的精神状态很美丽"
+  },
+  "chat_title": "闺蜜急救群",
+  "left": {
+    "avatar": "😤",
+    "bg": "#FFF0E1"
+  },
+  "right": {
+    "avatar": "🫙",
+    "bg": "#E8FFE1"
+  },
+  "bgm": "chaos",
+  "messages": [
+    {
+      "side": "right",
+      "text": "婆婆说要搬来住，你怎么办啊"
+    },
+    {
+      "side": "left",
+      "text": "我的天塌了"
+    },
+    {
+      "side": "left",
+      "text": "我的海枯了"
+    },
+    {
+      "side": "left",
+      "text": "我的春天夏天秋天全没了！",
+      "sfx": "damage"
+    },
+    {
+      "cutaway": "abstract",
+      "caption": "她的四季全被婆婆拿走了",
+      "sfx": "goose"
+    },
+    {
+      "side": "right",
+      "text": "冷静冷静，你说具体点……"
+    },
+    {
+      "side": "left",
+      "text": "她说要管家里的钱！！"
+    },
+    {
+      "side": "left",
+      "text": "我那张卡里有392块8！"
+    },
+    {
+      "side": "left",
+      "text": "那是我全部的温柔和尊严！",
+      "punch": true,
+      "sfx": "suona"
+    },
+    {
+      "side": "right",
+      "meme": "speechless"
+    },
+    {
+      "side": "left",
+      "text": "我跟那392块8相依为命九年了"
+    },
+    {
+      "side": "left",
+      "text": "她凭什么！她凭什么动我的钱！",
+      "sfx": "boom"
+    },
+    {
+      "side": "right",
+      "text": "……你们结婚才一年吧"
+    }
+  ]
+}

@@ -25,7 +25,7 @@ def preprocess(script: dict) -> dict:
                 "cutaway": (intro.get("image") if isinstance(intro, dict) else None) or "none",
                 "caption": text,
                 "sfx": (intro.get("sfx") if isinstance(intro, dict) else None) or "whoosh",
-                "dur": (intro.get("dur") if isinstance(intro, dict) else None) or 2600,
+                "dur": (intro.get("dur") if isinstance(intro, dict) else None) or 2100,
                 "big": True,
             }
             script["messages"] = [cut] + script["messages"]
@@ -41,10 +41,10 @@ def assemble(script: dict, tts_results, seed: str = ""):
     rng = random.Random(seed or script.get("title", ""))
     builtin = media.ensure_builtin_sfx()
 
-    # 脚本级节奏覆盖（控制总时长用）
-    pad_after_audio = int(script.get("pad_after_audio", config.PAD_AFTER_AUDIO))
-    image_dwell = int(script.get("image_dwell", config.IMAGE_DWELL))
-    end_hold = int(script.get("end_hold", config.END_HOLD))
+    # 脚本级节奏覆盖（控制总时长用）；默认值已调紧以压到 30s 内
+    pad_after_audio = int(script.get("pad_after_audio", 230))
+    image_dwell = int(script.get("image_dwell", 1250))
+    end_hold = int(script.get("end_hold", 1500))
 
     payload_msgs = []
     cutaways = []      # 全屏插播 {t, dur, image, caption}
@@ -83,7 +83,7 @@ def assemble(script: dict, tts_results, seed: str = ""):
             continue
 
         side = msg.get("side", "left")
-        typing_ms = 900 if msg.get("typing") else 0
+        typing_ms = 650 if msg.get("typing") else 0
         cursor += typing_ms
         t = cursor
 
@@ -155,22 +155,17 @@ def assemble(script: dict, tts_results, seed: str = ""):
                 role["avatar"] = p.resolve().as_uri()
         return role
 
-    # 封面数据：title/sub/image（image 可填情绪 tag 或路径，缺省用 right 头像图）
+    # 封面：聊天截图模式——手机停在反转气泡做主视觉，大字压顶+红条压底。
+    # 比纯文字大字报点击率高（观众一眼看到"那句话"）。
     cov = script.get("cover") or {}
-    cov_img = None
-    val = cov.get("image", "")
-    if val in config.EMOTIONS:
-        cov_img = assets.resolve_meme(val, rng)
-    elif val and (config.ROOT / val).exists():
-        cov_img = config.ROOT / val
-    else:
-        rav = (script.get("right") or {}).get("avatar", "")
-        if rav and (config.ROOT / rav).exists():
-            cov_img = config.ROOT / rav
+    punch_t = next((m["t"] for m in payload_msgs if m.get("punch")), None)
+    if punch_t is None and payload_msgs:
+        punch_t = payload_msgs[-1]["t"]            # 没标 punch 用最后一条
     cover = {
+        "mode": "chat",
+        "seekMs": (punch_t + 700) if punch_t is not None else 0,  # 反转气泡滑入后定格
         "title": cov.get("title") or script.get("hook") or script.get("title", ""),
-        "sub": cov.get("sub", "看到最后一句我跪了"),
-        "image": cov_img.resolve().as_uri() if cov_img else None,
+        "sub": cov.get("sub", "看到最后一句我直接笑喷"),
     }
 
     payload = {

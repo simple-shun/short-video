@@ -1,0 +1,95 @@
+{
+  "title": "相亲彩礼神反转3",
+  "hook": "她刚开口要彩礼，他已经在哭了😭",
+  "intro": {
+    "text": "注意看，这个男人哭得太快了"
+  },
+  "cover": {
+    "title": "她还没说完他已经哭了",
+    "sub": "哭的原因让她沉默"
+  },
+  "chat_title": "相亲对象-李晓云",
+  "left": {
+    "avatar": "👩‍💼",
+    "bg": "#DDA0DD"
+  },
+  "right": {
+    "avatar": "🥺",
+    "bg": "#ADD8E6"
+  },
+  "bgm": "sad",
+  "messages": [
+    {
+      "side": "left",
+      "text": "我对另一半要求不高"
+    },
+    {
+      "side": "left",
+      "text": "彩礼88万，全款房，婚后每月给我3万零花"
+    },
+    {
+      "side": "right",
+      "text": "呜呜呜呜呜",
+      "sfx": "damage"
+    },
+    {
+      "side": "left",
+      "meme": "confused"
+    },
+    {
+      "side": "left",
+      "text": "你哭啥？我还没说完"
+    },
+    {
+      "side": "right",
+      "text": "对不起我情绪有点激动"
+    },
+    {
+      "side": "right",
+      "text": "你说88万……"
+    },
+    {
+      "side": "right",
+      "text": "我上个月刚还完88万的债"
+    },
+    {
+      "cutaway": "cry",
+      "caption": "他真的我哭死",
+      "sfx": "awkward"
+    },
+    {
+      "side": "left",
+      "text": "啊……那你现在手头"
+    },
+    {
+      "side": "right",
+      "text": "还有7块2，但我有梦想",
+      "typing": true
+    },
+    {
+      "side": "right",
+      "text": "我梦想下个月再借88万",
+      "punch": true,
+      "sfx": "dun"
+    },
+    {
+      "cutaway": "abstract",
+      "caption": "纯爱战神无法战胜他",
+      "sfx": "goose"
+    },
+    {
+      "side": "left",
+      "meme": "speechless"
+    },
+    {
+      "side": "right",
+      "text": "你要的3万零花我也记下来了，一起借",
+      "sfx": "vl_wudi"
+    },
+    {
+      "side": "right",
+      "text": "你要不要一起借，两个人利息能少点",
+      "sfx": "laugh_evil"
+    }
+  ]
+}

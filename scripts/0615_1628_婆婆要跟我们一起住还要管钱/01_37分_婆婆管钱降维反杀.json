@@ -1,0 +1,93 @@
+{
+  "title": "婆婆管钱降维反杀",
+  "hook": "婆婆说要管家里的钱💰",
+  "intro": {
+    "text": "注意看，这个女人把婆婆整沉默了"
+  },
+  "cover": {
+    "title": "婆婆要管我的钱",
+    "sub": "她不知道我是干啥的"
+  },
+  "chat_title": "婆婆（财务总监）",
+  "left": {
+    "avatar": "👵",
+    "bg": "#FFB347"
+  },
+  "right": {
+    "avatar": "👩",
+    "bg": "#C9B1FF"
+  },
+  "bgm": "scheming",
+  "messages": [
+    {
+      "side": "left",
+      "text": "我住进来以后家里的钱我来管，你们小年轻不会花钱"
+    },
+    {
+      "side": "right",
+      "text": "好的，我需要您先提交一份资质证明"
+    },
+    {
+      "side": "left",
+      "text": "什么资质？我是你婆婆！"
+    },
+    {
+      "side": "right",
+      "text": "基金从业资格证"
+    },
+    {
+      "side": "right",
+      "text": "或者CFA三级"
+    },
+    {
+      "side": "right",
+      "text": "二者提供其一即可"
+    },
+    {
+      "side": "left",
+      "meme": "confused"
+    },
+    {
+      "side": "left",
+      "text": "我管自己家的钱还要考证？"
+    },
+    {
+      "side": "right",
+      "text": "我查了一下，我们家资产池现值83.6万",
+      "typing": true
+    },
+    {
+      "side": "right",
+      "text": "属于中高净值家庭，建议引入持牌机构托管",
+      "punch": true,
+      "sfx": "dun"
+    },
+    {
+      "cutaway": "confused",
+      "caption": "她在说人话吗我听不懂",
+      "sfx": "bruh"
+    },
+    {
+      "side": "left",
+      "text": "你这孩子说什么呢！"
+    },
+    {
+      "side": "right",
+      "text": "您放心，我给您争取到了一个顾问席位"
+    },
+    {
+      "side": "right",
+      "text": "年薪0元，但管饭，福利待遇行业前列",
+      "sfx": "laugh_duck"
+    },
+    {
+      "side": "left",
+      "meme": "angry"
+    },
+    {
+      "side": "right",
+      "text": "合同已起草，乙方签字处在第三页右下角",
+      "sfx": "goose"
+    }
+  ]
+}

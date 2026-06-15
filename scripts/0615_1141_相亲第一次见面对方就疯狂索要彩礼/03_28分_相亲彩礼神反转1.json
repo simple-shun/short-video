@@ -1,0 +1,99 @@
+{
+  "title": "相亲彩礼神反转1",
+  "hook": "相亲当天她开出天价彩礼💍",
+  "intro": {
+    "text": "注意看，这个男人笑得太诡异了"
+  },
+  "cover": {
+    "title": "她要房要车要百万",
+    "sub": "他说：都有，你进来看"
+  },
+  "chat_title": "相亲对象（今天见面）",
+  "left": {
+    "avatar": "👩",
+    "bg": "#FFB6C1"
+  },
+  "right": {
+    "avatar": "🧍",
+    "bg": "#B0C4DE"
+  },
+  "bgm": "scheming",
+  "messages": [
+    {
+      "side": "left",
+      "text": "咱俩今天刚见面，我直说哈"
+    },
+    {
+      "side": "left",
+      "text": "彩礼88万，市区全款房，奔驰GLE"
+    },
+    {
+      "side": "left",
+      "text": "婚后我妈住主卧，不接受就拉倒"
+    },
+    {
+      "side": "right",
+      "text": "行",
+      "sfx": "ding"
+    },
+    {
+      "side": "left",
+      "meme": "confused"
+    },
+    {
+      "side": "left",
+      "text": "？你说啥"
+    },
+    {
+      "side": "right",
+      "text": "我说行啊，都备着呢",
+      "typing": true
+    },
+    {
+      "cutaway": "surprised",
+      "caption": "家人们他备着呢！！",
+      "sfx": "boom"
+    },
+    {
+      "side": "left",
+      "text": "你在开玩笑？88万你随口就答应？"
+    },
+    {
+      "side": "right",
+      "text": "不开玩笑，你加我微信我发定位"
+    },
+    {
+      "side": "right",
+      "text": "房在那儿，车在楼下，钱在保险柜"
+    },
+    {
+      "side": "left",
+      "text": "……你干什么的",
+      "sfx": "drumroll"
+    },
+    {
+      "side": "right",
+      "text": "殡仪馆的",
+      "punch": true,
+      "sfx": "dun"
+    },
+    {
+      "side": "right",
+      "text": "房是寿材铺子，车是灵车，88万是今年流水"
+    },
+    {
+      "cutaway": "dizzy",
+      "caption": "她妈的主卧要进去了",
+      "sfx": "suona"
+    },
+    {
+      "side": "left",
+      "meme": "shock"
+    },
+    {
+      "side": "right",
+      "text": "你妈住主卧没问题，我给她挑个好位置",
+      "sfx": "laugh_evil"
+    }
+  ]
+}

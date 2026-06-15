@@ -1,0 +1,80 @@
+{
+  "title": "婆婆要住进来-抽象鬼畜",
+  "hook": "婆婆说这是她家？🤔",
+  "intro": {
+    "text": "注意看，这对话的走向不对劲"
+  },
+  "cover": {
+    "title": "婆婆说要住进来管钱",
+    "sub": "最后她管了一个寂寞"
+  },
+  "chat_title": "老公（中间人）",
+  "left": {
+    "avatar": "🧔",
+    "bg": "#E8E8FF"
+  },
+  "right": {
+    "avatar": "🌵",
+    "bg": "#FFE8E8"
+  },
+  "bgm": "silly",
+  "messages": [
+    {
+      "side": "left",
+      "text": "我妈说想搬来住，还想管咱家的钱"
+    },
+    {
+      "side": "right",
+      "text": "你妈会做饭吗"
+    },
+    {
+      "side": "left",
+      "text": "啊？会啊，这跟做饭有啥关系"
+    },
+    {
+      "side": "right",
+      "text": "厨房归她管"
+    },
+    {
+      "side": "right",
+      "text": "钱归我管",
+      "sfx": "ding"
+    },
+    {
+      "side": "left",
+      "meme": "confused"
+    },
+    {
+      "side": "left",
+      "text": "你这逻辑是……"
+    },
+    {
+      "side": "right",
+      "text": "她管吃进去的"
+    },
+    {
+      "side": "right",
+      "text": "我管花出去的",
+      "punch": true,
+      "sfx": "boom"
+    },
+    {
+      "cutaway": "doge",
+      "caption": "这分工合理得我无话可说",
+      "sfx": "goose"
+    },
+    {
+      "side": "left",
+      "text": "那我呢？？我管什么"
+    },
+    {
+      "side": "right",
+      "text": "你负责挣"
+    },
+    {
+      "side": "right",
+      "text": "欢迎婆婆入住，不用管钱",
+      "sfx": "laugh_duck"
+    }
+  ]
+}

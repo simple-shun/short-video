@@ -1,0 +1,97 @@
+{
+  "title": "相亲彩礼神反转2",
+  "hook": "相亲女孩疯狂加价，男方全程记账📒",
+  "intro": {
+    "text": "注意看，他一直在记什么东西"
+  },
+  "cover": {
+    "title": "她加到第8个条件",
+    "sub": "他把账本递过来了"
+  },
+  "chat_title": "相亲小程序-张梦琪",
+  "left": {
+    "avatar": "💁",
+    "bg": "#FFDAB9"
+  },
+  "right": {
+    "avatar": "🧮",
+    "bg": "#E0E0E0"
+  },
+  "bgm": "sneaky",
+  "messages": [
+    {
+      "side": "left",
+      "text": "彩礼先报个数，少于66万免谈"
+    },
+    {
+      "side": "right",
+      "text": "记住了"
+    },
+    {
+      "side": "left",
+      "text": "还要在我们小区买房，写我名字"
+    },
+    {
+      "side": "right",
+      "text": "记住了"
+    },
+    {
+      "side": "left",
+      "text": "婚车最少8辆，头车必须大G"
+    },
+    {
+      "side": "right",
+      "text": "记住了",
+      "sfx": "ding"
+    },
+    {
+      "side": "left",
+      "meme": "confused"
+    },
+    {
+      "side": "left",
+      "text": "你就会说记住了？你记那么多干嘛"
+    },
+    {
+      "side": "right",
+      "text": "记账啊",
+      "typing": true
+    },
+    {
+      "side": "right",
+      "text": "66万+房+8辆大G，折算一下"
+    },
+    {
+      "side": "right",
+      "text": "你今天花了我627块5的咨询费"
+    },
+    {
+      "cutaway": "speechless",
+      "caption": "他收费的？？家人们谁懂啊",
+      "sfx": "bruh"
+    },
+    {
+      "side": "left",
+      "text": "什么咨询费！！"
+    },
+    {
+      "side": "right",
+      "text": "我是婚庆顾问，不是相亲对象",
+      "punch": true,
+      "sfx": "boom"
+    },
+    {
+      "side": "right",
+      "text": "红娘把你发错群了，你应该在对面那个窗口"
+    },
+    {
+      "side": "left",
+      "meme": "dizzy"
+    },
+    {
+      "side": "right",
+      "text": "不过你的需求我记下来了，介绍费另算",
+      "sfx": "laugh_duck"
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "title": "查岗反杀_考古现场",
+  "hook": "查岗没回消息，他给我整了个考古🏺",
+  "intro": {
+    "text": "注意看，这个男人3小时没回消息"
+  },
+  "cover": {
+    "title": "他消失3小时的真相",
+    "sub": "对象彻底沉默了"
+  },
+  "chat_title": "宝贝儿🔒",
+  "left": {
+    "avatar": "👧",
+    "bg": "#FFD6E0"
+  },
+  "right": {
+    "avatar": "🧑",
+    "bg": "#D6E4FF"
+  },
+  "bgm": "tension",
+  "messages": [
+    {
+      "side": "left",
+      "text": "你在干嘛，怎么不回我"
+    },
+    {
+      "side": "left",
+      "text": "？"
+    },
+    {
+      "side": "left",
+      "text": "？？"
+    },
+    {
+      "side": "left",
+      "text": "你是不是跟别的女生在一起"
+    },
+    {
+      "side": "right",
+      "text": "没有，我在研究一个重大发现",
+      "typing": true
+    },
+    {
+      "side": "left",
+      "text": "什么发现"
+    },
+    {
+      "side": "right",
+      "text": "我翻出了你2019年发的微博",
+      "sfx": "drumroll"
+    },
+    {
+      "side": "right",
+      "text": "你说过你喜欢的男生要1米8、会打篮球、家里有车"
+    },
+    {
+      "cutaway": "shock",
+      "caption": "家人们他在干什么",
+      "sfx": "goose"
+    },
+    {
+      "side": "right",
+      "text": "我1米75、不会打篮球、骑电动车",
+      "punch": true,
+      "sfx": "dun"
+    },
+    {
+      "side": "right",
+      "text": "我一条都不符合"
+    },
+    {
+      "side": "right",
+      "text": "所以我这3小时在研究怎么退货"
+    },
+    {
+      "cutaway": "dizzy",
+      "caption": "他真的我哭死",
+      "sfx": "boom"
+    },
+    {
+      "side": "left",
+      "text": "你给我等着！！！",
+      "sfx": "damage"
+    },
+    {
+      "side": "right",
+      "text": "退不了是吧，我就说嘛，没有发票",
+      "sfx": "vl_wudi"
+    }
+  ]
+}

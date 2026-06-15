@@ -1,0 +1,96 @@
+{
+  "title": "画饼老板被00后整顿4",
+  "hook": "老板说公司是我们共同的事业🚀",
+  "intro": {
+    "text": "注意看，他去工商局了"
+  },
+  "cover": {
+    "title": "老板说公司是咱们的",
+    "sub": "我去查了股权结构"
+  },
+  "chat_title": "合伙人老板（待确认）",
+  "left": {
+    "avatar": "🎭",
+    "bg": "#6A0572"
+  },
+  "right": {
+    "avatar": "📋",
+    "bg": "#0D0D0D"
+  },
+  "bgm": "scheming",
+  "messages": [
+    {
+      "side": "left",
+      "text": "小吴！这公司是咱们共同的事业！你要有主人翁精神！"
+    },
+    {
+      "side": "right",
+      "text": "好的，我去工商局查了一下"
+    },
+    {
+      "side": "left",
+      "text": "查什么"
+    },
+    {
+      "side": "right",
+      "text": "股权结构",
+      "sfx": "dun"
+    },
+    {
+      "side": "right",
+      "text": "您100%，我0%"
+    },
+    {
+      "side": "right",
+      "text": "主人翁精神我有了，但主人翁股份我没有",
+      "punch": true,
+      "sfx": "boom"
+    },
+    {
+      "side": "left",
+      "meme": "speechless"
+    },
+    {
+      "cutaway": "scheme",
+      "caption": "他真的去工商局了……",
+      "sfx": "suona"
+    },
+    {
+      "side": "left",
+      "text": "股权这个……要考察期的……"
+    },
+    {
+      "side": "right",
+      "text": "我考察您三年了"
+    },
+    {
+      "side": "right",
+      "text": "考察结果：饼的水分含量过高，不建议继续持仓",
+      "sfx": "goose"
+    },
+    {
+      "side": "left",
+      "text": "你什么意思"
+    },
+    {
+      "side": "right",
+      "text": "我离职了王总",
+      "typing": true
+    },
+    {
+      "side": "right",
+      "text": "但我带走了主人翁精神",
+      "sfx": "vl_wudi"
+    },
+    {
+      "side": "right",
+      "text": "创业去了，缺投资人，您考虑一下",
+      "sfx": "laugh_evil"
+    },
+    {
+      "cutaway": "abstract",
+      "caption": "整顿完毕，反向画饼",
+      "sfx": "tada"
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "title": "婆婆管钱降维反杀",
+  "hook": "婆婆说要管家里的钱💰",
+  "intro": {
+    "text": "注意看，这个女人要对婆婆动手了"
+  },
+  "cover": {
+    "title": "婆婆要管我的钱",
+    "sub": "她不知道我有多少账户"
+  },
+  "chat_title": "婆婆（财务总监）",
+  "left": {
+    "avatar": "👵",
+    "bg": "#FF6B6B"
+  },
+  "right": {
+    "avatar": "🤑",
+    "bg": "#4ECDC4"
+  },
+  "bgm": "scheming",
+  "messages": [
+    {
+      "side": "left",
+      "text": "媳妇儿，以后家里的钱都交给妈管吧"
+    },
+    {
+      "side": "right",
+      "text": "好的妈，我整理一下资产清单"
+    },
+    {
+      "side": "left",
+      "text": "哎呀不用那么麻烦，就交给妈就行"
+    },
+    {
+      "side": "right",
+      "text": "我查了一下",
+      "typing": true
+    },
+    {
+      "side": "right",
+      "text": "您名下无存款无股票无基金"
+    },
+    {
+      "side": "right",
+      "text": "信用评分612，有两笔花呗未还"
+    },
+    {
+      "side": "left",
+      "meme": "shock"
+    },
+    {
+      "side": "right",
+      "text": "根据尽职调查结果，不建议完成资产交割",
+      "punch": true,
+      "sfx": "dun"
+    },
+    {
+      "cutaway": "surprised",
+      "caption": "家人们她真的做了背调",
+      "sfx": "boom"
+    },
+    {
+      "side": "left",
+      "text": "你这孩子怎么能查妈的信息"
+    },
+    {
+      "side": "right",
+      "text": "妈您放心，查询费627块我不收您的"
+    },
+    {
+      "side": "right",
+      "text": "但我聘您当家庭财务顾问的事也黄了",
+      "sfx": "laugh_duck"
+    },
+    {
+      "side": "left",
+      "meme": "angry"
+    },
+    {
+      "side": "right",
+      "text": "您631的分跑不过我的余额宝啊妈",
+      "punch": true,
+      "sfx": "vl_wudi"
+    }
+  ]
+}

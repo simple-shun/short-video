@@ -1,0 +1,90 @@
+{
+  "title": "婆婆同住字面理解流",
+  "hook": "婆婆说要住进来'帮忙'🏠",
+  "intro": {
+    "text": "注意看，这个婆婆对帮忙有独特理解"
+  },
+  "cover": {
+    "title": "婆婆说来帮我带孩子",
+    "sub": "但我还没有孩子"
+  },
+  "chat_title": "婆婆（未来室友）",
+  "left": {
+    "avatar": "👩",
+    "bg": "#A8E6CF"
+  },
+  "right": {
+    "avatar": "👵",
+    "bg": "#FFD3A5"
+  },
+  "bgm": "silly",
+  "messages": [
+    {
+      "side": "right",
+      "text": "妈说要搬来住，帮咱们做做家务"
+    },
+    {
+      "side": "left",
+      "text": "那她住哪个房间"
+    },
+    {
+      "side": "right",
+      "text": "主卧"
+    },
+    {
+      "side": "left",
+      "meme": "confused"
+    },
+    {
+      "side": "right",
+      "text": "她说咱俩年轻睡次卧就行"
+    },
+    {
+      "side": "left",
+      "text": "我量了一下次卧",
+      "typing": true
+    },
+    {
+      "side": "left",
+      "text": "1.2米的床"
+    },
+    {
+      "side": "left",
+      "text": "我打算睡沙发，你睡床"
+    },
+    {
+      "side": "right",
+      "text": "为什么你睡沙发"
+    },
+    {
+      "side": "left",
+      "text": "我研究了一下，沙发是中立区域",
+      "punch": true,
+      "sfx": "dun"
+    },
+    {
+      "cutaway": "abstract",
+      "caption": "她在下一盘很大的棋",
+      "sfx": "goose"
+    },
+    {
+      "side": "left",
+      "text": "主权归我，婆婆管不着"
+    },
+    {
+      "side": "right",
+      "text": "那我呢"
+    },
+    {
+      "side": "left",
+      "text": "你是联合国维和部队",
+      "sfx": "laugh_evil"
+    },
+    {
+      "side": "left",
+      "text": "负责婆媳关系稳定，加班不给钱那种",
+      "punch": true,
+      "sfx": "vl_wudi"
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "title": "婆婆要管钱人设爆破",
+  "hook": "婆婆管钱管出大事了😨",
+  "intro": {
+    "text": "注意看，这个婆婆以为她在管钱"
+  },
+  "cover": {
+    "title": "婆婆说她最会管钱",
+    "sub": "结果我查了她的账"
+  },
+  "chat_title": "和老公的聊天",
+  "left": {
+    "avatar": "👨",
+    "bg": "#82E0AA"
+  },
+  "right": {
+    "avatar": "😤",
+    "bg": "#F1948A"
+  },
+  "bgm": "chaos",
+  "messages": [
+    {
+      "side": "left",
+      "text": "妈说她年轻时管过厂里十几号人的工资，让她管咱家的钱吧"
+    },
+    {
+      "side": "right",
+      "text": "好啊，我去翻了一下她手机"
+    },
+    {
+      "side": "left",
+      "text": "你干啥翻我妈手机"
+    },
+    {
+      "side": "right",
+      "text": "她在某音买了386块的养生壶"
+    },
+    {
+      "side": "right",
+      "text": "说是原价9800的"
+    },
+    {
+      "side": "right",
+      "text": "还给主播扣了27个爱心，每个9块9"
+    },
+    {
+      "side": "left",
+      "meme": "dizzy"
+    },
+    {
+      "side": "right",
+      "text": "购物车里还有一条我给她截图了",
+      "typing": true
+    },
+    {
+      "side": "right",
+      "text": "\"超值！买一送一！官方旗舰店！纯金手镯199包邮\"",
+      "punch": true,
+      "sfx": "dun"
+    },
+    {
+      "cutaway": "abstract",
+      "caption": "这就是要来管我们钱的人",
+      "sfx": "bruh"
+    },
+    {
+      "side": "left",
+      "text": "……"
+    },
+    {
+      "side": "right",
+      "text": "她管钱我支持"
+    },
+    {
+      "side": "right",
+      "text": "但我建议她先管好自己的购物车",
+      "sfx": "laugh_duck"
+    },
+    {
+      "side": "left",
+      "meme": "speechless"
+    },
+    {
+      "side": "right",
+      "text": "主播们已经把她列为VIP了，你知道吗",
+      "sfx": "goose"
+    }
+  ]
+}

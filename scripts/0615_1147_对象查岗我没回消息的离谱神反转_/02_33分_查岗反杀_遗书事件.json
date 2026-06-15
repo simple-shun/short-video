@@ -1,0 +1,86 @@
+{
+  "title": "查岗反杀_遗书事件",
+  "hook": "查岗没回消息，他在给我写遗书📝",
+  "intro": {
+    "text": "注意看，他失联2小时后发来这条"
+  },
+  "cover": {
+    "title": "他消失2小时写了什么",
+    "sub": "我看完当场报警"
+  },
+  "chat_title": "男朋友（存疑）",
+  "left": {
+    "avatar": "🌸",
+    "bg": "#FFE4EC"
+  },
+  "right": {
+    "avatar": "🌵",
+    "bg": "#E4F0E8"
+  },
+  "bgm": "sneaky",
+  "messages": [
+    {
+      "side": "left",
+      "text": "你干嘛去了，两小时没消息"
+    },
+    {
+      "side": "left",
+      "text": "我是不是被分手了"
+    },
+    {
+      "side": "right",
+      "text": "没有，我在写东西",
+      "typing": true
+    },
+    {
+      "side": "left",
+      "text": "写什么"
+    },
+    {
+      "side": "right",
+      "text": "遗书",
+      "sfx": "dun"
+    },
+    {
+      "side": "left",
+      "meme": "shock"
+    },
+    {
+      "side": "left",
+      "text": "你！！发生什么了！！"
+    },
+    {
+      "side": "right",
+      "text": "我的外卖骑手账号被封了",
+      "punch": true,
+      "sfx": "boom"
+    },
+    {
+      "cutaway": "dizzy",
+      "caption": "等等他是骑手？",
+      "sfx": "bruh"
+    },
+    {
+      "side": "right",
+      "text": "我在上面写：此账号虽死，五星好评永存"
+    },
+    {
+      "side": "right",
+      "text": "我给三千个用户都送过餐，他们是我的遗产"
+    },
+    {
+      "cutaway": "speechless",
+      "caption": "这就是纯爱战神吗",
+      "sfx": "goose"
+    },
+    {
+      "side": "left",
+      "text": "……你能不能说人话"
+    },
+    {
+      "side": "right",
+      "text": "不能，我还在物色新账号，你要不要给我投资",
+      "sfx": "vl_wudi"
+    }
+  ]
+}

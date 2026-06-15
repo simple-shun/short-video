@@ -1,0 +1,97 @@
+{
+  "title": "画饼老板被00后整顿2",
+  "hook": "老板说把我当家人👨‍👩‍👧",
+  "intro": {
+    "text": "注意看，他真的信了"
+  },
+  "cover": {
+    "title": "老板说你是我家人",
+    "sub": "00后当场认亲"
+  },
+  "chat_title": "干爹（老板）",
+  "left": {
+    "avatar": "🥹",
+    "bg": "#8B4513"
+  },
+  "right": {
+    "avatar": "🫡",
+    "bg": "#1A1A2E"
+  },
+  "bgm": "silly",
+  "messages": [
+    {
+      "side": "left",
+      "text": "小张你要把公司当家！我把你当自己孩子！"
+    },
+    {
+      "side": "right",
+      "text": "好的干爹"
+    },
+    {
+      "side": "left",
+      "meme": "confused"
+    },
+    {
+      "side": "left",
+      "text": "……咱不叫这个"
+    },
+    {
+      "side": "right",
+      "text": "您说把我当孩子",
+      "sfx": "bruh"
+    },
+    {
+      "side": "right",
+      "text": "那这个月家里水电费1800能报销吗"
+    },
+    {
+      "side": "left",
+      "text": "那不行那是私事"
+    },
+    {
+      "side": "right",
+      "text": "我爸生病住院了家人能不能来探望",
+      "typing": true
+    },
+    {
+      "side": "right",
+      "text": "您是我干爹您得来",
+      "punch": true,
+      "sfx": "dun"
+    },
+    {
+      "side": "left",
+      "meme": "speechless"
+    },
+    {
+      "side": "left",
+      "text": "你这孩子说话太……"
+    },
+    {
+      "side": "right",
+      "text": "干爹我也想把公司当家"
+    },
+    {
+      "side": "right",
+      "text": "但家人过年是要给压岁钱的"
+    },
+    {
+      "side": "right",
+      "text": "我今年26了，按行情包1000吧",
+      "sfx": "goose"
+    },
+    {
+      "cutaway": "laugh",
+      "caption": "家人们，他真的去认亲了",
+      "sfx": "laugh_evil"
+    },
+    {
+      "side": "left",
+      "text": "……我说的是比喻"
+    },
+    {
+      "side": "right",
+      "text": "干爹你变了"
+    }
+  ]
+}

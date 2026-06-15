@@ -1,0 +1,94 @@
+{
+  "title": "画饼老板被00后整顿3",
+  "hook": "老板让我无偿加班说学经验💼",
+  "intro": {
+    "text": "注意看，这个00后怎么报价的"
+  },
+  "cover": {
+    "title": "老板叫我加班学经验",
+    "sub": "我给他发了份账单"
+  },
+  "chat_title": "王总（学费催收中）",
+  "left": {
+    "avatar": "💰",
+    "bg": "#2C3E50"
+  },
+  "right": {
+    "avatar": "🧾",
+    "bg": "#ECF0F1"
+  },
+  "bgm": "sneaky",
+  "messages": [
+    {
+      "side": "left",
+      "text": "小陈周末来加个班，不算加班费，当学经验了！"
+    },
+    {
+      "side": "right",
+      "text": "好的王总，我也正好有事找您"
+    },
+    {
+      "side": "left",
+      "text": "什么事"
+    },
+    {
+      "side": "right",
+      "text": "我查了一下",
+      "typing": true
+    },
+    {
+      "side": "right",
+      "text": "您给我讲的这些经验，同类型课程市价是这样的："
+    },
+    {
+      "side": "right",
+      "text": "销售话术课：2980元\n商务谈判课：4800元\n带团队管理课：6600元",
+      "punch": true,
+      "sfx": "dun"
+    },
+    {
+      "side": "left",
+      "meme": "doge"
+    },
+    {
+      "side": "right",
+      "text": "您教了我18个月了"
+    },
+    {
+      "side": "right",
+      "text": "合计学费约26万4"
+    },
+    {
+      "side": "right",
+      "text": "我愿意打个折，算您15万",
+      "sfx": "goose"
+    },
+    {
+      "cutaway": "money",
+      "caption": "家人们，他在给老板发账单",
+      "sfx": "boom"
+    },
+    {
+      "side": "left",
+      "text": "你……你这叫什么逻辑"
+    },
+    {
+      "side": "right",
+      "text": "您说加班是学经验"
+    },
+    {
+      "side": "right",
+      "text": "那我这学生交个学费合理吧王总",
+      "sfx": "laugh_duck"
+    },
+    {
+      "side": "left",
+      "text": "……加班费正常结你行了吧"
+    },
+    {
+      "side": "right",
+      "text": "学费可以暂时挂账，谢谢王总",
+      "sfx": "vl_wudi"
+    }
+  ]
+}

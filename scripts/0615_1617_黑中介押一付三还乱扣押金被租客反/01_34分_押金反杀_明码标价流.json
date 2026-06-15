@@ -1,0 +1,99 @@
+{
+  "title": "押金反杀_明码标价流",
+  "hook": "中介扣我押金🤡我把他做成了IP",
+  "intro": {
+    "text": "注意看，这个中介不知道我副业是什么"
+  },
+  "cover": {
+    "title": "押金没要回来但我赚了",
+    "sub": "他的聊天记录卖了1700份"
+  },
+  "chat_title": "中介李姐（收钱不认账）",
+  "left": {
+    "avatar": "💅",
+    "bg": "#8e44ad"
+  },
+  "right": {
+    "avatar": "📊",
+    "bg": "#1a252f"
+  },
+  "bgm": "sneaky",
+  "messages": [
+    {
+      "side": "left",
+      "text": "押一付三是我们这边规矩，退房押金正常走流程要45个工作日"
+    },
+    {
+      "side": "right",
+      "text": "好的"
+    },
+    {
+      "side": "left",
+      "text": "另外查出来燃气灶油污，扣押金800，剩下的钱慢慢等吧"
+    },
+    {
+      "side": "right",
+      "text": "好的，我等着，我顺手开了个账号",
+      "typing": true
+    },
+    {
+      "side": "right",
+      "text": "把您押一付三收了我9600还扣押金的聊天记录整理了一下"
+    },
+    {
+      "side": "right",
+      "text": "9块9一套，三个小时卖了214套",
+      "punch": true,
+      "sfx": "boom"
+    },
+    {
+      "side": "left",
+      "meme": "doge"
+    },
+    {
+      "cutaway": "money",
+      "caption": "他真的我哭死，直接货币化了",
+      "sfx": "laugh_duck"
+    },
+    {
+      "side": "left",
+      "text": "你这是侵犯我隐私！我要告你！"
+    },
+    {
+      "side": "right",
+      "text": "聊天记录里我打码了您的脸，保留了油污燃气灶和押一付三条款"
+    },
+    {
+      "side": "right",
+      "text": "粉丝问燃气灶品牌，说想买同款证据"
+    },
+    {
+      "side": "left",
+      "text": "你……你给我删了！"
+    },
+    {
+      "side": "right",
+      "text": "删除费1900，正好抵您扣我押金加利息，咱两清",
+      "punch": true,
+      "sfx": "dun"
+    },
+    {
+      "side": "right",
+      "text": "您考虑一下，粉丝等着更新第二期呢",
+      "sfx": "laugh_evil"
+    },
+    {
+      "side": "left",
+      "meme": "dizzy"
+    },
+    {
+      "side": "left",
+      "text": "押金全退你行了吧"
+    },
+    {
+      "side": "right",
+      "text": "退款已收到，给您发个五星好评：诚信中介，押金秒退，推荐大家踩坑",
+      "sfx": "laugh_duck"
+    }
+  ]
+}

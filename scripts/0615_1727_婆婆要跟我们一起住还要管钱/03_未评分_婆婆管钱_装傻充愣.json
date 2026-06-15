@@ -1,0 +1,79 @@
+{
+  "title": "婆婆管钱-装傻充愣",
+  "hook": "婆婆要管家里的钱？好的👌",
+  "intro": {
+    "text": "注意看，这个儿媳妇听话得很离谱"
+  },
+  "cover": {
+    "title": "婆婆说她来管钱",
+    "sub": "然后发生了一件大事"
+  },
+  "chat_title": "婆婆（新来的）",
+  "left": {
+    "avatar": "👵",
+    "bg": "#F5E6FF"
+  },
+  "right": {
+    "avatar": "🙂",
+    "bg": "#E6FFF5"
+  },
+  "bgm": "goofy",
+  "messages": [
+    {
+      "side": "left",
+      "text": "以后家里的钱都交给我来管哈"
+    },
+    {
+      "side": "right",
+      "text": "好的妈，我把卡给你"
+    },
+    {
+      "side": "left",
+      "text": "哎呀这孩子真懂事"
+    },
+    {
+      "side": "right",
+      "text": "卡里余额是0"
+    },
+    {
+      "side": "right",
+      "text": "密码是0000"
+    },
+    {
+      "side": "left",
+      "meme": "confused"
+    },
+    {
+      "side": "left",
+      "text": "那……钱呢？"
+    },
+    {
+      "side": "right",
+      "text": "您说管钱啊",
+      "punch": true,
+      "sfx": "dun"
+    },
+    {
+      "side": "right",
+      "text": "我就把钱存您账上管着了"
+    },
+    {
+      "cutaway": "shock",
+      "caption": "家人们反将一军了",
+      "sfx": "boom"
+    },
+    {
+      "side": "left",
+      "text": "你什么时候存的！！"
+    },
+    {
+      "side": "right",
+      "text": "就您说要来住那天"
+    },
+    {
+      "side": "right",
+      "text": "您放心，我管您管得很好",
+      "sfx": "laugh_duck"
+    }
+  ]
+}

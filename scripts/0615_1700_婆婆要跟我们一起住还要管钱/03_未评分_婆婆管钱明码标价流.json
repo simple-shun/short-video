@@ -1,0 +1,85 @@
+{
+  "title": "婆婆管钱明码标价流",
+  "hook": "婆婆管钱第一天就亏了💸",
+  "intro": {
+    "text": "注意看，婆婆的财务管理出现重大失误"
+  },
+  "cover": {
+    "title": "婆婆管家三个月",
+    "sub": "我算了一下账"
+  },
+  "chat_title": "老公（婆婆的律师）",
+  "left": {
+    "avatar": "😤",
+    "bg": "#F7DC6F"
+  },
+  "right": {
+    "avatar": "😰",
+    "bg": "#85C1E9"
+  },
+  "bgm": "tension",
+  "messages": [
+    {
+      "side": "left",
+      "text": "你妈管钱三个月了，我做了个审计报告"
+    },
+    {
+      "side": "right",
+      "text": "妈管得挺好的吧"
+    },
+    {
+      "side": "left",
+      "text": "超支2.3万"
+    },
+    {
+      "side": "right",
+      "meme": "shock"
+    },
+    {
+      "side": "left",
+      "text": "给你弟买了摩托车一辆，市值1.1万"
+    },
+    {
+      "side": "left",
+      "text": "给你姐随礼6000，我这边0收益"
+    },
+    {
+      "side": "left",
+      "text": "麻将消耗品支出每月固定2700",
+      "sfx": "damage"
+    },
+    {
+      "cutaway": "scheme",
+      "caption": "她在做的不是家务是风险投资",
+      "sfx": "boom"
+    },
+    {
+      "side": "right",
+      "text": "妈也是为了家啊"
+    },
+    {
+      "side": "left",
+      "text": "我理解，所以我给她定了个KPI",
+      "punch": true,
+      "sfx": "dun"
+    },
+    {
+      "side": "left",
+      "text": "季度亏损不超过8000，否则财权回收"
+    },
+    {
+      "side": "left",
+      "text": "顺便，她入股我们家的股权是0%"
+    },
+    {
+      "side": "left",
+      "text": "主人翁精神可以有，主人翁待遇，没有",
+      "punch": true,
+      "sfx": "vl_wudi"
+    },
+    {
+      "side": "right",
+      "meme": "dizzy"
+    }
+  ]
+}

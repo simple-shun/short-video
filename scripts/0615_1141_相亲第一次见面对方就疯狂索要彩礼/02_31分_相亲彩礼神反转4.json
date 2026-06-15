@@ -1,0 +1,94 @@
+{
+  "title": "相亲彩礼神反转4",
+  "hook": "她要彩礼，他当场给她算了一笔账🧾",
+  "intro": {
+    "text": "注意看，他把计算器拍到桌上了"
+  },
+  "cover": {
+    "title": "她要66万他说要退钱",
+    "sub": "她被算得说不出话"
+  },
+  "chat_title": "相亲-周女士",
+  "left": {
+    "avatar": "💅",
+    "bg": "#F08080"
+  },
+  "right": {
+    "avatar": "🧾",
+    "bg": "#90EE90"
+  },
+  "bgm": "scheming",
+  "messages": [
+    {
+      "side": "left",
+      "text": "我家条件你也看到了，彩礼不能少于66万"
+    },
+    {
+      "side": "right",
+      "text": "好，我也列个清单"
+    },
+    {
+      "side": "left",
+      "text": "你列什么清单"
+    },
+    {
+      "side": "right",
+      "text": "今天相亲饭：457元，我出的"
+    },
+    {
+      "side": "right",
+      "text": "打车来回：94元"
+    },
+    {
+      "side": "right",
+      "text": "你点的那杯气泡水：38元"
+    },
+    {
+      "side": "left",
+      "meme": "confused"
+    },
+    {
+      "side": "right",
+      "text": "算上我今天请假的工时费"
+    },
+    {
+      "side": "right",
+      "text": "你先退我2300块，我们再谈66万",
+      "typing": true,
+      "sfx": "drumroll"
+    },
+    {
+      "cutaway": "scheme",
+      "caption": "他在算什么我也想学",
+      "sfx": "wow"
+    },
+    {
+      "side": "left",
+      "text": "你什么意思！彩礼是男方给的！"
+    },
+    {
+      "side": "right",
+      "text": "所以我在出彩礼之前先结清账",
+      "punch": true,
+      "sfx": "boom"
+    },
+    {
+      "side": "right",
+      "text": "你欠我的清零，我欠你的66万一分不少"
+    },
+    {
+      "side": "left",
+      "meme": "angry"
+    },
+    {
+      "side": "right",
+      "text": "对了气泡水那38块可以抹掉",
+      "sfx": "vl_wudi"
+    },
+    {
+      "side": "right",
+      "text": "因为你没喝完，退你11块",
+      "sfx": "laugh_duck"
+    }
+  ]
+}
