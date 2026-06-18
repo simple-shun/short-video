@@ -1,0 +1,59 @@
+{
+  "mode": "magic",
+  "title": "朋克情侣分手现场",
+  "style_ref": "refs/punk_couple.png",
+  "bgm": "chaos",
+  "bgm_tempo": 1.2,
+  "cover": {"title": "我们分手！", "sub": "看到最后笑喷了"},
+  "endcard": "关注我，下集更癫 🤪",
+  "shots": [
+    {
+      "image": "gen:哥特女孩满脸泪水青筋暴起张大嘴愤怒嘶吼，彩虹莫西干头朋克男孩在旁边被吓得瞳孔地震张大嘴，仰拍特写，霓虹涂鸦砖墙，电影感强光，表情极度夸张",
+      "motion": "punch_in",
+      "motion_prompt": "女孩流泪嘶吼逼近镜头，男孩惊恐后仰，画面冲击",
+      "caption": "我们分手！",
+      "punch": true,
+      "narration": "我受够了我们分手吧",
+      "voice": "left",
+      "sfx": "boom",
+      "video_model": "kwaivgi/kling-v3.0-std",
+      "animate": true,
+      "dur": 4600
+    },
+    {
+      "image": "gen:彩虹莫西干头朋克男孩噗通跪地抱住哥特女孩大腿，鼻涕眼泪糊一脸嚎啕大哭，哥特女孩翻白眼嫌弃低头看他，俯拍全身，霓虹涂鸦砖墙，夸张沙雕",
+      "motion": "spin_in",
+      "motion_prompt": "男孩跪地抱大腿哭嚎身体颤抖，女孩居高临下嫌弃",
+      "caption": "别走啊宝！",
+      "narration": "别啊宝我什么都改",
+      "voice": "right",
+      "sfx": "fail",
+      "animate": true,
+      "dur": 4600
+    },
+    {
+      "image": "gen:哥特女孩突然停止哭泣面无表情擦掉眼泪，伸手摊开掌心冷漠要钱，眼神冰冷，彩虹莫西干头朋克男孩跪地上一脸懵，特写，霓虹涂鸦砖墙，反差喜剧",
+      "motion": "strobe_zoom",
+      "motion_prompt": "女孩瞬间收住眼泪摊手要钱，表情由哭转冷酷",
+      "caption": "先还火锅钱",
+      "punch": true,
+      "narration": "钱还我再谈分手",
+      "voice": "left",
+      "sfx": "dun",
+      "animate": true,
+      "dur": 4600
+    },
+    {
+      "image": "gen:彩虹莫西干头朋克男孩苦笑掏出手机展示余额数字超小，哥特女孩气到头顶冒烟翻白眼一把把他拽回来，两人都很无语，霓虹涂鸦砖墙，极度夸张沙雕",
+      "motion": "shake",
+      "motion_prompt": "男孩亮出手机余额，女孩冒烟无语一把拽回男孩",
+      "caption": "8毛？凑合过",
+      "punch": true,
+      "narration": "就八毛那还是凑合过吧",
+      "voice": "left",
+      "sfx": "tada",
+      "animate": true,
+      "dur": 4800
+    }
+  ]
+}

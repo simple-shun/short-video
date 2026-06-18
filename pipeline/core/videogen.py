@@ -1,10 +1,11 @@
 """图生视频适配器：参考图 + 动作提示词 → mp4 底片。
 
 走 OpenRouter 视频生成 API（异步任务），用项目现有 key，无需额外账号。
-默认模型 google/veo-3.1-lite（无声 720p $0.03/秒，5 秒镜头约 ¥1.1）。
-可用 VIDEO_MODEL 环境变量或脚本字段覆盖，候选：
-  alibaba/wan-2.6 ($0.10/s) / kwaivgi/kling-v3.0-std ($0.084/s) /
-  minimax/hailuo-2.3 ($0.082/s) / x-ai/grok-imagine-video (480p $0.05/s)
+默认模型 bytedance/seedance-2.0-fast（无声 9:16 性价比标杆，~$0.09/秒，5 秒镜头约 ¥3.2；
+非 fast 版质量更高但 ~$0.15/秒，需要时用 video_model 覆盖）。
+我们自己注配音/音效/BGM，故一律 generate_audio=false，不为原生音轨付费。
+关键/高潮镜头可在脚本里用 video_model 覆盖为更强的运动模型：
+  kwaivgi/kling-v3.0-std (运动连贯，首/尾帧控制) / alibaba/wan-2.6 / minimax/hailuo-2.3
 """
 import base64
 import hashlib
@@ -18,7 +19,7 @@ import requests
 from .. import config
 
 CLIPS_DIR = config.ASSETS / "clips"
-DEFAULT_MODEL = os.environ.get("VIDEO_MODEL", "google/veo-3.1-lite")
+DEFAULT_MODEL = os.environ.get("VIDEO_MODEL", "bytedance/seedance-2.0-fast")
 
 PROVIDERS = {}
 
@@ -52,9 +53,11 @@ def _openrouter_i2v(image_path: Path, motion_prompt: str, dur_s: int,
         json={
             "model": model or DEFAULT_MODEL,
             "prompt": motion_prompt,
-            "duration": max(2, min(int(dur_s), 10)),
+            "duration": max(2, min(int(dur_s), 8)),
             "resolution": os.environ.get("VIDEO_RESOLUTION", "720p"),
             "aspect_ratio": os.environ.get("VIDEO_ASPECT", "9:16"),
+            # 自己注配音/BGM，不要模型原生音轨（省钱 + 避免双音）
+            "generate_audio": False,
             "frame_images": [{
                 "type": "image_url",
                 "image_url": {"url": f"data:{mime};base64,{b64}"},

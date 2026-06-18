@@ -1,0 +1,56 @@
+{
+  "mode": "magic",
+  "title": "朋克情侣硬核养你",
+  "style_ref": "refs/punk_couple.png",
+  "bgm": "chaos",
+  "bgm_tempo": 1.2,
+  "cover": {"title": "宝，我养你", "sub": "结局没人猜得到"},
+  "endcard": "关注我，下集更癫 🤪",
+  "shots": [
+    {
+      "image": "gen:画面里这个彩虹莫西干头的朋克男孩痞痞地搂住哥特女孩的肩膀，咧嘴坏笑朝镜头比心，哥特女孩半信半疑斜眼看他，霓虹涂鸦砖墙背景，表情夸张",
+      "motion": "punch_in",
+      "motion_prompt": "男孩搂紧女孩咧嘴坏笑朝镜头比心，霓虹灯闪烁",
+      "caption": "宝，我养你",
+      "narration": "他霸气宣布要养她",
+      "voice": "right",
+      "sfx": "wow",
+      "animate": true,
+      "dur": 4700
+    },
+    {
+      "image": "gen:哥特女孩单手叉腰，挑眉冷笑，斜眼上下打量朋克男孩，一脸不屑翻白眼，霓虹涂鸦砖墙背景，表情浮夸",
+      "motion": "spin_in",
+      "motion_prompt": "女孩叉腰挑眉缓缓上下打量，嘴角冷笑翻白眼",
+      "caption": "就你？拿啥养",
+      "narration": "女孩冷笑根本不信",
+      "voice": "left",
+      "sfx": "huh",
+      "animate": true,
+      "dur": 4700
+    },
+    {
+      "image": "gen:朋克男孩把手机怼到镜头前，手机屏幕上只有很小的余额数字，他表情得意又强装镇定，鱼眼怼脸，霓虹涂鸦砖墙背景",
+      "motion": "strobe_zoom",
+      "motion_prompt": "男孩把手机怼向镜头，表情从得意变尴尬，画面轻微抖动",
+      "caption": "余额 8 块",
+      "narration": "他亮出全部家当",
+      "voice": "right",
+      "sfx": "fail",
+      "animate": true,
+      "dur": 4700
+    },
+    {
+      "image": "gen:哥特女孩两眼放光激动地猛扑过去抱住朋克男孩，夸张比心，男孩被扑得一脸懵，霓虹涂鸦砖墙背景，画面极度夸张沙雕",
+      "motion": "shake",
+      "motion_prompt": "女孩两眼发光猛地扑上去抱住男孩夸张比心，镜头晃动",
+      "caption": "我也8块·绝配",
+      "narration": "女孩感动我俩天生一对",
+      "voice": "left",
+      "sfx": "tada",
+      "video_model": "kwaivgi/kling-v3.0-std",
+      "animate": true,
+      "dur": 4700
+    }
+  ]
+}

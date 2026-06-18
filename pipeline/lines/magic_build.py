@@ -14,16 +14,20 @@ SHOT_PAD = 450        # 旁白念完后的呼吸
 DEFAULT_SHOT = 2000   # 无旁白镜头默认时长
 
 
-def _resolve_image(val: str, rng: random.Random):
-    """gen:提示词 / meme:情绪 / 相对路径 → 本地图片 Path（解析失败返回 None）。"""
+def _resolve_image(val: str, rng: random.Random, ref_images=None):
+    """gen:提示词 / meme:情绪 / 相对路径 → 本地图片 Path（解析失败返回 None）。
+    ref_images: 参考图，仅对 gen: 生效（图生图保持人物/画风一致）。"""
     if not val:
         return None
     if val.startswith("gen:"):
         prompt = val[4:].strip()
         full = (f"竖版9:16构图，抖音魔性沙雕风格插画，色彩高饱和，表情夸张离谱：{prompt}。"
                 f"画面里不要任何文字。")
+        if ref_images:
+            full = ("参考图给定了角色形象与画风，请严格沿用同样的人物、配色和插画风格，"
+                    "只改变他们的动作/表情/场景：" + full)
         try:
-            return imagegen.generate_image(full)
+            return imagegen.generate_image(full, ref_images=ref_images)
         except Exception as e:
             print(f"  生图失败({e})，该镜头改用梗图兜底")
             return assets.resolve_meme("shock", rng)
@@ -33,36 +37,41 @@ def _resolve_image(val: str, rng: random.Random):
     return p if p.exists() else None
 
 
-def _resolve_media(s: dict, rng: random.Random):
-    """镜头底片 → ("video"|"image", Path)；解析失败返回 None。
+def _resolve_media(s: dict, rng: random.Random, ref_images=None):
+    """镜头底片 → ("video"|"image", media_path, still_path)；解析失败返回 None。
+    still_path = 该镜首帧静图（动画镜头也保留，供"参考图存档"）。
     优先级：显式 video > 动图 GIF 转码 > animate 图生视频 > 静图。"""
     if s.get("video"):
         p = config.ROOT / s["video"]
-        return ("video", p) if p.exists() else None
-    img = _resolve_image(s.get("image", ""), rng)
+        return ("video", p, None) if p.exists() else None
+    img = _resolve_image(s.get("image", ""), rng, ref_images=ref_images)
     if not img:
         return None
     if img.suffix.lower() == ".gif":
         mp4 = videogen.CLIPS_DIR / f"gif_{hashlib.sha1(img.read_bytes()).hexdigest()[:12]}.mp4"
         if not mp4.exists():
             media.gif_to_mp4(img, mp4)
-        return ("video", mp4)
+        return ("video", mp4, img)
     if s.get("animate"):
         prompt = (s.get("motion_prompt") or s.get("narration") or s.get("caption")
                   or "镜头缓慢推进，主体做夸张魔性的动作")
         try:
             clip = videogen.generate_clip(img, prompt, max(2, round(s.get("dur", 5000) / 1000)),
                                           model=s.get("video_model"))
-            return ("video", clip)
+            return ("video", clip, img)
         except Exception as e:
             print(f"  图生视频不可用（{e}），该镜头退回静图运镜")
-    return ("image", img)
+    return ("image", img, img)
 
 
 def build(script: dict):
     """返回 {payload, audio_events, total_ms, bgm, bgm_tempo}（与聊天线 timeline.build 同构）。"""
     rng = random.Random(script.get("title", ""))
     shots_in = script.get("shots") or []
+
+    # 脚本级参考图：所有 gen: 镜头都以它为准，保持人物/画风一致
+    sref = script.get("style_ref")
+    sref_list = [str((config.ROOT / sref).resolve())] if sref and (config.ROOT / sref).exists() else None
 
     # ── 旁白 TTS（intro 也走 narrator）──
     workdir = config.OUTPUT_DIR / script["_slug"]
@@ -93,13 +102,21 @@ def build(script: dict):
         cursor += dur + 120
 
     # ── 镜头序列 ──
+    stills_dir = workdir / "stills"
     shots_out = []
     for i, s in enumerate(shots_in):
-        m = _resolve_media(s, rng)
+        m = _resolve_media(s, rng, ref_images=sref_list)
         if not m:
             print(f"  镜头{i} 无可用底片，跳过")
             continue
-        kind, mpath = m
+        kind, mpath, still = m
+        # 首帧静图存档（满足"参考图也输出保存"）
+        if still and still.exists():
+            stills_dir.mkdir(parents=True, exist_ok=True)
+            try:
+                (stills_dir / f"shot{i+1}{still.suffix}").write_bytes(still.read_bytes())
+            except OSError:
+                pass
         t = cursor
         narr_path, narr_dur = narrs[i]
         dur = int(s.get("dur", DEFAULT_SHOT))
@@ -118,6 +135,7 @@ def build(script: dict):
             "t": t, "dur": dur,
             "motion": s.get("motion") if s.get("motion") in MOTIONS else "punch_in",
             "caption": s.get("caption", ""),
+            "punch": bool(s.get("punch")),  # 反转句切大黄字强调
             "sticker": sticker,
         }
         shot["video" if kind == "video" else "image"] = mpath.resolve().as_uri()
