@@ -1,0 +1,83 @@
+{
+  "title": "阴阳打工人深夜反杀",
+  "hook": "领导凌晨两点让我交方案😈",
+  "intro": {
+    "text": "注意看，这员工的阴阳功力让老板彻夜难眠"
+  },
+  "cover": {
+    "title": "半夜被@方案",
+    "sub": "我反手发到大群"
+  },
+  "chat_title": "和领导的私聊",
+  "left": {
+    "avatar": "👔",
+    "bg": "#E8F0FE"
+  },
+  "right": {
+    "avatar": "🙃",
+    "bg": "#FFE5CC"
+  },
+  "bgm": "sneaky",
+  "messages": [
+    {
+      "side": "left",
+      "text": "方案明早8点前必须交"
+    },
+    {
+      "side": "right",
+      "text": "领导这么晚还没睡呀"
+    },
+    {
+      "side": "right",
+      "text": "熬夜容易猝死，您要保重"
+    },
+    {
+      "side": "right",
+      "text": "不然明天公司没法人签字了"
+    },
+    {
+      "side": "left",
+      "text": "别扯没用的，方案呢"
+    },
+    {
+      "side": "right",
+      "meme": "scheme"
+    },
+    {
+      "cutaway": "shock"
+    },
+    {
+      "side": "right",
+      "text": "我查了劳动法第44条"
+    },
+    {
+      "side": "right",
+      "text": "夜间工作工资按150%算，先转账还是先签加班单？",
+      "typing": true
+    },
+    {
+      "side": "left",
+      "text": "你……",
+      "sfx": "damage"
+    },
+    {
+      "side": "right",
+      "text": "截图已发大群并@所有人",
+      "punch": true,
+      "sfx": "boom"
+    },
+    {
+      "side": "right",
+      "text": "现在同事们都在夸您敬业，要给您送锦旗"
+    },
+    {
+      "side": "left",
+      "text": "你被开除了！"
+    },
+    {
+      "side": "right",
+      "text": "谢谢，辞退补偿够我旅游了，我开直播讲您的故事",
+      "sfx": "laugh_duck"
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "title": "装傻自爆-少爷实习被辞反手开除老板",
+  "hook": "试用期被开除，我反手让老板下岗😎",
+  "intro": {
+    "text": "注意看，实习生装傻装成了老板"
+  },
+  "cover": {
+    "title": "被辞退后，我让老板明天不用来了",
+    "sub": "老板连夜叫我少爷"
+  },
+  "chat_title": "老板（实习期）",
+  "left": {
+    "avatar": "👨‍💼",
+    "bg": "#DCE1E3"
+  },
+  "right": {
+    "avatar": "🧒",
+    "bg": "#FFB347"
+  },
+  "bgm": "scheming",
+  "messages": [
+    {
+      "side": "left",
+      "text": "小刘，试用期未通过，今天最后一天。"
+    },
+    {
+      "side": "right",
+      "text": "未通过？下水道没通吗？我能通",
+      "typing": true
+    },
+    {
+      "side": "left",
+      "text": "……是工作能力不匹配"
+    },
+    {
+      "side": "right",
+      "text": "匹配？王者荣耀？我钻石段位"
+    },
+    {
+      "side": "left",
+      "text": "我说的是职场！"
+    },
+    {
+      "side": "right",
+      "text": "职场是什么？能吃吗？"
+    },
+    {
+      "side": "left",
+      "meme": "speechless"
+    },
+    {
+      "side": "left",
+      "text": "这月工资会结，三千。"
+    },
+    {
+      "side": "right",
+      "text": "才三千？我爸说买狗粮都不够"
+    },
+    {
+      "side": "right",
+      "text": "他说这公司就是买着玩的"
+    },
+    {
+      "side": "left",
+      "text": "你爸是谁？！",
+      "sfx": "damage"
+    },
+    {
+      "side": "right",
+      "text": "我姓马",
+      "punch": true,
+      "sfx": "boom"
+    },
+    {
+      "side": "left",
+      "text": "马总公子？！少爷我错了！"
+    },
+    {
+      "side": "right",
+      "text": "明天起你不用来了，我让爸换CEO",
+      "sfx": "laugh_duck"
+    },
+    {
+      "cutaway": "shock",
+      "caption": "老板连夜改口叫少爷",
+      "sfx": "vl_wudi"
+    }
+  ]
+}

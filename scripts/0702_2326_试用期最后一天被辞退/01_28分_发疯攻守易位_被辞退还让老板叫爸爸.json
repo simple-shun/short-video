@@ -1,0 +1,90 @@
+{
+  "title": "发疯攻守易位-被辞退还让老板叫爸爸",
+  "hook": "试用期最后一天被开除😭发疯让老板破防",
+  "intro": {
+    "text": "注意看，打工人把老板整崩溃了"
+  },
+  "cover": {
+    "title": "老板说辞退我，反被我整哭",
+    "sub": "最后他求我别嚎了"
+  },
+  "chat_title": "和老板的聊天",
+  "left": {
+    "avatar": "👔",
+    "bg": "#E8E8E8"
+  },
+  "right": {
+    "avatar": "😤",
+    "bg": "#FFD93D"
+  },
+  "bgm": "silly",
+  "messages": [
+    {
+      "side": "left",
+      "text": "小王，试用期今天结束，明天不用来了。"
+    },
+    {
+      "side": "right",
+      "text": "凭什么！我整个世界都塌了！",
+      "typing": true
+    },
+    {
+      "side": "right",
+      "text": "你毁了我的青春我的梦想我的花呗！"
+    },
+    {
+      "side": "right",
+      "text": "我每天用眼泪浇绿萝，你闻闻咸的！"
+    },
+    {
+      "side": "right",
+      "meme": "cry"
+    },
+    {
+      "side": "left",
+      "text": "……那你想怎样？",
+      "sfx": "bruh"
+    },
+    {
+      "side": "right",
+      "text": "得加钱！三个月精神损失费",
+      "punch": true,
+      "sfx": "dun"
+    },
+    {
+      "side": "left",
+      "text": "这不是敲诈吗…给一个月行吧"
+    },
+    {
+      "side": "right",
+      "text": "晚了！还有精神股东分红",
+      "sfx": "goose"
+    },
+    {
+      "side": "right",
+      "text": "我帮你拿外卖算实际控制，股比0.5%"
+    },
+    {
+      "side": "left",
+      "meme": "speechless"
+    },
+    {
+      "side": "left",
+      "text": "行行行你别嚎了……"
+    },
+    {
+      "side": "right",
+      "text": "拜拜，我家3000头猪等着继承",
+      "sfx": "laugh_evil"
+    },
+    {
+      "side": "right",
+      "text": "下月猪出栏给你内购价，前老板"
+    },
+    {
+      "cutaway": "speechless",
+      "caption": "家人们谁懂啊，老板CPU烧了",
+      "sfx": "vl_nigan"
+    }
+  ]
+}

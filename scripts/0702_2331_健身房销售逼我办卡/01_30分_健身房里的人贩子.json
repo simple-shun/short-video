@@ -1,0 +1,83 @@
+{
+  "title": "健身房里的人贩子",
+  "hook": "私教说我是他职业生涯最大的坎 😭",
+  "intro": {
+    "text": "我报名了体验课，销售逼我续年卡，结果我把他整破防"
+  },
+  "cover": {
+    "title": "办卡吗？按斤卖的那种",
+    "sub": "年卡十万，续到我下辈子"
+  },
+  "chat_title": "宇哥（金牌私教 业绩王）",
+  "left": {
+    "avatar": "💪",
+    "bg": "#E8F5E9"
+  },
+  "right": {
+    "avatar": "🦦",
+    "bg": "#FFF3E0"
+  },
+  "bgm": "sneaky",
+  "messages": [
+    {
+      "side": "left",
+      "text": "体验完感觉咋样，是不是浑身通透？"
+    },
+    {
+      "side": "right",
+      "text": "通透，我现在感觉自己能徒手拆快递了"
+    },
+    {
+      "side": "left",
+      "text": "妹妹，你这底子是我见过最特别的，续个年卡我带你飞"
+    },
+    {
+      "side": "right",
+      "text": "真的吗，哪种特别？"
+    },
+    {
+      "side": "left",
+      "text": "就是……咱们慢慢来，你今天先刷卡，我送你三节拉伸课"
+    },
+    {
+      "side": "left",
+      "meme": "money"
+    },
+    {
+      "side": "right",
+      "text": "你还没说我是哪种特别呢，是骨骼清奇那种吗？"
+    },
+    {
+      "side": "left",
+      "text": "对！万中无一的练武奇才！所以这卡……"
+    },
+    {
+      "side": "right",
+      "text": "那你说我能打过你吗，现在",
+      "typing": true
+    },
+    {
+      "side": "left",
+      "meme": "confused"
+    },
+    {
+      "side": "right",
+      "text": "你刚说我万中无一，那我要是打赢了，你是不是得给我办卡",
+      "punch": true,
+      "sfx": "dun"
+    },
+    {
+      "side": "left",
+      "text": "？咱这卖课不比武啊妹妹"
+    },
+    {
+      "side": "left",
+      "meme": "speechless"
+    },
+    {
+      "side": "right",
+      "text": "不比武说啥练武奇才，你虚假宣传，我要去工商局查你",
+      "sfx": "goose"
+    }
+  ]
+}

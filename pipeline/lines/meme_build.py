@@ -51,7 +51,8 @@ def _to_static(img_path: Path) -> Path:
             ["ffmpeg", "-y", "-i", str(img_path), "-frames:v", "1", str(out)],
             capture_output=True, check=True,
         )
-    return out
+    # GIF 在 resolve_meme 里跳过了去水印裁剪，取出的首帧静图在此补裁
+    return assets._clean_meme(out)
 
 
 def build(script: dict):
@@ -171,6 +172,8 @@ def build(script: dict):
             "motion":  motion,
             "punch":   bool(s.get("punch")),
             "sticker": None,
+            # 金句快剪：逐镜头彩色背景（黄金角铺开色相，替代灰蒙蒙模糊底）
+            "bgHue":   (i * 137) % 360 if is_punchline else None,
         })
         cursor = t + dur
 

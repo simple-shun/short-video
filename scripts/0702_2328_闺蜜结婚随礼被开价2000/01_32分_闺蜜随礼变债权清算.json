@@ -1,0 +1,101 @@
+{
+  "title": "闺蜜随礼变债权清算",
+  "hook": "闺蜜结婚让我随2000😱",
+  "intro": {
+    "text": "注意看这女人被闺蜜开价两千，她竟一口答应…"
+  },
+  "cover": {
+    "title": "随礼2000？",
+    "sub": "我的债权清算日"
+  },
+  "chat_title": "塑料姐妹花（备注：欠债未还）",
+  "left": {
+    "avatar": "👰‍♀️",
+    "bg": "#FFB6C1"
+  },
+  "right": {
+    "avatar": "😈",
+    "bg": "#DDA0DD"
+  },
+  "bgm": "scheming",
+  "messages": [
+    {
+      "side": "left",
+      "text": "我要结婚了，你随多少？"
+    },
+    {
+      "side": "right",
+      "text": "咱俩谁跟谁，必须到位",
+      "typing": true
+    },
+    {
+      "side": "left",
+      "text": "嘻嘻，那2000不过分吧？"
+    },
+    {
+      "side": "right",
+      "meme": "scheme"
+    },
+    {
+      "side": "right",
+      "text": "不过分，我早就准备好了",
+      "typing": true
+    },
+    {
+      "side": "left",
+      "text": "我就知道你最好了！"
+    },
+    {
+      "side": "right",
+      "text": "我算了下，从19年到现在"
+    },
+    {
+      "side": "right",
+      "text": "你吃我用我借我的",
+      "typing": true
+    },
+    {
+      "side": "right",
+      "text": "一共1862.5元",
+      "sfx": "drumroll"
+    },
+    {
+      "side": "right",
+      "meme": "money"
+    },
+    {
+      "side": "right",
+      "text": "四舍五入正好2000",
+      "punch": true,
+      "sfx": "boom"
+    },
+    {
+      "side": "right",
+      "text": "礼金就从里面扣了哈"
+    },
+    {
+      "side": "left",
+      "text": "？？？你认真的？"
+    },
+    {
+      "side": "right",
+      "text": "利息按花呗年化15%",
+      "sfx": "vl_nigan"
+    },
+    {
+      "side": "right",
+      "text": "你再补我137.5，凑个整",
+      "meme": "scheme"
+    },
+    {
+      "side": "left",
+      "text": "你是不是有病？"
+    },
+    {
+      "side": "right",
+      "text": "祝你幸福，债权清了💕",
+      "meme": "love",
+      "sfx": "laugh_duck"
+    }
+  ]
+}

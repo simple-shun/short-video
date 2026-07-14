@@ -1,0 +1,100 @@
+{
+  "title": "同事带饭不给钱-装傻充愣版",
+  "hook": "同事蹭饭3年不给钱，我决定用魔法打败魔法",
+  "intro": {
+    "text": "注意看，这哥们被同事蹭饭三年，终于疯了"
+  },
+  "cover": {
+    "title": "他蹭饭3年没给过钱",
+    "sub": "今天我认真问了一句"
+  },
+  "chat_title": "市场部-王哥（蹭饭侠）",
+  "left": {
+    "avatar": "🐷",
+    "bg": "#95E1D3"
+  },
+  "right": {
+    "avatar": "🤡",
+    "bg": "#F38181"
+  },
+  "bgm": "goofy",
+  "messages": [
+    {
+      "side": "left",
+      "text": "兄弟中午帮我带份黄焖鸡"
+    },
+    {
+      "side": "left",
+      "text": "加个卤蛋 老规矩"
+    },
+    {
+      "side": "right",
+      "text": "好的王哥"
+    },
+    {
+      "side": "right",
+      "typing": true,
+      "text": "对了王哥，我有个问题憋三年了"
+    },
+    {
+      "side": "left",
+      "text": "说呗"
+    },
+    {
+      "side": "right",
+      "text": "你吃的这些鸡"
+    },
+    {
+      "side": "right",
+      "text": "是走地鸡还是圈养鸡"
+    },
+    {
+      "side": "left",
+      "meme": "confused"
+    },
+    {
+      "side": "right",
+      "text": "因为如果是走地鸡，它走的时候算不算工伤"
+    },
+    {
+      "side": "left",
+      "text": "？？？你在说什么"
+    },
+    {
+      "side": "right",
+      "text": "如果是圈养鸡，它一辈子没出过门，我吃它之前是不是得带它旅个游",
+      "punch": true,
+      "sfx": "goose"
+    },
+    {
+      "cutaway": "abstract",
+      "caption": "这个问题让两个人都沉默了",
+      "sfx": "bruh"
+    },
+    {
+      "side": "right",
+      "text": "还有卤蛋，鸡知不知道它下的蛋被卤了"
+    },
+    {
+      "side": "left",
+      "text": "你是不是不想带饭才在这发癫"
+    },
+    {
+      "side": "right",
+      "text": "王哥你想多了，我只是觉得每一次吃它，都应该给它写个悼词",
+      "sfx": "laugh_duck"
+    },
+    {
+      "side": "right",
+      "text": "今天这只鸡叫黄焖，我给它准备了16字挽联"
+    },
+    {
+      "side": "left",
+      "text": "……饭我不要了，你别发了"
+    },
+    {
+      "side": "right",
+      "text": "那怎么行，这是黄焖的葬礼，你得来随礼，三年了该把帛金补上了"
+    }
+  ]
+}

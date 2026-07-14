@@ -1,0 +1,86 @@
+{
+  "mode": "meme",
+  "title": "香菜绑架案",
+  "hook": {
+    "text": "我朋友点外卖备注了五个不要香菜"
+  },
+  "cover": {
+    "title": "五遍不要香菜😱",
+    "sub": "老板：我瞎了"
+  },
+  "bgm": "scheming",
+  "bgm_tempo": 1.28,
+  "bgm_volume": 0.4,
+  "endcard": {
+    "main": "被香菜伤害过的扣1",
+    "sub": "有些人就是故意看不见备注",
+    "cta": "关注我，明天继续报仇 🔥"
+  },
+  "shots": [
+    {
+      "meme": "smug",
+      "text": "他为了防止老板手抖 备注写成了文言文",
+      "voice": "narrator",
+      "motion": "spin_in"
+    },
+    {
+      "meme": "love",
+      "text": "鄙人不食香菜 望君手下留情",
+      "voice": "narrator"
+    },
+    {
+      "meme": "shock",
+      "text": "然后又用拼音写了一遍 buyaoxiangcai",
+      "voice": "narrator",
+      "sfx": "wow"
+    },
+    {
+      "meme": "love",
+      "text": "还在订单最后加了一句 老板你最好看",
+      "voice": "narrator"
+    },
+    {
+      "meme": "confused",
+      "text": "外卖小哥打来电话说",
+      "voice": "dongbei"
+    },
+    {
+      "meme": "doge",
+      "text": "哥们你餐被香菜绑架了 绑匪说要见你",
+      "voice": "narrator",
+      "punch": true,
+      "sfx": "boom"
+    },
+    {
+      "meme": "speechless",
+      "text": "打开一看 上面用香菜摆了个笑脸",
+      "voice": "boy"
+    },
+    {
+      "meme": "tired",
+      "text": "他当场就悟了 这叫艺术",
+      "voice": "dongbei",
+      "sfx": "fail"
+    },
+    {
+      "meme": "cry",
+      "text": "从那以后他都备注 香菜过敏 住院别找我",
+      "voice": "narrator"
+    }
+  ],
+  "_post": {
+    "title": "为了不吃香菜把备注写成文言文，老板直接给你整活",
+    "tags": [
+      "#搞笑",
+      "#表情包",
+      "#香菜",
+      "#反转",
+      "#外卖备注",
+      "#段子",
+      "#抽象",
+      "#每日一笑",
+      "#鬼畜"
+    ],
+    "caption": "有些人天生和香菜有仇，你备注得越狠，老板手越抖…你们的外卖备注都用过什么狠话？评论区见👇"
+  }
+}

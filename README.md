@@ -49,7 +49,7 @@ python3 -m pipeline.make scripts/punchline/毒舌_烦你一辈子.json
 python3 -m pipeline.make scripts/*.json --keep-frames     # 批量 + 保留帧调试
 ```
 
-产物在 `output/<片名>/`：成片 `<片名>.mp4` + 封面 `cover.jpg`。
+产物按生产线归档在 `output/<生产线>/<片名>/`（chat / meme / punchline / magic）：成片 `<片名>.mp4` + 封面 `cover.jpg`。
 脚本批次落在 `scripts/<月日_时分>_<主题>/`，附 `索引.md`（含评分/毒评/出片命令）。
 
 ---

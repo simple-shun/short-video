@@ -1,0 +1,86 @@
+{
+  "mode": "meme",
+  "title": "七天无理由的极限操作",
+  "hook": {
+    "text": "我朋友为了退一件羽绒服 把体感温度都改了"
+  },
+  "cover": {
+    "title": "羽绒服退货玄学 🤯",
+    "sub": "为了退款拼过命"
+  },
+  "bgm": "sneaky",
+  "bgm_tempo": 1.3,
+  "bgm_volume": 0.42,
+  "endcard": {
+    "main": "干过这种事的扣2",
+    "sub": "七天无理由，是他最后的倔强",
+    "cta": "关注我，下期教你怎么正确退货"
+  },
+  "shots": [
+    {
+      "meme": "smug",
+      "text": "他去年买了一件羽绒服 浙江穿太夸张",
+      "voice": "narrator",
+      "motion": "spin_in"
+    },
+    {
+      "meme": "shock",
+      "text": "但他又舍不得运费 于是天天盼着降温",
+      "voice": "narrator",
+      "sfx": "wow"
+    },
+    {
+      "meme": "scheme",
+      "text": "终于天气预报说 后天冷空气来了",
+      "voice": "boy"
+    },
+    {
+      "meme": "love",
+      "text": "他开心得像个孩子 提前把衣服挂在床头",
+      "voice": "narrator"
+    },
+    {
+      "meme": "angry",
+      "text": "结果冷空气放鸽子 气温纹丝不动",
+      "voice": "dongbei"
+    },
+    {
+      "meme": "doge",
+      "text": "眼看七天无理由最后一天 他把空调开到16度",
+      "voice": "narrator",
+      "punch": true,
+      "sfx": "boom"
+    },
+    {
+      "meme": "laugh",
+      "text": "穿着羽绒服站在空调口冻了仨小时",
+      "voice": "boy"
+    },
+    {
+      "meme": "tired",
+      "text": "最后图都给商家看 商家说亲 咱家就是浙江的",
+      "voice": "shaanxi",
+      "sfx": "fail"
+    },
+    {
+      "meme": "speechless",
+      "text": "那一刻他知道了什么叫气候差异不可逆",
+      "voice": "dongbei"
+    }
+  ],
+  "_post": {
+    "title": "为了退一件羽绒服，他把自己冻成冰棍！商家回复直接破防",
+    "tags": [
+      "#搞笑",
+      "#表情包",
+      "#反转",
+      "#抽象",
+      "#段子",
+      "#每日一笑",
+      "#魔性",
+      "#退货经历",
+      "#羽绒服"
+    ],
+    "caption": "你为了退货干过最离谱的事是啥？我朋友把自己冻感冒了，商家还补了一刀，笑不活了 😂 评论区说出你的故事"
+  }
+}

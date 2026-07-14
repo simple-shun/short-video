@@ -1,0 +1,86 @@
+{
+  "mode": "meme",
+  "title": "最后的倔强",
+  "hook": {
+    "text": "他研究出一个杜绝香菜的方法"
+  },
+  "cover": {
+    "title": "杜绝香菜😎",
+    "sub": "物理隔绝"
+  },
+  "bgm": "silly",
+  "bgm_tempo": 1.28,
+  "bgm_volume": 0.4,
+  "endcard": {
+    "main": "这个方法可行的扣1",
+    "sub": "科技改变命运",
+    "cta": "关注我，明天试验一下 🔥"
+  },
+  "shots": [
+    {
+      "meme": "smug",
+      "text": "他每次点外卖都多花三块钱",
+      "voice": "narrator",
+      "motion": "spin_in"
+    },
+    {
+      "meme": "love",
+      "text": "买一把小镊子和一个放大镜",
+      "voice": "narrator"
+    },
+    {
+      "meme": "scheme",
+      "text": "打开外卖先不着急吃",
+      "voice": "narrator",
+      "sfx": "wow"
+    },
+    {
+      "meme": "shock",
+      "text": "像考古一样把香菜碎末一根一根夹出来",
+      "voice": "narrator"
+    },
+    {
+      "meme": "love",
+      "text": "夹了二十分钟 碗里终于看不见香菜了",
+      "voice": "narrator"
+    },
+    {
+      "meme": "confused",
+      "text": "结果吃第一口就咬了满嘴香菜根",
+      "voice": "dongbei"
+    },
+    {
+      "meme": "doge",
+      "text": "原来老板把香菜榨成汁揉进面里了",
+      "voice": "narrator",
+      "punch": true,
+      "sfx": "boom"
+    },
+    {
+      "meme": "speechless",
+      "text": "这波在大气层",
+      "voice": "boy"
+    },
+    {
+      "meme": "tired",
+      "text": "他默默把镊子扔了 从此改吃白米饭",
+      "voice": "dongbei",
+      "sfx": "fail"
+    }
+  ],
+  "_post": {
+    "title": "为了不吃香菜他买了镊子显微镜，结果老板直接榨汁揉面",
+    "tags": [
+      "#搞笑",
+      "#表情包",
+      "#香菜",
+      "#反转",
+      "#外卖",
+      "#段子",
+      "#抽象",
+      "#每日一笑",
+      "#鬼畜"
+    ],
+    "caption": "这场香菜攻防战到底谁能赢？你永远不知道老板为了让你吃香菜有多拼…你们有什么避香菜妙招？评论区交出秘籍👇"
+  }
+}

@@ -304,6 +304,9 @@ async function load(payload) {
     el.className = 'shot';
 
     const bg   = makeMedia(src, isVideo, 'bg');
+    // bgHue：金句快剪彩色背景（sepia 先注入色彩，黑白图也能转出颜色）
+    if (s.bgHue != null)
+      bg.style.filter = `blur(34px) sepia(.85) saturate(2.8) hue-rotate(${s.bgHue}deg) brightness(.55)`;
     el.appendChild(bg);
     const wrap = document.createElement('div');
     wrap.className = 'fgwrap';

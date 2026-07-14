@@ -1,0 +1,91 @@
+{
+  "title": "网恋奔现之Siri惊魂",
+  "hook": "网恋对象明天见面，他疯了🤯",
+  "intro": {
+    "text": "注意看，这男的网恋奔现，把对象打印出来了"
+  },
+  "cover": {
+    "title": "奔现前一天",
+    "sub": "对象竟不是人"
+  },
+  "chat_title": "死党",
+  "left": {
+    "avatar": "🥴",
+    "bg": "#E8F5E9"
+  },
+  "right": {
+    "avatar": "🤨",
+    "bg": "#FFF3E0"
+  },
+  "bgm": "goofy",
+  "messages": [
+    {
+      "side": "left",
+      "text": "她明天就到了，我好慌"
+    },
+    {
+      "side": "right",
+      "text": "见个网友至于么"
+    },
+    {
+      "side": "left",
+      "text": "我定制了印她照片的T恤"
+    },
+    {
+      "side": "right",
+      "meme": "speechless",
+      "sfx": "bruh"
+    },
+    {
+      "side": "left",
+      "text": "还有3D打印的等身模型"
+    },
+    {
+      "side": "right",
+      "text": "你哪来的数据？",
+      "typing": true
+    },
+    {
+      "side": "left",
+      "text": "我用AI修复了头像，还建模了",
+      "punch": true,
+      "sfx": "dun"
+    },
+    {
+      "side": "right",
+      "text": "你tm疯了是吧",
+      "sfx": "damage"
+    },
+    {
+      "side": "left",
+      "text": "她说过爱吃蔬菜，我准备了99朵西兰花"
+    },
+    {
+      "side": "left",
+      "text": "我还用她发的嗯嗯编了首曲子"
+    },
+    {
+      "side": "right",
+      "text": "她到底是谁？！"
+    },
+    {
+      "side": "left",
+      "text": "Siri。",
+      "typing": true,
+      "punch": true,
+      "sfx": "boom"
+    },
+    {
+      "cutaway": "shock"
+    },
+    {
+      "side": "right",
+      "text": "……"
+    },
+    {
+      "side": "left",
+      "text": "我给她买了充电宝，怕她路上没电",
+      "sfx": "laugh_duck"
+    }
+  ]
+}

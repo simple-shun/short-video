@@ -1,0 +1,91 @@
+{
+  "mode": "meme",
+  "title": "香菜复仇记",
+  "hook": {
+    "text": "注意看，他点外卖备注了不要香菜"
+  },
+  "cover": {
+    "title": "不要香菜😡",
+    "sub": "老板：我偏要放"
+  },
+  "bgm": "sneaky",
+  "bgm_tempo": 1.28,
+  "bgm_volume": 0.4,
+  "endcard": {
+    "main": "评论区扣1 我帮你骂老板",
+    "sub": "不吃香菜的人懂的都懂",
+    "cta": "关注我，明天继续整活 🔥"
+  },
+  "shots": [
+    {
+      "meme": "smug",
+      "text": "他点了一份麻辣烫 备注写得清清楚楚",
+      "voice": "narrator",
+      "motion": "spin_in"
+    },
+    {
+      "meme": "love",
+      "text": "不要香菜 加粗 加感叹号 还画了个箭头",
+      "voice": "narrator"
+    },
+    {
+      "meme": "scheme",
+      "text": "他以为自己把话说得很明白了",
+      "voice": "narrator",
+      "sfx": "wow"
+    },
+    {
+      "meme": "shock",
+      "text": "结果外卖到了打开一看",
+      "voice": "narrator"
+    },
+    {
+      "meme": "love",
+      "text": "满碗绿油油的香菜铺了整整两层",
+      "voice": "narrator"
+    },
+    {
+      "meme": "confused",
+      "text": "老板还贴了张便签 上面写着",
+      "voice": "dongbei"
+    },
+    {
+      "meme": "doge",
+      "text": "多送你点 不用客气",
+      "voice": "narrator",
+      "punch": true,
+      "sfx": "boom"
+    },
+    {
+      "meme": "angry",
+      "text": "这是哪个星球的理解力",
+      "voice": "boy"
+    },
+    {
+      "meme": "speechless",
+      "text": "他蹲在马路牙子上 眼泪拌香菜往下咽",
+      "voice": "dongbei",
+      "sfx": "fail"
+    },
+    {
+      "meme": "tired",
+      "text": "从此他的备注变成了 敢放香菜我顺着网线去找你",
+      "voice": "narrator"
+    }
+  ],
+  "_post": {
+    "title": "点外卖备注不要香菜，老板直接给你铺满，还贴了张纸条…",
+    "tags": [
+      "#搞笑",
+      "#表情包",
+      "#香菜",
+      "#反转",
+      "#外卖",
+      "#段子",
+      "#每日一笑",
+      "#整活",
+      "#脱口秀"
+    ],
+    "caption": "不吃香菜的人到底得罪谁了？老板的阅读理解一直是满分…你们遇到过这种情况吗？评论区开始你的故事👇"
+  }
+}

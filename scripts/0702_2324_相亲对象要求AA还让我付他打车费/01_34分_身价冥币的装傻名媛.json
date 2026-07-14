@@ -1,0 +1,84 @@
+{
+  "title": "身价冥币的装傻名媛",
+  "hook": "相亲后他让我AA，还让我付打车费😅",
+  "intro": {
+    "text": "注意看，这兄弟算账算到了量子领域"
+  },
+  "cover": {
+    "title": "你的账，我只在冥想里结",
+    "sub": "我身上的钱比他的算数大"
+  },
+  "chat_title": "太平洋宽肩（见面后）",
+  "left": {
+    "avatar": "🤡",
+    "bg": "#4B0082"
+  },
+  "right": {
+    "avatar": "🐒",
+    "bg": "#FF8C00"
+  },
+  "bgm": "silly",
+  "messages": [
+    {
+      "side": "left",
+      "text": "饭钱127，你转我63.5就行"
+    },
+    {
+      "side": "left",
+      "text": "哦对，我来时打车花了43，你也A一下"
+    },
+    {
+      "side": "left",
+      "text": "一共85，转我"
+    },
+    {
+      "side": "right",
+      "text": "原来打车费也要A呀"
+    },
+    {
+      "side": "right",
+      "text": "我查查宇宙法则哈"
+    },
+    {
+      "side": "right",
+      "meme": "abstract"
+    },
+    {
+      "side": "right",
+      "sfx": "goose",
+      "text": "你这43块是打的人间出租车吧"
+    },
+    {
+      "side": "right",
+      "text": "我这边只收冥币，汇率有点麻烦"
+    },
+    {
+      "side": "left",
+      "text": "？？你没事吧"
+    },
+    {
+      "side": "right",
+      "text": "我上辈子是地府财务总监，现在身上万亿资产都在冥想里搁着",
+      "punch": true,
+      "sfx": "dun",
+      "typing": true
+    },
+    {
+      "side": "right",
+      "text": "你接受通灵转账吗？我托梦给你烧过来"
+    },
+    {
+      "side": "left",
+      "meme": "dizzy"
+    },
+    {
+      "side": "left",
+      "text": "疯了吧你……"
+    },
+    {
+      "cutaway": "abstract",
+      "caption": "她真的在联系地府驸马爷",
+      "sfx": "vl_haha"
+    }
+  ]
+}

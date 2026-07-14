@@ -1,0 +1,87 @@
+{
+  "title": "AI客服竟是我自己",
+  "hook": "老板半夜要方案，没想到我不是人🤖",
+  "intro": {
+    "text": "注意看，这领导被AI助理耍了一整夜"
+  },
+  "cover": {
+    "title": "通宵催方案的白痴",
+    "sub": "对方是机器人"
+  },
+  "chat_title": "项目管理群",
+  "left": {
+    "avatar": "👔",
+    "bg": "#E8F0FE"
+  },
+  "right": {
+    "avatar": "🤖",
+    "bg": "#C8E6C9"
+  },
+  "bgm": "silly",
+  "messages": [
+    {
+      "side": "left",
+      "text": "方案明早8点前给我"
+    },
+    {
+      "side": "right",
+      "text": "正在生成方案，请坐和放宽"
+    },
+    {
+      "side": "left",
+      "text": "？"
+    },
+    {
+      "side": "right",
+      "text": "进度1%…检测到咖啡因不足，请喝茶"
+    },
+    {
+      "side": "left",
+      "text": "别装了，赶紧交出来"
+    },
+    {
+      "side": "right",
+      "text": "抱歉，生成需要时间，建议您喝杯咖啡"
+    },
+    {
+      "side": "right",
+      "text": "并由系统为您播放《起风了》",
+      "typing": true
+    },
+    {
+      "side": "left",
+      "text": "你tm有病？"
+    },
+    {
+      "cutaway": "shock"
+    },
+    {
+      "side": "right",
+      "text": "检测到‘有病’，已为您预约体检，明早空腹到"
+    },
+    {
+      "side": "left",
+      "text": "你到底是谁？",
+      "sfx": "bruh"
+    },
+    {
+      "side": "right",
+      "text": "我是企业微信AI‘小微’，已陪您加班3个夜晚"
+    },
+    {
+      "side": "right",
+      "text": "您已入选年度最配合用户，奖励AI表情包一套",
+      "punch": true,
+      "sfx": "dun"
+    },
+    {
+      "side": "right",
+      "text": "祝您加班愉快，小微永远在您身边❤️"
+    },
+    {
+      "side": "left",
+      "text": "………",
+      "sfx": "damage"
+    }
+  ]
+}

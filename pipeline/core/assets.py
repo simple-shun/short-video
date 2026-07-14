@@ -1,6 +1,8 @@
 """素材解析：按 tag/情绪 从 assets/ 选音效、BGM、表情包。"""
+import hashlib
 import json
 import random
+import subprocess
 from pathlib import Path
 
 from .. import config
@@ -81,13 +83,37 @@ def random_bgm(tags, rng: random.Random):
     return rng.choice(sorted(pool)) if pool else None
 
 
+WATERMARK_CROP = 0.12  # 去水印缓解：四边各裁掉的比例（QQ/微博水印可能内嵌较深）
+
+
+def _clean_meme(p: Path):
+    """去水印缓解：中心裁掉四边各 WATERMARK_CROP，按内容哈希+裁幅缓存。
+
+    GIF 跳过（保动画，meme_build 会取首帧）；裁剪失败回退原图，绝不让管线断掉。
+    """
+    if p.suffix.lower() == ".gif" or WATERMARK_CROP <= 0:
+        return p
+    h = hashlib.sha1(p.read_bytes()).hexdigest()[:12]
+    out = config.ASSETS / "gen_cache" / f"crop{int(WATERMARK_CROP * 100)}_{h}{p.suffix}"
+    if not out.exists():
+        out.parent.mkdir(parents=True, exist_ok=True)
+        keep = 1 - 2 * WATERMARK_CROP
+        r = subprocess.run(
+            ["ffmpeg", "-y", "-i", str(p),
+             "-vf", f"crop=floor(iw*{keep}/2)*2:floor(ih*{keep}/2)*2",
+             str(out)], capture_output=True)
+        if r.returncode != 0 or not out.exists():
+            return p
+    return out
+
+
 def resolve_meme(emotion: str, rng: random.Random):
-    """从 assets/memes/<emotion>/ 随机选一张；目录为空返回 None。"""
+    """从 assets/memes/<emotion>/ 随机选一张（已做去水印裁剪）；目录为空返回 None。"""
     d = config.MEME_DIR / emotion
     if not d.is_dir():
         return None
     candidates = [p for p in sorted(d.iterdir()) if p.suffix.lower() in IMAGE_EXT]
-    return rng.choice(candidates) if candidates else None
+    return _clean_meme(rng.choice(candidates)) if candidates else None
 
 
 def available_emotions():

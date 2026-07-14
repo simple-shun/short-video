@@ -1,0 +1,81 @@
+{
+  "mode": "meme",
+  "title": "退货社死瞬间",
+  "hook": {
+    "text": "注意看，他买了一件衣服想惊艳所有人"
+  },
+  "cover": {
+    "title": "退货界的显眼包 😂",
+    "sub": "社死只需一瞬间"
+  },
+  "bgm": "scheming",
+  "bgm_tempo": 1.28,
+  "bgm_volume": 0.4,
+  "endcard": {
+    "main": "退过货的扣1 👇",
+    "sub": "有些尴尬，退货小哥比你先知道",
+    "cta": "关注我，明天讲更社死的 🔥"
+  },
+  "shots": [
+    {
+      "meme": "love",
+      "text": "他精挑细选买了件战袍 准备周末炸场",
+      "voice": "narrator",
+      "motion": "spin_in"
+    },
+    {
+      "meme": "smug",
+      "text": "穿上之后发现 怎么说呢 像行走的茄子",
+      "voice": "narrator"
+    },
+    {
+      "meme": "shock",
+      "text": "火速申请退货 心里还想好了解释话术",
+      "voice": "narrator",
+      "sfx": "wow"
+    },
+    {
+      "meme": "scheme",
+      "text": "标签没拆 袋子套好 想着快递上门就拿走",
+      "voice": "boy"
+    },
+    {
+      "meme": "confused",
+      "text": "结果快递小哥上门 看了一眼衣服愣了",
+      "voice": "dongbei"
+    },
+    {
+      "meme": "doge",
+      "text": "他说 兄弟你咋退这个 这不是我昨儿退的吗",
+      "voice": "narrator",
+      "punch": true,
+      "sfx": "boom"
+    },
+    {
+      "meme": "speechless",
+      "text": "好好好 这波闭环了",
+      "voice": "boy"
+    },
+    {
+      "meme": "tired",
+      "text": "从此他退出网购界 打算去实体店挨宰",
+      "voice": "dongbei",
+      "sfx": "fail"
+    }
+  ],
+  "_post": {
+    "title": "网购退货遇到前任买家快递小哥！全程高能笑到岔气",
+    "tags": [
+      "#搞笑",
+      "#表情包",
+      "#反转",
+      "#抽象",
+      "#段子",
+      "#每日一笑",
+      "#魔性",
+      "#鬼畜",
+      "#退货社死"
+    ],
+    "caption": "你退货最怕遇到什么？这套衣服直接闭环了，评论区说说你的抓马经历，我看看谁更惨 🤡"
+  }
+}

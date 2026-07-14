@@ -17,15 +17,18 @@ def make_video(script_path, keep_frames=False):
     t0 = time.time()
     script = json.loads(Path(script_path).read_text())
     slug = batch.slugify(script.get("title", Path(script_path).stem))
-    script["_slug"] = slug
-    workdir = config.OUTPUT_DIR / slug
-    frames_dir = workdir / "frames"
-    workdir.mkdir(parents=True, exist_ok=True)
 
     mode = script.get("mode") or "chat"
     builder = registry.BUILDERS.get(mode)
     if not builder:
         raise ValueError(f"未知 mode={mode!r}，已注册：{list(registry.BUILDERS)}")
+
+    # 产物按生产线归档：output/<line>/<片名>/（punchline 是 meme 的 style 分支，单独归档）
+    line = "punchline" if mode == "meme" and script.get("style") == "punchline" else mode
+    script["_slug"] = f"{line}/{slug}"
+    workdir = config.OUTPUT_DIR / line / slug
+    frames_dir = workdir / "frames"
+    workdir.mkdir(parents=True, exist_ok=True)
 
     print(f"▶ [{slug}] 1-2/5 构建时间轴 (mode={mode})")
     tl = builder["fn"](script)
